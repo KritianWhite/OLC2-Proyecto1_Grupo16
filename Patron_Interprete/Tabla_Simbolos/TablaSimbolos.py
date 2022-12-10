@@ -1,5 +1,7 @@
 from Patron_Interprete.Tabla_Simbolos.Simbolos import Simbolos
-from Analizador.gramatica import E_list
+#from Analizador.gramatica import E_list
+from Patron_Interprete.Errores import TablaErrores
+E_list = TablaErrores()
 
 class TablaDeSimbolos():
 

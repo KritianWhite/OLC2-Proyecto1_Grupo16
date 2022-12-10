@@ -3,6 +3,9 @@ from Patron_Interprete.Expresion.Identificador import Identificador
 from Patron_Interprete.Tabla_Simbolos.Simbolos import Simbolos
 from Patron_Interprete.Tabla_Simbolos.Tipos import tipo, RetornoType
 
+from Patron_Interprete.Tabla_Simbolos.TablaSimbolos import TablaDeSimbolos
+from Generador_3D.Generador3D import Generador3D
+
 class Declaracion(Intruccion):
 
     def __init__(self, fila, columna, id: Identificador, tipo, expresion):
@@ -13,12 +16,13 @@ class Declaracion(Intruccion):
         self.columna = columna
 
 
-    def Ejecutar3D(self, controlador, ts):
+    def Ejecutar3D(self, controlador, ts : TablaDeSimbolos):
         print(" ==== Declarar === ",self.expresion)
         codigo = ""
         if self.expresion is not None:
 
             return_exp: RetornoType = self.expresion.Obtener3D(controlador, ts)
+
 
             if self.tipo is not None:
                 sizeTabla = ts.size
@@ -30,7 +34,7 @@ class Declaracion(Intruccion):
                 ts.size += 1
 
                 newSimbolo = Simbolos()
-                newSimbolo.SimboloPremitivo(self.identificador.id,return_exp.valor, self.tipo, self.mut,sizeTabla)
+                newSimbolo.SimboloPremitivo(self.identificador.id,return_exp.valor, self.tipo, sizeTabla)
                 ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
                 return codigo
                 #controlador.Generador3D.agregarInstruccion(codigo)
@@ -48,7 +52,7 @@ class Declaracion(Intruccion):
                 ts.size += 1
 
                 newSimbolo = Simbolos()
-                newSimbolo.SimboloPremitivo(self.identificador.id, None, self.tipo, self.mut, sizeTabla)
+                newSimbolo.SimboloPremitivo(self.identificador.id, None, self.tipo, sizeTabla)
                 ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
                 return codigo
                 #controlador.Generador3D.agregarInstruccion(codigo)
@@ -65,20 +69,20 @@ class Declaracion(Intruccion):
                     codigo += f'\tStack[(int){temp1}] = 0;\n'
                     ts.size += 1
 
-                    newSimbolo.SimboloPremitivo(self.identificador.id, 0, self.tipo, self.mut,sizeTabla)
+                    newSimbolo.SimboloPremitivo(self.identificador.id, 0, self.tipo,sizeTabla)
                     ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
                     return  codigo
 
                 elif self.tipo == tipo.DECIMAL:
-                    newSimbolo.SimboloPremitivo(self.identificador.id, 0.0, self.tipo, self.mut,sizeTabla)
+                    newSimbolo.SimboloPremitivo(self.identificador.id, 0.0, self.tipo,sizeTabla)
                     ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
 
                 elif self.tipo == tipo.CARACTER:
-                    newSimbolo.SimboloPremitivo(self.identificador.id, '', self.tipo, self.mut,sizeTabla)
+                    newSimbolo.SimboloPremitivo(self.identificador.id, '', self.tipo,sizeTabla)
                     ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
 
                 elif self.tipo == tipo.STRING or self.tipo == tipo.DIRSTRING:
-                    newSimbolo.SimboloPremitivo(self.identificador.id, "", self.tipo, self.mut,sizeTabla)
+                    newSimbolo.SimboloPremitivo(self.identificador.id, "", self.tipo,sizeTabla)
                     ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
 
                 elif self.tipo == tipo.BOOLEANO:
@@ -88,7 +92,7 @@ class Declaracion(Intruccion):
                     codigo += f'\tStack[(int){temp1}] = 0;\n'
                     ts.size += 1
 
-                    newSimbolo.SimboloPremitivo(self.identificador.id, False, self.tipo, self.mut, sizeTabla)
+                    newSimbolo.SimboloPremitivo(self.identificador.id, False, self.tipo, sizeTabla)
                     ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
                     return codigo
             else:

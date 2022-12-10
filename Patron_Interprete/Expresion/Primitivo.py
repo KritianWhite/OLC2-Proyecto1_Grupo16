@@ -1,6 +1,7 @@
 from Patron_Interprete.Abstracto.Expresion import Expresion
 from Patron_Interprete.Tabla_Simbolos.Tipos import Tipos, RetornoType
 from Patron_Interprete.Tabla_Simbolos.Tipos import tipo as ttipo
+from Generador_3D.Generador3D import Generador3D
 
 
 class Primitivo(Expresion):
@@ -19,8 +20,8 @@ class Primitivo(Expresion):
         codigo = ""
         retorno = RetornoType(self.valor)
 
-        if self.tipo.tipo == ttipo.ENTERO or self.tipo.tipo or  self.tipo.tipo == ttipo.DECIMAL:
-            temp = controlador.Generador3D.obtenerTemporal()
+        if self.tipo.tipo == ttipo.ENTERO or self.tipo.tipo or self.tipo.tipo == ttipo.DECIMAL:
+            temp = controlador.obtenerTemporal()
             codigo = f'\t{temp} = {self.valor};'
 
         elif self.tipo.tipo == ttipo.BOOLEANO:
@@ -42,7 +43,7 @@ class Primitivo(Expresion):
                 else:
                     codigo = f'\t{temp} = 0;'
 
-        elif self.tipo.tipo != ttipo.STRING or self.tipo.tipo != ttipo.DIRSTRING or self.tipo.tipo != ttipo.CARACTER:
+        elif self.tipo.tipo != ttipo.STRING or self.tipo.tipo != ttipo.CARACTER:
 
             temp = controlador.Generador3D.obtenerTemporal()
             codigo += f'\t{temp} = HP;\n'

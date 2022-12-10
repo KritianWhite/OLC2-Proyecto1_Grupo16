@@ -1,5 +1,6 @@
 from Patron_Interprete.Tabla_Simbolos.Tipos import tipo
 from Patron_Interprete.Expresion.Declaracion import Declaracion
+from Patron_Interprete.Expresion.Asignacion import Asignacion
 from Patron_Interprete.Expresion.Primitivo import Primitivo
 from Patron_Interprete.Expresion.Identificador import Identificador
 from Patron_Interprete.Expresion.Operaciones.Aritmeticas import Aritmetica
@@ -9,6 +10,9 @@ from Patron_Interprete.Expresion.Operaciones.Relacional import Relacional
 from Patron_Interprete.Controlador import Controlador
 from Generador_3D.Generador3D import Generador3D
 from Patron_Interprete.Tabla_Simbolos.Tipos import RetornoType
+
+from Patron_Interprete.Errores import TablaErrores
+E_list = TablaErrores()
 
 
 reservadas = {
@@ -224,7 +228,8 @@ def p_funcNativas(t):
 #Declaracion normal
 def p_asignacion1(t):
     'asignacion :  lista_ID IGUAL  exp '
-    t[0] = Declaracion(t.lineno(1), find_column(input, t.slice[1]), str(t[1]),None, t[3])
+    t[0] = Asignacion(str(t[1]), t[3])
+    #t[0] = Declaracion(t.lineno(1), find_column(input, t.slice[1]), str(t[1]),None, t[3])
      #(self,fila,columna,identificador, tipo, expresion=None,es_mutable=False
 
 #Declaracion con tipo
