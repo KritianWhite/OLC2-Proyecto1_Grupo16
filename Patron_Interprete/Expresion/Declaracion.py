@@ -1,5 +1,5 @@
 from Patron_Interprete.Abstracto.Instruccion import Intruccion
-from Patron_Interprete.Expresion import Identificador
+from Patron_Interprete.Expresion.Identificador import Identificador
 from Patron_Interprete.Tabla_Simbolos.Simbolos import Simbolos
 from Patron_Interprete.Tabla_Simbolos.Tipos import tipo, RetornoType
 

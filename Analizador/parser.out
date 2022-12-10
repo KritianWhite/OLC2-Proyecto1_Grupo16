@@ -1,0 +1,2089 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    BREAK
+    CADENA
+    CLASS
+    CONTINUE
+    CORCHETEDER
+    CORCHETEIZQ
+    DECIMAL
+    DEF
+    ELIF
+    ELSE
+    ENTERO
+    FOR
+    IF
+    IN
+    LINEANUEVA
+    LIST
+    LLAVDER
+    LLAVIZQ
+    LOCAL
+    PUNTO
+    RANGE
+    RETURN
+    STRUCT
+    WHILE
+
+Grammar
+
+Rule 0     S' -> init
+Rule 1     init -> linstrucciones
+Rule 2     linstrucciones -> linstrucciones instrucciones
+Rule 3     linstrucciones -> instrucciones
+Rule 4     instrucciones -> asignacion
+Rule 5     instrucciones -> imprimir
+Rule 6     instrucciones -> imprimirln
+Rule 7     instrucciones -> exp
+Rule 8     funciones_nativas -> imprimir
+Rule 9     asignacion -> lista_ID IGUAL exp
+Rule 10    asignacion -> lista_ID IGUAL exp DOSP tipo
+Rule 11    lista_ID -> lista_ID COMA ID
+Rule 12    lista_ID -> ID
+Rule 13    imprimir -> PRINT PARIZQ impresiones PARDER
+Rule 14    imprimirln -> PRINTLN PARIZQ impresiones PARDER
+Rule 15    impresiones -> impresiones COMA prima_impresiones
+Rule 16    impresiones -> prima_impresiones
+Rule 17    prima_impresiones -> ID
+Rule 18    prima_impresiones -> exp
+Rule 19    tipo -> INT
+Rule 20    tipo -> BOOL
+Rule 21    tipo -> FLOAT
+Rule 22    tipo -> STRING
+Rule 23    tipo -> NONE
+Rule 24    tipo -> <empty>
+Rule 25    exp -> INT
+Rule 26    exp -> FLOAT
+Rule 27    exp -> TRUE
+Rule 28    exp -> FALSE
+Rule 29    exp -> cadenaString
+Rule 30    exp -> PARIZQ exp PARDER
+Rule 31    exp -> ID
+Rule 32    exp -> exp MAS exp
+Rule 33    exp -> exp MENOS exp
+Rule 34    exp -> exp DIVIDIDO exp
+Rule 35    exp -> exp POR exp
+Rule 36    exp -> exp MODULO exp
+Rule 37    exp -> exp MAYQUE exp
+Rule 38    exp -> exp MENIGUALQUE exp
+Rule 39    exp -> exp MAYIGUALQUE exp
+Rule 40    exp -> exp MENQUE exp
+Rule 41    exp -> exp IGUALQUE exp
+Rule 42    exp -> exp NIGUALQUE exp
+
+Terminals, with rules where they appear
+
+BOOL                 : 20
+BREAK                : 
+CADENA               : 
+CLASS                : 
+COMA                 : 11 15
+CONTINUE             : 
+CORCHETEDER          : 
+CORCHETEIZQ          : 
+DECIMAL              : 
+DEF                  : 
+DIVIDIDO             : 34
+DOSP                 : 10
+ELIF                 : 
+ELSE                 : 
+ENTERO               : 
+FALSE                : 28
+FLOAT                : 21 26
+FOR                  : 
+ID                   : 11 12 17 31
+IF                   : 
+IGUAL                : 9 10
+IGUALQUE             : 41
+IN                   : 
+INT                  : 19 25
+LINEANUEVA           : 
+LIST                 : 
+LLAVDER              : 
+LLAVIZQ              : 
+LOCAL                : 
+MAS                  : 32
+MAYIGUALQUE          : 39
+MAYQUE               : 37
+MENIGUALQUE          : 38
+MENOS                : 33
+MENQUE               : 40
+MODULO               : 36
+NIGUALQUE            : 42
+NONE                 : 23
+PARDER               : 13 14 30
+PARIZQ               : 13 14 30
+POR                  : 35
+PRINT                : 13
+PRINTLN              : 14
+PUNTO                : 
+RANGE                : 
+RETURN               : 
+STRING               : 22
+STRUCT               : 
+TRUE                 : 27
+WHILE                : 
+cadenaString         : 29
+error                : 
+
+Nonterminals, with rules where they appear
+
+asignacion           : 4
+exp                  : 7 9 10 18 30 32 32 33 33 34 34 35 35 36 36 37 37 38 38 39 39 40 40 41 41 42 42
+funciones_nativas    : 
+impresiones          : 13 14 15
+imprimir             : 5 8
+imprimirln           : 6
+init                 : 0
+instrucciones        : 2 3
+linstrucciones       : 1 2
+lista_ID             : 9 10 11
+prima_impresiones    : 15 16
+tipo                 : 10
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . init
+    (1) init -> . linstrucciones
+    (2) linstrucciones -> . linstrucciones instrucciones
+    (3) linstrucciones -> . instrucciones
+    (4) instrucciones -> . asignacion
+    (5) instrucciones -> . imprimir
+    (6) instrucciones -> . imprimirln
+    (7) instrucciones -> . exp
+    (9) asignacion -> . lista_ID IGUAL exp
+    (10) asignacion -> . lista_ID IGUAL exp DOSP tipo
+    (13) imprimir -> . PRINT PARIZQ impresiones PARDER
+    (14) imprimirln -> . PRINTLN PARIZQ impresiones PARDER
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+    (11) lista_ID -> . lista_ID COMA ID
+    (12) lista_ID -> . ID
+
+    PRINT           shift and go to state 9
+    PRINTLN         shift and go to state 11
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 17
+
+    init                           shift and go to state 1
+    linstrucciones                 shift and go to state 2
+    instrucciones                  shift and go to state 3
+    asignacion                     shift and go to state 4
+    imprimir                       shift and go to state 5
+    imprimirln                     shift and go to state 6
+    exp                            shift and go to state 7
+    lista_ID                       shift and go to state 8
+
+state 1
+
+    (0) S' -> init .
+
+
+
+state 2
+
+    (1) init -> linstrucciones .
+    (2) linstrucciones -> linstrucciones . instrucciones
+    (4) instrucciones -> . asignacion
+    (5) instrucciones -> . imprimir
+    (6) instrucciones -> . imprimirln
+    (7) instrucciones -> . exp
+    (9) asignacion -> . lista_ID IGUAL exp
+    (10) asignacion -> . lista_ID IGUAL exp DOSP tipo
+    (13) imprimir -> . PRINT PARIZQ impresiones PARDER
+    (14) imprimirln -> . PRINTLN PARIZQ impresiones PARDER
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+    (11) lista_ID -> . lista_ID COMA ID
+    (12) lista_ID -> . ID
+
+    $end            reduce using rule 1 (init -> linstrucciones .)
+    PRINT           shift and go to state 9
+    PRINTLN         shift and go to state 11
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 17
+
+    instrucciones                  shift and go to state 18
+    asignacion                     shift and go to state 4
+    imprimir                       shift and go to state 5
+    imprimirln                     shift and go to state 6
+    exp                            shift and go to state 7
+    lista_ID                       shift and go to state 8
+
+state 3
+
+    (3) linstrucciones -> instrucciones .
+
+    PRINT           reduce using rule 3 (linstrucciones -> instrucciones .)
+    PRINTLN         reduce using rule 3 (linstrucciones -> instrucciones .)
+    INT             reduce using rule 3 (linstrucciones -> instrucciones .)
+    FLOAT           reduce using rule 3 (linstrucciones -> instrucciones .)
+    TRUE            reduce using rule 3 (linstrucciones -> instrucciones .)
+    FALSE           reduce using rule 3 (linstrucciones -> instrucciones .)
+    cadenaString    reduce using rule 3 (linstrucciones -> instrucciones .)
+    PARIZQ          reduce using rule 3 (linstrucciones -> instrucciones .)
+    ID              reduce using rule 3 (linstrucciones -> instrucciones .)
+    $end            reduce using rule 3 (linstrucciones -> instrucciones .)
+
+
+state 4
+
+    (4) instrucciones -> asignacion .
+
+    PRINT           reduce using rule 4 (instrucciones -> asignacion .)
+    PRINTLN         reduce using rule 4 (instrucciones -> asignacion .)
+    INT             reduce using rule 4 (instrucciones -> asignacion .)
+    FLOAT           reduce using rule 4 (instrucciones -> asignacion .)
+    TRUE            reduce using rule 4 (instrucciones -> asignacion .)
+    FALSE           reduce using rule 4 (instrucciones -> asignacion .)
+    cadenaString    reduce using rule 4 (instrucciones -> asignacion .)
+    PARIZQ          reduce using rule 4 (instrucciones -> asignacion .)
+    ID              reduce using rule 4 (instrucciones -> asignacion .)
+    $end            reduce using rule 4 (instrucciones -> asignacion .)
+
+
+state 5
+
+    (5) instrucciones -> imprimir .
+
+    PRINT           reduce using rule 5 (instrucciones -> imprimir .)
+    PRINTLN         reduce using rule 5 (instrucciones -> imprimir .)
+    INT             reduce using rule 5 (instrucciones -> imprimir .)
+    FLOAT           reduce using rule 5 (instrucciones -> imprimir .)
+    TRUE            reduce using rule 5 (instrucciones -> imprimir .)
+    FALSE           reduce using rule 5 (instrucciones -> imprimir .)
+    cadenaString    reduce using rule 5 (instrucciones -> imprimir .)
+    PARIZQ          reduce using rule 5 (instrucciones -> imprimir .)
+    ID              reduce using rule 5 (instrucciones -> imprimir .)
+    $end            reduce using rule 5 (instrucciones -> imprimir .)
+
+
+state 6
+
+    (6) instrucciones -> imprimirln .
+
+    PRINT           reduce using rule 6 (instrucciones -> imprimirln .)
+    PRINTLN         reduce using rule 6 (instrucciones -> imprimirln .)
+    INT             reduce using rule 6 (instrucciones -> imprimirln .)
+    FLOAT           reduce using rule 6 (instrucciones -> imprimirln .)
+    TRUE            reduce using rule 6 (instrucciones -> imprimirln .)
+    FALSE           reduce using rule 6 (instrucciones -> imprimirln .)
+    cadenaString    reduce using rule 6 (instrucciones -> imprimirln .)
+    PARIZQ          reduce using rule 6 (instrucciones -> imprimirln .)
+    ID              reduce using rule 6 (instrucciones -> imprimirln .)
+    $end            reduce using rule 6 (instrucciones -> imprimirln .)
+
+
+state 7
+
+    (7) instrucciones -> exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    PRINT           reduce using rule 7 (instrucciones -> exp .)
+    PRINTLN         reduce using rule 7 (instrucciones -> exp .)
+    INT             reduce using rule 7 (instrucciones -> exp .)
+    FLOAT           reduce using rule 7 (instrucciones -> exp .)
+    TRUE            reduce using rule 7 (instrucciones -> exp .)
+    FALSE           reduce using rule 7 (instrucciones -> exp .)
+    cadenaString    reduce using rule 7 (instrucciones -> exp .)
+    PARIZQ          reduce using rule 7 (instrucciones -> exp .)
+    ID              reduce using rule 7 (instrucciones -> exp .)
+    $end            reduce using rule 7 (instrucciones -> exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+    MAYQUE          shift and go to state 24
+    MENIGUALQUE     shift and go to state 25
+    MAYIGUALQUE     shift and go to state 26
+    MENQUE          shift and go to state 27
+    IGUALQUE        shift and go to state 28
+    NIGUALQUE       shift and go to state 29
+
+
+state 8
+
+    (9) asignacion -> lista_ID . IGUAL exp
+    (10) asignacion -> lista_ID . IGUAL exp DOSP tipo
+    (11) lista_ID -> lista_ID . COMA ID
+
+    IGUAL           shift and go to state 30
+    COMA            shift and go to state 31
+
+
+state 9
+
+    (13) imprimir -> PRINT . PARIZQ impresiones PARDER
+
+    PARIZQ          shift and go to state 32
+
+
+state 10
+
+    (30) exp -> PARIZQ . exp PARDER
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 33
+
+state 11
+
+    (14) imprimirln -> PRINTLN . PARIZQ impresiones PARDER
+
+    PARIZQ          shift and go to state 35
+
+
+state 12
+
+    (25) exp -> INT .
+
+    MAS             reduce using rule 25 (exp -> INT .)
+    MENOS           reduce using rule 25 (exp -> INT .)
+    DIVIDIDO        reduce using rule 25 (exp -> INT .)
+    POR             reduce using rule 25 (exp -> INT .)
+    MODULO          reduce using rule 25 (exp -> INT .)
+    MAYQUE          reduce using rule 25 (exp -> INT .)
+    MENIGUALQUE     reduce using rule 25 (exp -> INT .)
+    MAYIGUALQUE     reduce using rule 25 (exp -> INT .)
+    MENQUE          reduce using rule 25 (exp -> INT .)
+    IGUALQUE        reduce using rule 25 (exp -> INT .)
+    NIGUALQUE       reduce using rule 25 (exp -> INT .)
+    PRINT           reduce using rule 25 (exp -> INT .)
+    PRINTLN         reduce using rule 25 (exp -> INT .)
+    INT             reduce using rule 25 (exp -> INT .)
+    FLOAT           reduce using rule 25 (exp -> INT .)
+    TRUE            reduce using rule 25 (exp -> INT .)
+    FALSE           reduce using rule 25 (exp -> INT .)
+    cadenaString    reduce using rule 25 (exp -> INT .)
+    PARIZQ          reduce using rule 25 (exp -> INT .)
+    ID              reduce using rule 25 (exp -> INT .)
+    $end            reduce using rule 25 (exp -> INT .)
+    PARDER          reduce using rule 25 (exp -> INT .)
+    DOSP            reduce using rule 25 (exp -> INT .)
+    COMA            reduce using rule 25 (exp -> INT .)
+
+
+state 13
+
+    (26) exp -> FLOAT .
+
+    MAS             reduce using rule 26 (exp -> FLOAT .)
+    MENOS           reduce using rule 26 (exp -> FLOAT .)
+    DIVIDIDO        reduce using rule 26 (exp -> FLOAT .)
+    POR             reduce using rule 26 (exp -> FLOAT .)
+    MODULO          reduce using rule 26 (exp -> FLOAT .)
+    MAYQUE          reduce using rule 26 (exp -> FLOAT .)
+    MENIGUALQUE     reduce using rule 26 (exp -> FLOAT .)
+    MAYIGUALQUE     reduce using rule 26 (exp -> FLOAT .)
+    MENQUE          reduce using rule 26 (exp -> FLOAT .)
+    IGUALQUE        reduce using rule 26 (exp -> FLOAT .)
+    NIGUALQUE       reduce using rule 26 (exp -> FLOAT .)
+    PRINT           reduce using rule 26 (exp -> FLOAT .)
+    PRINTLN         reduce using rule 26 (exp -> FLOAT .)
+    INT             reduce using rule 26 (exp -> FLOAT .)
+    FLOAT           reduce using rule 26 (exp -> FLOAT .)
+    TRUE            reduce using rule 26 (exp -> FLOAT .)
+    FALSE           reduce using rule 26 (exp -> FLOAT .)
+    cadenaString    reduce using rule 26 (exp -> FLOAT .)
+    PARIZQ          reduce using rule 26 (exp -> FLOAT .)
+    ID              reduce using rule 26 (exp -> FLOAT .)
+    $end            reduce using rule 26 (exp -> FLOAT .)
+    PARDER          reduce using rule 26 (exp -> FLOAT .)
+    DOSP            reduce using rule 26 (exp -> FLOAT .)
+    COMA            reduce using rule 26 (exp -> FLOAT .)
+
+
+state 14
+
+    (27) exp -> TRUE .
+
+    MAS             reduce using rule 27 (exp -> TRUE .)
+    MENOS           reduce using rule 27 (exp -> TRUE .)
+    DIVIDIDO        reduce using rule 27 (exp -> TRUE .)
+    POR             reduce using rule 27 (exp -> TRUE .)
+    MODULO          reduce using rule 27 (exp -> TRUE .)
+    MAYQUE          reduce using rule 27 (exp -> TRUE .)
+    MENIGUALQUE     reduce using rule 27 (exp -> TRUE .)
+    MAYIGUALQUE     reduce using rule 27 (exp -> TRUE .)
+    MENQUE          reduce using rule 27 (exp -> TRUE .)
+    IGUALQUE        reduce using rule 27 (exp -> TRUE .)
+    NIGUALQUE       reduce using rule 27 (exp -> TRUE .)
+    PRINT           reduce using rule 27 (exp -> TRUE .)
+    PRINTLN         reduce using rule 27 (exp -> TRUE .)
+    INT             reduce using rule 27 (exp -> TRUE .)
+    FLOAT           reduce using rule 27 (exp -> TRUE .)
+    TRUE            reduce using rule 27 (exp -> TRUE .)
+    FALSE           reduce using rule 27 (exp -> TRUE .)
+    cadenaString    reduce using rule 27 (exp -> TRUE .)
+    PARIZQ          reduce using rule 27 (exp -> TRUE .)
+    ID              reduce using rule 27 (exp -> TRUE .)
+    $end            reduce using rule 27 (exp -> TRUE .)
+    PARDER          reduce using rule 27 (exp -> TRUE .)
+    DOSP            reduce using rule 27 (exp -> TRUE .)
+    COMA            reduce using rule 27 (exp -> TRUE .)
+
+
+state 15
+
+    (28) exp -> FALSE .
+
+    MAS             reduce using rule 28 (exp -> FALSE .)
+    MENOS           reduce using rule 28 (exp -> FALSE .)
+    DIVIDIDO        reduce using rule 28 (exp -> FALSE .)
+    POR             reduce using rule 28 (exp -> FALSE .)
+    MODULO          reduce using rule 28 (exp -> FALSE .)
+    MAYQUE          reduce using rule 28 (exp -> FALSE .)
+    MENIGUALQUE     reduce using rule 28 (exp -> FALSE .)
+    MAYIGUALQUE     reduce using rule 28 (exp -> FALSE .)
+    MENQUE          reduce using rule 28 (exp -> FALSE .)
+    IGUALQUE        reduce using rule 28 (exp -> FALSE .)
+    NIGUALQUE       reduce using rule 28 (exp -> FALSE .)
+    PRINT           reduce using rule 28 (exp -> FALSE .)
+    PRINTLN         reduce using rule 28 (exp -> FALSE .)
+    INT             reduce using rule 28 (exp -> FALSE .)
+    FLOAT           reduce using rule 28 (exp -> FALSE .)
+    TRUE            reduce using rule 28 (exp -> FALSE .)
+    FALSE           reduce using rule 28 (exp -> FALSE .)
+    cadenaString    reduce using rule 28 (exp -> FALSE .)
+    PARIZQ          reduce using rule 28 (exp -> FALSE .)
+    ID              reduce using rule 28 (exp -> FALSE .)
+    $end            reduce using rule 28 (exp -> FALSE .)
+    PARDER          reduce using rule 28 (exp -> FALSE .)
+    DOSP            reduce using rule 28 (exp -> FALSE .)
+    COMA            reduce using rule 28 (exp -> FALSE .)
+
+
+state 16
+
+    (29) exp -> cadenaString .
+
+    MAS             reduce using rule 29 (exp -> cadenaString .)
+    MENOS           reduce using rule 29 (exp -> cadenaString .)
+    DIVIDIDO        reduce using rule 29 (exp -> cadenaString .)
+    POR             reduce using rule 29 (exp -> cadenaString .)
+    MODULO          reduce using rule 29 (exp -> cadenaString .)
+    MAYQUE          reduce using rule 29 (exp -> cadenaString .)
+    MENIGUALQUE     reduce using rule 29 (exp -> cadenaString .)
+    MAYIGUALQUE     reduce using rule 29 (exp -> cadenaString .)
+    MENQUE          reduce using rule 29 (exp -> cadenaString .)
+    IGUALQUE        reduce using rule 29 (exp -> cadenaString .)
+    NIGUALQUE       reduce using rule 29 (exp -> cadenaString .)
+    PRINT           reduce using rule 29 (exp -> cadenaString .)
+    PRINTLN         reduce using rule 29 (exp -> cadenaString .)
+    INT             reduce using rule 29 (exp -> cadenaString .)
+    FLOAT           reduce using rule 29 (exp -> cadenaString .)
+    TRUE            reduce using rule 29 (exp -> cadenaString .)
+    FALSE           reduce using rule 29 (exp -> cadenaString .)
+    cadenaString    reduce using rule 29 (exp -> cadenaString .)
+    PARIZQ          reduce using rule 29 (exp -> cadenaString .)
+    ID              reduce using rule 29 (exp -> cadenaString .)
+    $end            reduce using rule 29 (exp -> cadenaString .)
+    PARDER          reduce using rule 29 (exp -> cadenaString .)
+    DOSP            reduce using rule 29 (exp -> cadenaString .)
+    COMA            reduce using rule 29 (exp -> cadenaString .)
+
+
+state 17
+
+    (31) exp -> ID .
+    (12) lista_ID -> ID .
+
+    MAS             reduce using rule 31 (exp -> ID .)
+    MENOS           reduce using rule 31 (exp -> ID .)
+    DIVIDIDO        reduce using rule 31 (exp -> ID .)
+    POR             reduce using rule 31 (exp -> ID .)
+    MODULO          reduce using rule 31 (exp -> ID .)
+    MAYQUE          reduce using rule 31 (exp -> ID .)
+    MENIGUALQUE     reduce using rule 31 (exp -> ID .)
+    MAYIGUALQUE     reduce using rule 31 (exp -> ID .)
+    MENQUE          reduce using rule 31 (exp -> ID .)
+    IGUALQUE        reduce using rule 31 (exp -> ID .)
+    NIGUALQUE       reduce using rule 31 (exp -> ID .)
+    PRINT           reduce using rule 31 (exp -> ID .)
+    PRINTLN         reduce using rule 31 (exp -> ID .)
+    INT             reduce using rule 31 (exp -> ID .)
+    FLOAT           reduce using rule 31 (exp -> ID .)
+    TRUE            reduce using rule 31 (exp -> ID .)
+    FALSE           reduce using rule 31 (exp -> ID .)
+    cadenaString    reduce using rule 31 (exp -> ID .)
+    PARIZQ          reduce using rule 31 (exp -> ID .)
+    ID              reduce using rule 31 (exp -> ID .)
+    $end            reduce using rule 31 (exp -> ID .)
+    IGUAL           reduce using rule 12 (lista_ID -> ID .)
+    COMA            reduce using rule 12 (lista_ID -> ID .)
+
+
+state 18
+
+    (2) linstrucciones -> linstrucciones instrucciones .
+
+    PRINT           reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    PRINTLN         reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    INT             reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    FLOAT           reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    TRUE            reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    FALSE           reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    cadenaString    reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    PARIZQ          reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    ID              reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+    $end            reduce using rule 2 (linstrucciones -> linstrucciones instrucciones .)
+
+
+state 19
+
+    (32) exp -> exp MAS . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 36
+
+state 20
+
+    (33) exp -> exp MENOS . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 37
+
+state 21
+
+    (34) exp -> exp DIVIDIDO . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 38
+
+state 22
+
+    (35) exp -> exp POR . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 39
+
+state 23
+
+    (36) exp -> exp MODULO . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 40
+
+state 24
+
+    (37) exp -> exp MAYQUE . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 41
+
+state 25
+
+    (38) exp -> exp MENIGUALQUE . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 42
+
+state 26
+
+    (39) exp -> exp MAYIGUALQUE . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 43
+
+state 27
+
+    (40) exp -> exp MENQUE . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 44
+
+state 28
+
+    (41) exp -> exp IGUALQUE . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 45
+
+state 29
+
+    (42) exp -> exp NIGUALQUE . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 46
+
+state 30
+
+    (9) asignacion -> lista_ID IGUAL . exp
+    (10) asignacion -> lista_ID IGUAL . exp DOSP tipo
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+    ID              shift and go to state 34
+
+    exp                            shift and go to state 47
+
+state 31
+
+    (11) lista_ID -> lista_ID COMA . ID
+
+    ID              shift and go to state 48
+
+
+state 32
+
+    (13) imprimir -> PRINT PARIZQ . impresiones PARDER
+    (15) impresiones -> . impresiones COMA prima_impresiones
+    (16) impresiones -> . prima_impresiones
+    (17) prima_impresiones -> . ID
+    (18) prima_impresiones -> . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    ID              shift and go to state 51
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+
+    impresiones                    shift and go to state 49
+    prima_impresiones              shift and go to state 50
+    exp                            shift and go to state 52
+
+state 33
+
+    (30) exp -> PARIZQ exp . PARDER
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    PARDER          shift and go to state 53
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+    MAYQUE          shift and go to state 24
+    MENIGUALQUE     shift and go to state 25
+    MAYIGUALQUE     shift and go to state 26
+    MENQUE          shift and go to state 27
+    IGUALQUE        shift and go to state 28
+    NIGUALQUE       shift and go to state 29
+
+
+state 34
+
+    (31) exp -> ID .
+
+    PARDER          reduce using rule 31 (exp -> ID .)
+    MAS             reduce using rule 31 (exp -> ID .)
+    MENOS           reduce using rule 31 (exp -> ID .)
+    DIVIDIDO        reduce using rule 31 (exp -> ID .)
+    POR             reduce using rule 31 (exp -> ID .)
+    MODULO          reduce using rule 31 (exp -> ID .)
+    MAYQUE          reduce using rule 31 (exp -> ID .)
+    MENIGUALQUE     reduce using rule 31 (exp -> ID .)
+    MAYIGUALQUE     reduce using rule 31 (exp -> ID .)
+    MENQUE          reduce using rule 31 (exp -> ID .)
+    IGUALQUE        reduce using rule 31 (exp -> ID .)
+    NIGUALQUE       reduce using rule 31 (exp -> ID .)
+    PRINT           reduce using rule 31 (exp -> ID .)
+    PRINTLN         reduce using rule 31 (exp -> ID .)
+    INT             reduce using rule 31 (exp -> ID .)
+    FLOAT           reduce using rule 31 (exp -> ID .)
+    TRUE            reduce using rule 31 (exp -> ID .)
+    FALSE           reduce using rule 31 (exp -> ID .)
+    cadenaString    reduce using rule 31 (exp -> ID .)
+    PARIZQ          reduce using rule 31 (exp -> ID .)
+    ID              reduce using rule 31 (exp -> ID .)
+    $end            reduce using rule 31 (exp -> ID .)
+    DOSP            reduce using rule 31 (exp -> ID .)
+    COMA            reduce using rule 31 (exp -> ID .)
+
+
+state 35
+
+    (14) imprimirln -> PRINTLN PARIZQ . impresiones PARDER
+    (15) impresiones -> . impresiones COMA prima_impresiones
+    (16) impresiones -> . prima_impresiones
+    (17) prima_impresiones -> . ID
+    (18) prima_impresiones -> . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    ID              shift and go to state 51
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+
+    impresiones                    shift and go to state 54
+    prima_impresiones              shift and go to state 50
+    exp                            shift and go to state 52
+
+state 36
+
+    (32) exp -> exp MAS exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAS             reduce using rule 32 (exp -> exp MAS exp .)
+    MENOS           reduce using rule 32 (exp -> exp MAS exp .)
+    MAYQUE          reduce using rule 32 (exp -> exp MAS exp .)
+    MENIGUALQUE     reduce using rule 32 (exp -> exp MAS exp .)
+    MAYIGUALQUE     reduce using rule 32 (exp -> exp MAS exp .)
+    MENQUE          reduce using rule 32 (exp -> exp MAS exp .)
+    IGUALQUE        reduce using rule 32 (exp -> exp MAS exp .)
+    NIGUALQUE       reduce using rule 32 (exp -> exp MAS exp .)
+    PRINT           reduce using rule 32 (exp -> exp MAS exp .)
+    PRINTLN         reduce using rule 32 (exp -> exp MAS exp .)
+    INT             reduce using rule 32 (exp -> exp MAS exp .)
+    FLOAT           reduce using rule 32 (exp -> exp MAS exp .)
+    TRUE            reduce using rule 32 (exp -> exp MAS exp .)
+    FALSE           reduce using rule 32 (exp -> exp MAS exp .)
+    cadenaString    reduce using rule 32 (exp -> exp MAS exp .)
+    PARIZQ          reduce using rule 32 (exp -> exp MAS exp .)
+    ID              reduce using rule 32 (exp -> exp MAS exp .)
+    $end            reduce using rule 32 (exp -> exp MAS exp .)
+    PARDER          reduce using rule 32 (exp -> exp MAS exp .)
+    DOSP            reduce using rule 32 (exp -> exp MAS exp .)
+    COMA            reduce using rule 32 (exp -> exp MAS exp .)
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+
+  ! DIVIDIDO        [ reduce using rule 32 (exp -> exp MAS exp .) ]
+  ! POR             [ reduce using rule 32 (exp -> exp MAS exp .) ]
+  ! MODULO          [ reduce using rule 32 (exp -> exp MAS exp .) ]
+  ! MAS             [ shift and go to state 19 ]
+  ! MENOS           [ shift and go to state 20 ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 37
+
+    (33) exp -> exp MENOS exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAS             reduce using rule 33 (exp -> exp MENOS exp .)
+    MENOS           reduce using rule 33 (exp -> exp MENOS exp .)
+    MAYQUE          reduce using rule 33 (exp -> exp MENOS exp .)
+    MENIGUALQUE     reduce using rule 33 (exp -> exp MENOS exp .)
+    MAYIGUALQUE     reduce using rule 33 (exp -> exp MENOS exp .)
+    MENQUE          reduce using rule 33 (exp -> exp MENOS exp .)
+    IGUALQUE        reduce using rule 33 (exp -> exp MENOS exp .)
+    NIGUALQUE       reduce using rule 33 (exp -> exp MENOS exp .)
+    PRINT           reduce using rule 33 (exp -> exp MENOS exp .)
+    PRINTLN         reduce using rule 33 (exp -> exp MENOS exp .)
+    INT             reduce using rule 33 (exp -> exp MENOS exp .)
+    FLOAT           reduce using rule 33 (exp -> exp MENOS exp .)
+    TRUE            reduce using rule 33 (exp -> exp MENOS exp .)
+    FALSE           reduce using rule 33 (exp -> exp MENOS exp .)
+    cadenaString    reduce using rule 33 (exp -> exp MENOS exp .)
+    PARIZQ          reduce using rule 33 (exp -> exp MENOS exp .)
+    ID              reduce using rule 33 (exp -> exp MENOS exp .)
+    $end            reduce using rule 33 (exp -> exp MENOS exp .)
+    PARDER          reduce using rule 33 (exp -> exp MENOS exp .)
+    DOSP            reduce using rule 33 (exp -> exp MENOS exp .)
+    COMA            reduce using rule 33 (exp -> exp MENOS exp .)
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+
+  ! DIVIDIDO        [ reduce using rule 33 (exp -> exp MENOS exp .) ]
+  ! POR             [ reduce using rule 33 (exp -> exp MENOS exp .) ]
+  ! MODULO          [ reduce using rule 33 (exp -> exp MENOS exp .) ]
+  ! MAS             [ shift and go to state 19 ]
+  ! MENOS           [ shift and go to state 20 ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 38
+
+    (34) exp -> exp DIVIDIDO exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAS             reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    MENOS           reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    DIVIDIDO        reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    POR             reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    MODULO          reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    MAYQUE          reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    MENIGUALQUE     reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    MAYIGUALQUE     reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    MENQUE          reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    IGUALQUE        reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    NIGUALQUE       reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    PRINT           reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    PRINTLN         reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    INT             reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    FLOAT           reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    TRUE            reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    FALSE           reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    cadenaString    reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    PARIZQ          reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    ID              reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    $end            reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    PARDER          reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    DOSP            reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+    COMA            reduce using rule 34 (exp -> exp DIVIDIDO exp .)
+
+  ! MAS             [ shift and go to state 19 ]
+  ! MENOS           [ shift and go to state 20 ]
+  ! DIVIDIDO        [ shift and go to state 21 ]
+  ! POR             [ shift and go to state 22 ]
+  ! MODULO          [ shift and go to state 23 ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 39
+
+    (35) exp -> exp POR exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAS             reduce using rule 35 (exp -> exp POR exp .)
+    MENOS           reduce using rule 35 (exp -> exp POR exp .)
+    DIVIDIDO        reduce using rule 35 (exp -> exp POR exp .)
+    POR             reduce using rule 35 (exp -> exp POR exp .)
+    MODULO          reduce using rule 35 (exp -> exp POR exp .)
+    MAYQUE          reduce using rule 35 (exp -> exp POR exp .)
+    MENIGUALQUE     reduce using rule 35 (exp -> exp POR exp .)
+    MAYIGUALQUE     reduce using rule 35 (exp -> exp POR exp .)
+    MENQUE          reduce using rule 35 (exp -> exp POR exp .)
+    IGUALQUE        reduce using rule 35 (exp -> exp POR exp .)
+    NIGUALQUE       reduce using rule 35 (exp -> exp POR exp .)
+    PRINT           reduce using rule 35 (exp -> exp POR exp .)
+    PRINTLN         reduce using rule 35 (exp -> exp POR exp .)
+    INT             reduce using rule 35 (exp -> exp POR exp .)
+    FLOAT           reduce using rule 35 (exp -> exp POR exp .)
+    TRUE            reduce using rule 35 (exp -> exp POR exp .)
+    FALSE           reduce using rule 35 (exp -> exp POR exp .)
+    cadenaString    reduce using rule 35 (exp -> exp POR exp .)
+    PARIZQ          reduce using rule 35 (exp -> exp POR exp .)
+    ID              reduce using rule 35 (exp -> exp POR exp .)
+    $end            reduce using rule 35 (exp -> exp POR exp .)
+    PARDER          reduce using rule 35 (exp -> exp POR exp .)
+    DOSP            reduce using rule 35 (exp -> exp POR exp .)
+    COMA            reduce using rule 35 (exp -> exp POR exp .)
+
+  ! MAS             [ shift and go to state 19 ]
+  ! MENOS           [ shift and go to state 20 ]
+  ! DIVIDIDO        [ shift and go to state 21 ]
+  ! POR             [ shift and go to state 22 ]
+  ! MODULO          [ shift and go to state 23 ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 40
+
+    (36) exp -> exp MODULO exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAS             reduce using rule 36 (exp -> exp MODULO exp .)
+    MENOS           reduce using rule 36 (exp -> exp MODULO exp .)
+    DIVIDIDO        reduce using rule 36 (exp -> exp MODULO exp .)
+    POR             reduce using rule 36 (exp -> exp MODULO exp .)
+    MODULO          reduce using rule 36 (exp -> exp MODULO exp .)
+    MAYQUE          reduce using rule 36 (exp -> exp MODULO exp .)
+    MENIGUALQUE     reduce using rule 36 (exp -> exp MODULO exp .)
+    MAYIGUALQUE     reduce using rule 36 (exp -> exp MODULO exp .)
+    MENQUE          reduce using rule 36 (exp -> exp MODULO exp .)
+    IGUALQUE        reduce using rule 36 (exp -> exp MODULO exp .)
+    NIGUALQUE       reduce using rule 36 (exp -> exp MODULO exp .)
+    PRINT           reduce using rule 36 (exp -> exp MODULO exp .)
+    PRINTLN         reduce using rule 36 (exp -> exp MODULO exp .)
+    INT             reduce using rule 36 (exp -> exp MODULO exp .)
+    FLOAT           reduce using rule 36 (exp -> exp MODULO exp .)
+    TRUE            reduce using rule 36 (exp -> exp MODULO exp .)
+    FALSE           reduce using rule 36 (exp -> exp MODULO exp .)
+    cadenaString    reduce using rule 36 (exp -> exp MODULO exp .)
+    PARIZQ          reduce using rule 36 (exp -> exp MODULO exp .)
+    ID              reduce using rule 36 (exp -> exp MODULO exp .)
+    $end            reduce using rule 36 (exp -> exp MODULO exp .)
+    PARDER          reduce using rule 36 (exp -> exp MODULO exp .)
+    DOSP            reduce using rule 36 (exp -> exp MODULO exp .)
+    COMA            reduce using rule 36 (exp -> exp MODULO exp .)
+
+  ! MAS             [ shift and go to state 19 ]
+  ! MENOS           [ shift and go to state 20 ]
+  ! DIVIDIDO        [ shift and go to state 21 ]
+  ! POR             [ shift and go to state 22 ]
+  ! MODULO          [ shift and go to state 23 ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 41
+
+    (37) exp -> exp MAYQUE exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAYQUE          reduce using rule 37 (exp -> exp MAYQUE exp .)
+    MENIGUALQUE     reduce using rule 37 (exp -> exp MAYQUE exp .)
+    MAYIGUALQUE     reduce using rule 37 (exp -> exp MAYQUE exp .)
+    MENQUE          reduce using rule 37 (exp -> exp MAYQUE exp .)
+    IGUALQUE        reduce using rule 37 (exp -> exp MAYQUE exp .)
+    NIGUALQUE       reduce using rule 37 (exp -> exp MAYQUE exp .)
+    PRINT           reduce using rule 37 (exp -> exp MAYQUE exp .)
+    PRINTLN         reduce using rule 37 (exp -> exp MAYQUE exp .)
+    INT             reduce using rule 37 (exp -> exp MAYQUE exp .)
+    FLOAT           reduce using rule 37 (exp -> exp MAYQUE exp .)
+    TRUE            reduce using rule 37 (exp -> exp MAYQUE exp .)
+    FALSE           reduce using rule 37 (exp -> exp MAYQUE exp .)
+    cadenaString    reduce using rule 37 (exp -> exp MAYQUE exp .)
+    PARIZQ          reduce using rule 37 (exp -> exp MAYQUE exp .)
+    ID              reduce using rule 37 (exp -> exp MAYQUE exp .)
+    $end            reduce using rule 37 (exp -> exp MAYQUE exp .)
+    PARDER          reduce using rule 37 (exp -> exp MAYQUE exp .)
+    DOSP            reduce using rule 37 (exp -> exp MAYQUE exp .)
+    COMA            reduce using rule 37 (exp -> exp MAYQUE exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+
+  ! MAS             [ reduce using rule 37 (exp -> exp MAYQUE exp .) ]
+  ! MENOS           [ reduce using rule 37 (exp -> exp MAYQUE exp .) ]
+  ! DIVIDIDO        [ reduce using rule 37 (exp -> exp MAYQUE exp .) ]
+  ! POR             [ reduce using rule 37 (exp -> exp MAYQUE exp .) ]
+  ! MODULO          [ reduce using rule 37 (exp -> exp MAYQUE exp .) ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 42
+
+    (38) exp -> exp MENIGUALQUE exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAYQUE          reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    MENIGUALQUE     reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    MAYIGUALQUE     reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    MENQUE          reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    IGUALQUE        reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    NIGUALQUE       reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    PRINT           reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    PRINTLN         reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    INT             reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    FLOAT           reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    TRUE            reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    FALSE           reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    cadenaString    reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    PARIZQ          reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    ID              reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    $end            reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    PARDER          reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    DOSP            reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    COMA            reduce using rule 38 (exp -> exp MENIGUALQUE exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+
+  ! MAS             [ reduce using rule 38 (exp -> exp MENIGUALQUE exp .) ]
+  ! MENOS           [ reduce using rule 38 (exp -> exp MENIGUALQUE exp .) ]
+  ! DIVIDIDO        [ reduce using rule 38 (exp -> exp MENIGUALQUE exp .) ]
+  ! POR             [ reduce using rule 38 (exp -> exp MENIGUALQUE exp .) ]
+  ! MODULO          [ reduce using rule 38 (exp -> exp MENIGUALQUE exp .) ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 43
+
+    (39) exp -> exp MAYIGUALQUE exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAYQUE          reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    MENIGUALQUE     reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    MAYIGUALQUE     reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    MENQUE          reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    IGUALQUE        reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    NIGUALQUE       reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    PRINT           reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    PRINTLN         reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    INT             reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    FLOAT           reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    TRUE            reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    FALSE           reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    cadenaString    reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    PARIZQ          reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    ID              reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    $end            reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    PARDER          reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    DOSP            reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    COMA            reduce using rule 39 (exp -> exp MAYIGUALQUE exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+
+  ! MAS             [ reduce using rule 39 (exp -> exp MAYIGUALQUE exp .) ]
+  ! MENOS           [ reduce using rule 39 (exp -> exp MAYIGUALQUE exp .) ]
+  ! DIVIDIDO        [ reduce using rule 39 (exp -> exp MAYIGUALQUE exp .) ]
+  ! POR             [ reduce using rule 39 (exp -> exp MAYIGUALQUE exp .) ]
+  ! MODULO          [ reduce using rule 39 (exp -> exp MAYIGUALQUE exp .) ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 44
+
+    (40) exp -> exp MENQUE exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    MAYQUE          reduce using rule 40 (exp -> exp MENQUE exp .)
+    MENIGUALQUE     reduce using rule 40 (exp -> exp MENQUE exp .)
+    MAYIGUALQUE     reduce using rule 40 (exp -> exp MENQUE exp .)
+    MENQUE          reduce using rule 40 (exp -> exp MENQUE exp .)
+    IGUALQUE        reduce using rule 40 (exp -> exp MENQUE exp .)
+    NIGUALQUE       reduce using rule 40 (exp -> exp MENQUE exp .)
+    PRINT           reduce using rule 40 (exp -> exp MENQUE exp .)
+    PRINTLN         reduce using rule 40 (exp -> exp MENQUE exp .)
+    INT             reduce using rule 40 (exp -> exp MENQUE exp .)
+    FLOAT           reduce using rule 40 (exp -> exp MENQUE exp .)
+    TRUE            reduce using rule 40 (exp -> exp MENQUE exp .)
+    FALSE           reduce using rule 40 (exp -> exp MENQUE exp .)
+    cadenaString    reduce using rule 40 (exp -> exp MENQUE exp .)
+    PARIZQ          reduce using rule 40 (exp -> exp MENQUE exp .)
+    ID              reduce using rule 40 (exp -> exp MENQUE exp .)
+    $end            reduce using rule 40 (exp -> exp MENQUE exp .)
+    PARDER          reduce using rule 40 (exp -> exp MENQUE exp .)
+    DOSP            reduce using rule 40 (exp -> exp MENQUE exp .)
+    COMA            reduce using rule 40 (exp -> exp MENQUE exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+
+  ! MAS             [ reduce using rule 40 (exp -> exp MENQUE exp .) ]
+  ! MENOS           [ reduce using rule 40 (exp -> exp MENQUE exp .) ]
+  ! DIVIDIDO        [ reduce using rule 40 (exp -> exp MENQUE exp .) ]
+  ! POR             [ reduce using rule 40 (exp -> exp MENQUE exp .) ]
+  ! MODULO          [ reduce using rule 40 (exp -> exp MENQUE exp .) ]
+  ! MAYQUE          [ shift and go to state 24 ]
+  ! MENIGUALQUE     [ shift and go to state 25 ]
+  ! MAYIGUALQUE     [ shift and go to state 26 ]
+  ! MENQUE          [ shift and go to state 27 ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 45
+
+    (41) exp -> exp IGUALQUE exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    IGUALQUE        reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    NIGUALQUE       reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    PRINT           reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    PRINTLN         reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    INT             reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    FLOAT           reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    TRUE            reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    FALSE           reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    cadenaString    reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    PARIZQ          reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    ID              reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    $end            reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    PARDER          reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    DOSP            reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    COMA            reduce using rule 41 (exp -> exp IGUALQUE exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+    MAYQUE          shift and go to state 24
+    MENIGUALQUE     shift and go to state 25
+    MAYIGUALQUE     shift and go to state 26
+    MENQUE          shift and go to state 27
+
+  ! MAS             [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! MENOS           [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! DIVIDIDO        [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! POR             [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! MODULO          [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! MAYQUE          [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! MENIGUALQUE     [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! MAYIGUALQUE     [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! MENQUE          [ reduce using rule 41 (exp -> exp IGUALQUE exp .) ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 46
+
+    (42) exp -> exp NIGUALQUE exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    IGUALQUE        reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    NIGUALQUE       reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    PRINT           reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    PRINTLN         reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    INT             reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    FLOAT           reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    TRUE            reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    FALSE           reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    cadenaString    reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    PARIZQ          reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    ID              reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    $end            reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    PARDER          reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    DOSP            reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    COMA            reduce using rule 42 (exp -> exp NIGUALQUE exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+    MAYQUE          shift and go to state 24
+    MENIGUALQUE     shift and go to state 25
+    MAYIGUALQUE     shift and go to state 26
+    MENQUE          shift and go to state 27
+
+  ! MAS             [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! MENOS           [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! DIVIDIDO        [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! POR             [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! MODULO          [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! MAYQUE          [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! MENIGUALQUE     [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! MAYIGUALQUE     [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! MENQUE          [ reduce using rule 42 (exp -> exp NIGUALQUE exp .) ]
+  ! IGUALQUE        [ shift and go to state 28 ]
+  ! NIGUALQUE       [ shift and go to state 29 ]
+
+
+state 47
+
+    (9) asignacion -> lista_ID IGUAL exp .
+    (10) asignacion -> lista_ID IGUAL exp . DOSP tipo
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    PRINT           reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    PRINTLN         reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    INT             reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    FLOAT           reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    TRUE            reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    FALSE           reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    cadenaString    reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    PARIZQ          reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    ID              reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    $end            reduce using rule 9 (asignacion -> lista_ID IGUAL exp .)
+    DOSP            shift and go to state 55
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+    MAYQUE          shift and go to state 24
+    MENIGUALQUE     shift and go to state 25
+    MAYIGUALQUE     shift and go to state 26
+    MENQUE          shift and go to state 27
+    IGUALQUE        shift and go to state 28
+    NIGUALQUE       shift and go to state 29
+
+
+state 48
+
+    (11) lista_ID -> lista_ID COMA ID .
+
+    IGUAL           reduce using rule 11 (lista_ID -> lista_ID COMA ID .)
+    COMA            reduce using rule 11 (lista_ID -> lista_ID COMA ID .)
+
+
+state 49
+
+    (13) imprimir -> PRINT PARIZQ impresiones . PARDER
+    (15) impresiones -> impresiones . COMA prima_impresiones
+
+    PARDER          shift and go to state 56
+    COMA            shift and go to state 57
+
+
+state 50
+
+    (16) impresiones -> prima_impresiones .
+
+    PARDER          reduce using rule 16 (impresiones -> prima_impresiones .)
+    COMA            reduce using rule 16 (impresiones -> prima_impresiones .)
+
+
+state 51
+
+    (17) prima_impresiones -> ID .
+    (31) exp -> ID .
+
+  ! reduce/reduce conflict for PARDER resolved using rule 17 (prima_impresiones -> ID .)
+  ! reduce/reduce conflict for COMA resolved using rule 17 (prima_impresiones -> ID .)
+    PARDER          reduce using rule 17 (prima_impresiones -> ID .)
+    COMA            reduce using rule 17 (prima_impresiones -> ID .)
+    MAS             reduce using rule 31 (exp -> ID .)
+    MENOS           reduce using rule 31 (exp -> ID .)
+    DIVIDIDO        reduce using rule 31 (exp -> ID .)
+    POR             reduce using rule 31 (exp -> ID .)
+    MODULO          reduce using rule 31 (exp -> ID .)
+    MAYQUE          reduce using rule 31 (exp -> ID .)
+    MENIGUALQUE     reduce using rule 31 (exp -> ID .)
+    MAYIGUALQUE     reduce using rule 31 (exp -> ID .)
+    MENQUE          reduce using rule 31 (exp -> ID .)
+    IGUALQUE        reduce using rule 31 (exp -> ID .)
+    NIGUALQUE       reduce using rule 31 (exp -> ID .)
+
+  ! PARDER          [ reduce using rule 31 (exp -> ID .) ]
+  ! COMA            [ reduce using rule 31 (exp -> ID .) ]
+
+
+state 52
+
+    (18) prima_impresiones -> exp .
+    (32) exp -> exp . MAS exp
+    (33) exp -> exp . MENOS exp
+    (34) exp -> exp . DIVIDIDO exp
+    (35) exp -> exp . POR exp
+    (36) exp -> exp . MODULO exp
+    (37) exp -> exp . MAYQUE exp
+    (38) exp -> exp . MENIGUALQUE exp
+    (39) exp -> exp . MAYIGUALQUE exp
+    (40) exp -> exp . MENQUE exp
+    (41) exp -> exp . IGUALQUE exp
+    (42) exp -> exp . NIGUALQUE exp
+
+    PARDER          reduce using rule 18 (prima_impresiones -> exp .)
+    COMA            reduce using rule 18 (prima_impresiones -> exp .)
+    MAS             shift and go to state 19
+    MENOS           shift and go to state 20
+    DIVIDIDO        shift and go to state 21
+    POR             shift and go to state 22
+    MODULO          shift and go to state 23
+    MAYQUE          shift and go to state 24
+    MENIGUALQUE     shift and go to state 25
+    MAYIGUALQUE     shift and go to state 26
+    MENQUE          shift and go to state 27
+    IGUALQUE        shift and go to state 28
+    NIGUALQUE       shift and go to state 29
+
+
+state 53
+
+    (30) exp -> PARIZQ exp PARDER .
+
+    MAS             reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    MENOS           reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    DIVIDIDO        reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    POR             reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    MODULO          reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    MAYQUE          reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    MENIGUALQUE     reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    MAYIGUALQUE     reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    MENQUE          reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    IGUALQUE        reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    NIGUALQUE       reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    PRINT           reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    PRINTLN         reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    INT             reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    FLOAT           reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    TRUE            reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    FALSE           reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    cadenaString    reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    PARIZQ          reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    ID              reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    $end            reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    PARDER          reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    DOSP            reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+    COMA            reduce using rule 30 (exp -> PARIZQ exp PARDER .)
+
+
+state 54
+
+    (14) imprimirln -> PRINTLN PARIZQ impresiones . PARDER
+    (15) impresiones -> impresiones . COMA prima_impresiones
+
+    PARDER          shift and go to state 58
+    COMA            shift and go to state 57
+
+
+state 55
+
+    (10) asignacion -> lista_ID IGUAL exp DOSP . tipo
+    (19) tipo -> . INT
+    (20) tipo -> . BOOL
+    (21) tipo -> . FLOAT
+    (22) tipo -> . STRING
+    (23) tipo -> . NONE
+    (24) tipo -> .
+
+  ! shift/reduce conflict for INT resolved as shift
+  ! shift/reduce conflict for FLOAT resolved as shift
+    INT             shift and go to state 60
+    BOOL            shift and go to state 61
+    FLOAT           shift and go to state 62
+    STRING          shift and go to state 63
+    NONE            shift and go to state 64
+    PRINT           reduce using rule 24 (tipo -> .)
+    PRINTLN         reduce using rule 24 (tipo -> .)
+    TRUE            reduce using rule 24 (tipo -> .)
+    FALSE           reduce using rule 24 (tipo -> .)
+    cadenaString    reduce using rule 24 (tipo -> .)
+    PARIZQ          reduce using rule 24 (tipo -> .)
+    ID              reduce using rule 24 (tipo -> .)
+    $end            reduce using rule 24 (tipo -> .)
+
+  ! INT             [ reduce using rule 24 (tipo -> .) ]
+  ! FLOAT           [ reduce using rule 24 (tipo -> .) ]
+
+    tipo                           shift and go to state 59
+
+state 56
+
+    (13) imprimir -> PRINT PARIZQ impresiones PARDER .
+
+    PRINT           reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    PRINTLN         reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    INT             reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    FLOAT           reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    TRUE            reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    FALSE           reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    cadenaString    reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    PARIZQ          reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    ID              reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+    $end            reduce using rule 13 (imprimir -> PRINT PARIZQ impresiones PARDER .)
+
+
+state 57
+
+    (15) impresiones -> impresiones COMA . prima_impresiones
+    (17) prima_impresiones -> . ID
+    (18) prima_impresiones -> . exp
+    (25) exp -> . INT
+    (26) exp -> . FLOAT
+    (27) exp -> . TRUE
+    (28) exp -> . FALSE
+    (29) exp -> . cadenaString
+    (30) exp -> . PARIZQ exp PARDER
+    (31) exp -> . ID
+    (32) exp -> . exp MAS exp
+    (33) exp -> . exp MENOS exp
+    (34) exp -> . exp DIVIDIDO exp
+    (35) exp -> . exp POR exp
+    (36) exp -> . exp MODULO exp
+    (37) exp -> . exp MAYQUE exp
+    (38) exp -> . exp MENIGUALQUE exp
+    (39) exp -> . exp MAYIGUALQUE exp
+    (40) exp -> . exp MENQUE exp
+    (41) exp -> . exp IGUALQUE exp
+    (42) exp -> . exp NIGUALQUE exp
+
+    ID              shift and go to state 51
+    INT             shift and go to state 12
+    FLOAT           shift and go to state 13
+    TRUE            shift and go to state 14
+    FALSE           shift and go to state 15
+    cadenaString    shift and go to state 16
+    PARIZQ          shift and go to state 10
+
+    prima_impresiones              shift and go to state 65
+    exp                            shift and go to state 52
+
+state 58
+
+    (14) imprimirln -> PRINTLN PARIZQ impresiones PARDER .
+
+    PRINT           reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    PRINTLN         reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    INT             reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    FLOAT           reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    TRUE            reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    FALSE           reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    cadenaString    reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    PARIZQ          reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    ID              reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+    $end            reduce using rule 14 (imprimirln -> PRINTLN PARIZQ impresiones PARDER .)
+
+
+state 59
+
+    (10) asignacion -> lista_ID IGUAL exp DOSP tipo .
+
+    PRINT           reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    PRINTLN         reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    INT             reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    FLOAT           reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    TRUE            reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    FALSE           reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    cadenaString    reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    PARIZQ          reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    ID              reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+    $end            reduce using rule 10 (asignacion -> lista_ID IGUAL exp DOSP tipo .)
+
+
+state 60
+
+    (19) tipo -> INT .
+
+    PRINT           reduce using rule 19 (tipo -> INT .)
+    PRINTLN         reduce using rule 19 (tipo -> INT .)
+    INT             reduce using rule 19 (tipo -> INT .)
+    FLOAT           reduce using rule 19 (tipo -> INT .)
+    TRUE            reduce using rule 19 (tipo -> INT .)
+    FALSE           reduce using rule 19 (tipo -> INT .)
+    cadenaString    reduce using rule 19 (tipo -> INT .)
+    PARIZQ          reduce using rule 19 (tipo -> INT .)
+    ID              reduce using rule 19 (tipo -> INT .)
+    $end            reduce using rule 19 (tipo -> INT .)
+
+
+state 61
+
+    (20) tipo -> BOOL .
+
+    PRINT           reduce using rule 20 (tipo -> BOOL .)
+    PRINTLN         reduce using rule 20 (tipo -> BOOL .)
+    INT             reduce using rule 20 (tipo -> BOOL .)
+    FLOAT           reduce using rule 20 (tipo -> BOOL .)
+    TRUE            reduce using rule 20 (tipo -> BOOL .)
+    FALSE           reduce using rule 20 (tipo -> BOOL .)
+    cadenaString    reduce using rule 20 (tipo -> BOOL .)
+    PARIZQ          reduce using rule 20 (tipo -> BOOL .)
+    ID              reduce using rule 20 (tipo -> BOOL .)
+    $end            reduce using rule 20 (tipo -> BOOL .)
+
+
+state 62
+
+    (21) tipo -> FLOAT .
+
+    PRINT           reduce using rule 21 (tipo -> FLOAT .)
+    PRINTLN         reduce using rule 21 (tipo -> FLOAT .)
+    INT             reduce using rule 21 (tipo -> FLOAT .)
+    FLOAT           reduce using rule 21 (tipo -> FLOAT .)
+    TRUE            reduce using rule 21 (tipo -> FLOAT .)
+    FALSE           reduce using rule 21 (tipo -> FLOAT .)
+    cadenaString    reduce using rule 21 (tipo -> FLOAT .)
+    PARIZQ          reduce using rule 21 (tipo -> FLOAT .)
+    ID              reduce using rule 21 (tipo -> FLOAT .)
+    $end            reduce using rule 21 (tipo -> FLOAT .)
+
+
+state 63
+
+    (22) tipo -> STRING .
+
+    PRINT           reduce using rule 22 (tipo -> STRING .)
+    PRINTLN         reduce using rule 22 (tipo -> STRING .)
+    INT             reduce using rule 22 (tipo -> STRING .)
+    FLOAT           reduce using rule 22 (tipo -> STRING .)
+    TRUE            reduce using rule 22 (tipo -> STRING .)
+    FALSE           reduce using rule 22 (tipo -> STRING .)
+    cadenaString    reduce using rule 22 (tipo -> STRING .)
+    PARIZQ          reduce using rule 22 (tipo -> STRING .)
+    ID              reduce using rule 22 (tipo -> STRING .)
+    $end            reduce using rule 22 (tipo -> STRING .)
+
+
+state 64
+
+    (23) tipo -> NONE .
+
+    PRINT           reduce using rule 23 (tipo -> NONE .)
+    PRINTLN         reduce using rule 23 (tipo -> NONE .)
+    INT             reduce using rule 23 (tipo -> NONE .)
+    FLOAT           reduce using rule 23 (tipo -> NONE .)
+    TRUE            reduce using rule 23 (tipo -> NONE .)
+    FALSE           reduce using rule 23 (tipo -> NONE .)
+    cadenaString    reduce using rule 23 (tipo -> NONE .)
+    PARIZQ          reduce using rule 23 (tipo -> NONE .)
+    ID              reduce using rule 23 (tipo -> NONE .)
+    $end            reduce using rule 23 (tipo -> NONE .)
+
+
+state 65
+
+    (15) impresiones -> impresiones COMA prima_impresiones .
+
+    PARDER          reduce using rule 15 (impresiones -> impresiones COMA prima_impresiones .)
+    COMA            reduce using rule 15 (impresiones -> impresiones COMA prima_impresiones .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for INT in state 55 resolved as shift
+WARNING: shift/reduce conflict for FLOAT in state 55 resolved as shift
+WARNING: reduce/reduce conflict in state 51 resolved using rule (prima_impresiones -> ID)
+WARNING: rejected rule (exp -> ID) in state 51

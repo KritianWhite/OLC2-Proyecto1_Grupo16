@@ -1,4 +1,4 @@
-from Patron_Interprete.Tabla_Simbolos.Tipos import Tipo
+from Patron_Interprete.Tabla_Simbolos.Tipos import Tipos
 from Patron_Interprete.Entorno import Entorno
 from Patron_Interprete.Tabla_Simbolos.Simbolos import Simbolos
 from Patron_Interprete.Abstracto.Instruccion import Intruccion
@@ -9,7 +9,7 @@ class Identificador(Intruccion):
         self.identificador =  identificador
         self.fila = fila
         self.columna = columna
-        self.tipo = Tipo.NULLO
+        self.tipo = Tipos.NULLO
 
     def ejecutar(self, entorno:Entorno , listaMensajes):
         simbolo : Simbolos=entorno.buscarSimbolo(self.identificador)

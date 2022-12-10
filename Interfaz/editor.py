@@ -1,3 +1,5 @@
+import Analizador.gramatica as gramatica
+
 import tkinter
 import sys
 sys.setrecursionlimit(5000)
@@ -97,9 +99,9 @@ def main():
 
     clearTextOutPut()
     tk_text_Output.insert("1.0", salida)
-    tk_text_OutputError.insert("1.0", outPutError)
+    #tk_text_OutputError.insert("1.0", outPutError)
     contLineasEjecutar()
-    ReporteErroresHtml(listaMensajes)
+    #ReporteErroresHtml(listaMensajes)
          
 
 
