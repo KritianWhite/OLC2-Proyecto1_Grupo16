@@ -1,4 +1,4 @@
-from Patron_Interprete.Tabla_Simbolos.Tipos import Tipos
+from Patron_Interprete.Tabla_Simbolos.Tipos import tipo
 from Patron_Interprete.Expresion.Declaracion import Declaracion
 from Patron_Interprete.Expresion.Primitivo import Primitivo
 from Patron_Interprete.Expresion.Identificador import Identificador
@@ -224,13 +224,13 @@ def p_funcNativas(t):
 #Declaracion normal
 def p_asignacion1(t):
     'asignacion :  lista_ID IGUAL  exp '
-    t[0] = Declaracion(t.lineno(1), find_column(input, t.slice[1]), str(t[1]),None, t[3], False)
+    t[0] = Declaracion(t.lineno(1), find_column(input, t.slice[1]), str(t[1]),None, t[3])
      #(self,fila,columna,identificador, tipo, expresion=None,es_mutable=False
 
 #Declaracion con tipo
 def p_asignacion2(t):
     'asignacion :  lista_ID IGUAL  exp DOSP tipo '
-    t[0] = Declaracion(t.lineno(1), find_column(input, t.slice[1]), str(t[1]),t[5], t[3], False)
+    t[0] = Declaracion(t.lineno(1), find_column(input, t.slice[1]), str(t[1]),t[5], t[3])
      #(self,fila,columna,identificador, tipo, expresion=None,es_mutable=False
 
 def p_listaParametros(t):
@@ -278,35 +278,35 @@ def p_tipo(t):
         '''
     #print(str(Tipo.getTipo(str(t[1]))))
     if str(t[1]).lower()== "int":
-        t[0]= Tipos.ENTERO
+        t[0]= tipo.ENTERO
     elif str((t[1])).lower() == "float":
-        t[0]= Tipos.DOBLE
+        t[0]= tipo.DECIMAL
     elif str((t[1])).lower() == "bool": 
-        t[0]= Tipos.BOOLEANO
+        t[0]= tipo.BOOLEANO
     elif str((t[1])) == "string":
        # print("reconocio string ")
-        t[0]= Tipos.STRING
+        t[0]= tipo.STRING
 
 
 def p_exp(t):
     'exp : INT'
    
     t[0] = Primitivo(t.lineno(1), find_column(
-       input, t.slice[1]), Tipos.ENTERO, int(t[1]))
+       input, t.slice[1]), tipo.ENTERO, int(t[1]))
 
 def p_exp2(t):
     'exp : FLOAT'
  
     t[0] = Primitivo(t.lineno(1), find_column(
-        input, t.slice[1]), Tipos.DOBLE,float(t[1]))
+        input, t.slice[1]), tipo.DECIMAL,float(t[1]))
 
 def p_expTrue(t):
     'exp : TRUE'
-    t[0] =  Primitivo(t.lineno(1), find_column(input, t.slice[1]), Tipos.BOOLEANO, True)
+    t[0] =  Primitivo(t.lineno(1), find_column(input, t.slice[1]), tipo.BOOLEANO, True)
 
 def p_expFalse(t):
     'exp : FALSE'
-    t[0] =  Primitivo(t.lineno(1), find_column(input, t.slice[1]), Tipos.BOOLEANO, False)
+    t[0] =  Primitivo(t.lineno(1), find_column(input, t.slice[1]), tipo.BOOLEANO, False)
 
  
 
@@ -316,7 +316,7 @@ def p_expFalse(t):
 def  p_exp7(t):
     'exp : cadenaString'
     print("reconoce cadena")
-    t[0] = Primitivo(t.lineno(1),find_column(input, t.slice[1]), Tipos.STR ,str(t[1]))    
+    t[0] = Primitivo(t.lineno(1),find_column(input, t.slice[1]), tipo.STRING ,str(t[1]))
     
 def p_exp8(t):
     'exp : PARIZQ exp PARDER'
@@ -389,11 +389,11 @@ def analizar(data):
     global listaMensajes
     listaMensajes.clear()
     instrucciones = parser.parse(data)
-    entornoGlobal = Generador3D(None)
+    entornoGlobal = Generador3D()
     manejadorGlobal = Controlador()
 
     for ins in instrucciones:
-           valor = ins.traducir(entornoGlobal,manejadorGlobal)
+           valor = ins.Ejecutar3D(entornoGlobal,manejadorGlobal)
 
     cod = manejadorGlobal.codigo
    

@@ -5,10 +5,12 @@ from Patron_Interprete.Tabla_Simbolos.Tipos import tipo, RetornoType
 
 class Declaracion(Intruccion):
 
-    def __init__(self, id: Identificador, expresion, tipo):
+    def __init__(self, fila, columna, id: Identificador, tipo, expresion):
         self.identificador = id
         self.expresion = expresion
         self.tipo = tipo
+        self.fila = fila
+        self.columna = columna
 
 
     def Ejecutar3D(self, controlador, ts):
@@ -91,7 +93,7 @@ class Declaracion(Intruccion):
                     return codigo
             else:
                 newSimbolo = Simbolos()
-                newSimbolo.SimboloPremitivo(self.identificador.id, None, tipo.UNDEFINED, self.mut,sizeTabla)
+                newSimbolo.SimboloPremitivo(self.identificador.id, None, tipo.UNDEFINED)
                 ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
 
        # print("=== SE DECLARO LA VARIABLES === ", self.identificador.id)
