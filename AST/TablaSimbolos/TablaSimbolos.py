@@ -21,6 +21,7 @@ class TablaDeSimbolos():
                 padre.siguiente.append(self)
 
     def Agregar_Simbolo(self, id, simbolo):
+        #self.tabla["main"] = simbolo
         print("Agregando: ", id, " con simbolo: ", simbolo, " en: ", self.name)
         if not self.Existe_id(id):
             self.tabla[id] = simbolo

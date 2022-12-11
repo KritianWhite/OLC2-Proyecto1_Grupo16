@@ -48,8 +48,8 @@ class Simbolos() :
         self.direccion = direccion
 
     def SimboloFuncion(self,id,parametros,instrucciones,tipo):
-        self.id = id
-        self.tipo = tipo
+        self.id = "main"
+        self.tipo = "main"
         self.parametros = parametros
         self.instrucciones = instrucciones
 

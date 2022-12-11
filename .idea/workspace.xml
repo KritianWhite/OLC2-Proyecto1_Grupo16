@@ -6,19 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Funcion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Funcion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/Simbolos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/Simbolos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parser.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parsetab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.py" afterDir="false" />
     </list>
     <list id="02073b61-f00c-40e3-87db-7f4a9a868334" name="Changes by Boror" comment="" />
-    <list id="370a197f-192e-48fa-8608-2c16d7302846" name="Changes by Julio R" comment="">
-      <change beforePath="$PROJECT_DIR$/Generador3D/Generador3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generador3D/Generador3D.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.py" afterDir="false" />
-    </list>
+    <list id="370a197f-192e-48fa-8608-2c16d7302846" name="Changes by Julio R" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,27 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/UI/UI.py">
-      <ranges>
-        <range start1="12" end1="13" start2="12" end2="12" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="19" end1="21" start2="18" end2="20" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="54" end1="55" start2="53" end2="54" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="58" end1="59" start2="57" end2="58" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="60" end1="62" start2="59" end2="60" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="63" end1="64" start2="61" end2="62" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="65" end1="66" start2="63" end2="64" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="67" end1="70" start2="65" end2="66" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="71" end1="72" start2="67" end2="68" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="73" end1="74" start2="69" end2="70" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="75" end1="76" start2="71" end2="72" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="78" end1="79" start2="74" end2="75" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="84" end1="85" start2="80" end2="81" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="90" end1="91" start2="86" end2="87" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="100" end1="101" start2="96" end2="97" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -109,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670735766977</updated>
-      <workItem from="1670735768635" duration="11542000" />
+      <workItem from="1670735768635" duration="16965000" />
     </task>
     <servers />
   </component>
@@ -121,7 +96,8 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica.coverage" NAME="Gramatica Coverage Results" MODIFIED="1670748362150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1670748593444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica.coverage" NAME="Gramatica Coverage Results" MODIFIED="1670751214893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Funcion.coverage" NAME="Funcion Coverage Results" MODIFIED="1670750936203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1670754034597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>
