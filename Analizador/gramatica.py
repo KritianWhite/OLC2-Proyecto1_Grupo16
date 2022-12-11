@@ -290,6 +290,7 @@ def p_instruccion(t):
                     | asignacion
                     | declaracion_arreglo
                     | star_struct
+
                     '''
 
     t[0] = t[1]
@@ -603,14 +604,16 @@ def p_lista_expres(t):
 
     else:
         t[0] = [t[1]]
-
+#PRINT PI CADENA PD
 def p_funciones(t):
     '''funcion  : FUNCION MAIN PI PD LI lista_bloque LD
-                |  FUNCION ID PI PD tipo_funcion LI lista_bloque LD
+                | FUNCION ID PI PD tipo_funcion LI lista_bloque LD
                 |  FUNCION ID PI parametros PD tipo_funcion LI lista_bloque LD'''
 
     if len(t) == 8:
+        #t[0] = Funcion.Funcion(None, None, [], t[5])
         t[0] = Funcion.Funcion(t[2], None, [], t[6])
+        #t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), False, [])
     elif len(t) == 9:
         t[0] = Funcion.Funcion(t[2], t[5], [], t[7])
     elif len(t) == 10:

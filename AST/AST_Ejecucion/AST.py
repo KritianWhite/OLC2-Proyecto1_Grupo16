@@ -49,7 +49,7 @@ class AST(Intruccion):
             return controlador.consola
 
         #except:
-            #print("Err")
+        #    print("Err")
 
     def Reporte_Tabla_simbolos(self, ts):
         Reporte = '<center><h6 class=\"titulos\" ><b>' + "Tabla Simbolos" + '</b></h6>\n'

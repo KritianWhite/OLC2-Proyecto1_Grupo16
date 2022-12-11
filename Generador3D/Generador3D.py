@@ -25,18 +25,21 @@ class Generador3D:
 
     def agregarReturn(self,nombre):
         self.listareturn.append(nombre)
-
+## se modifica encabezado para go
     def generarEncabezado(self):
         encabezado = ""
         encabezado += """
-#include <iostream>
-float Stack[10000];
-float Heap[10000];
+package main
 
-int SP = 0;
-int HP = 0;\n"""
-        if self.temporales > 0:
-            encabezado += "float "
+import ("fmt")
+
+var SP, HP int;
+var stack [30101999]float64;
+var heap [30101999]float64;
+ SP = 0;
+ HP = 0;\n"""
+        if self.temporales > 0:   ## se modifica la manera para declarar las variables temporales
+            encabezado += "var "
         for i in range(0, self.temporales):
             if i % 15 == 0 and i > 0:
                 encabezado += "\n"
@@ -45,16 +48,16 @@ int HP = 0;\n"""
                 encabezado += ","
 
         if self.temporales > 0:
-            encabezado += "; \n\n"
+            encabezado += "float64; \n\n"
 
         if len(self.listareturn) > 0:
-            encabezado += "float "
+            encabezado += "var "
             for i in range(0, len(self.listareturn)):
                 if i == len(self.listareturn) - 1:
                     encabezado += self.listareturn[i]
                 else:
                     encabezado += self.listareturn[i] + ","
-            encabezado += "; \n\n"
+            encabezado += "float64; \n\n"
 
         return encabezado
 
@@ -62,15 +65,13 @@ int HP = 0;\n"""
         self.main += codigo + '\n'
         print(self.main)
 
+        ##elimina return 0 go no lo lleva \treturn 0;
     def generarMain(self):
         codigo_SALIDA = self.generarEncabezado()
         codigo_SALIDA += self.codigo + '\n'
         codigo_SALIDA += self.declararfuciones() + "\n\n\n"
         codigo_SALIDA += self.funciones
-        codigo_SALIDA += "int main(){ \n" \
-                         f"{self.main} \n" \
-                         f"\treturn 0;" \
-                         "\n}"
+        codigo_SALIDA += 'func main()' + "{" + f'\n {self.main}  \n' + "}"
         return codigo_SALIDA
 
     def declararfuciones(self):
