@@ -465,11 +465,11 @@ class Imprimir(Intruccion):
             codigo += f'\t{temp}  = {valorexp.temporal};\n'
             etq1 = controlador.Generador3D.obtenerEtiqueta()
             etq2 = controlador.Generador3D.obtenerEtiqueta()
-
+            ## se modifica el printf() por fmt.Printf() para Goland
             codigo += f'\t{etq1}: \n'
             codigo += f'\t{caracter} = Heap[(int){temp}]; \n'
             codigo += f'\tif({caracter} == 0) goto {etq2};\n' \
-                      f'\tprintf(\"%c\",(char){caracter});\n' \
+                      f'\tfmt.Printf(\"%c\",(char){caracter});\n' \
                       f'\t{temp} = {temp} + 1;\n' \
                       f'\tgoto {etq1};\n' \
                       f'\t{etq2}:\n'
@@ -606,7 +606,7 @@ class Imprimir(Intruccion):
         codigo += f'\tif({caracter} == 165) goto {etq3};\n'
         codigo += f'\tif({caracter} == 162) goto {etq4};\n'
 
-        codigo += f'\tprintf(\"%c\",(char){caracter});\n'
+        codigo += f'\tfmt.Printf(\"%c\",(char){caracter});\n'
         codigo += f'\tgoto {etq5};\n'
         # string----------------
         codigo += f'\t{etq6}:\n'
@@ -619,20 +619,20 @@ class Imprimir(Intruccion):
         codigo += f'\tgoto {etq5};\n'
 
         codigo += f'\t{etq8}:\n'
-        codigo += f'\tprintf(\"%c\",(char){caracterTemp});\n'
+        codigo += f'\tfmt.Printf(\"%c\",(char){caracterTemp});\n'
         codigo += f'\t{temp2} = {temp2} + 1;\n'
         codigo += f'\tgoto {etq7};\n'
         # -------------------------
         codigo += f'\t{etq3}:\n' \
                   f'\t{temp} = {temp} + 1;\n' \
                   f'\t{caracter} = Heap[(int){temp}]; \n' \
-                  f'\tprintf(\"%d\",(int){caracter});\n'
+                  f'\tfmt.Printf(\"%d\",(int){caracter});\n'
         codigo += f'\tgoto {etq5};\n'
 
         codigo += f'\t{etq4}:\n' \
                   f'\t{temp} = {temp} + 1;\n' \
                   f'\t{caracter} = Heap[(int){temp}]; \n' \
-                  f'\tprintf(\"%f\",{caracter});\n'
+                  f'\tfmt.Printf(\"%f\",{caracter});\n'
 
         codigo += f'\t{etq5}:\n'
         codigo += f'\t{temp} = {temp} + 1;\n' \
@@ -669,7 +669,7 @@ class Imprimir(Intruccion):
         codigo += f'\tif({caracter} == 165) goto {etq3};\n'
         codigo += f'\tif({caracter} == 162) goto {etq4};\n'
 
-        codigo += f'\tprintf(\"%c\",(char){caracter});\n'
+        codigo += f'\tfmt.Printf(\"%c\",(char){caracter});\n'
         codigo += f'\tgoto {etq5};\n'
         # string----------------
         codigo += f'\t{etq6}:\n'
@@ -682,20 +682,20 @@ class Imprimir(Intruccion):
         codigo += f'\tgoto {etq5};\n'
 
         codigo += f'\t{etq8}:\n'
-        codigo += f'\tprintf(\"%c\",(char){caracterTemp});\n'
+        codigo += f'\tfmt.Printf(\"%c\",(char){caracterTemp});\n'
         codigo += f'\t{temp2} = {temp2} + 1;\n'
         codigo += f'\tgoto {etq7};\n'
         # -------------------------
         codigo += f'\t{etq3}:\n' \
                   f'\t{temp} = {temp} + 1;\n' \
                   f'\t{caracter} = Heap[(int){temp}]; \n' \
-                  f'\tprintf(\"%d\",(int){caracter});\n'
+                  f'\tfmt.Printf(\"%d\",(int){caracter});\n'
         codigo += f'\tgoto {etq5};\n'
 
         codigo += f'\t{etq4}:\n' \
                   f'\t{temp} = {temp} + 1;\n' \
                   f'\t{caracter} = Heap[(int){temp}]; \n' \
-                  f'\tprintf(\"%f\",{caracter});\n'
+                  f'\tfmt.Printf(\"%f\",{caracter});\n'
 
         codigo += f'\t{etq5}:\n'
         codigo += f'\t{temp} = {temp} + 1;\n' \
