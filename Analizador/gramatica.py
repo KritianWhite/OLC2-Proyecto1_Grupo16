@@ -16,8 +16,8 @@ reservadas = {
     # CASTEO
     'as': 'AS',
     # IMPRIMIR
-    'println!': 'PRINTLN',
-    'print!': 'PRINT',
+    'println': 'PRINTLN',
+    'print': 'PRINT',
     # DECLARAR
     'let': 'LET',
     'mut': 'MUT',
@@ -308,21 +308,21 @@ def p_lista_bloque(t):
         t[0] = [t[1]]
 
 def p_bloque(t):
-    '''bloque : impresiones PYC
+    '''bloque : impresiones
                 | declaracion
-                | asignacion PYC
-                | llamada PYC
+                | asignacion
+                | llamada
                 | start_match
                 | start_if
                 | start_while
-                | return_ins PYC
-                | break_ins PYC
-                | continue_ins PYC
+                | return_ins
+                | break_ins
+                | continue_ins
                 | start_loop
                 | declaracion_arreglo
                 | asignacion_arreglo
                 | start_for
-                | funcion_nativa PYC
+                | funcion_nativa
                 | '''
 
     if len(t) > 1:
@@ -416,7 +416,7 @@ def p_asignacion_arreglo(t):
     t[0] = t[1]
 
 def p_declaracion_arreglo(t):
-    '''declaracion_arreglo : LET mutable ID validacion_dimension IGUAL expresiones PYC '''
+    '''declaracion_arreglo : LET mutable ID validacion_dimension IGUAL expresiones '''
     t[0]= DeclaracionArreglo.DeclaracionArreglo(t[2],t[3],t[4],t[6],None)
 
 def p_validacion_dimension(t):
@@ -607,17 +607,16 @@ def p_lista_expres(t):
         t[0] = [t[1]]
 #PRINT PI CADENA PD
 def p_funciones(t):
-    '''funcion  : FUNCION LI lista_bloque LD
+    '''funcion  : LI lista_bloque LD
                 | FUNCION ID PI PD tipo_funcion LI lista_bloque LD
                 |  FUNCION ID PI parametros PD tipo_funcion LI lista_bloque LD
                 '''
 
 
 
-    if len(t) == 5:
-        t[0] = Funcion.Funcion(None, None, [], t[3])
+    if len(t) == 4:
+        t[0] = Funcion.Funcion(None, None, [], t[2])
         #t[0] = Funcion.Funcion(t[2], None, [], t[6])
-        #t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), False, [])
     elif len(t) == 9:
         t[0] = Funcion.Funcion(t[2], t[5], [], t[7])
     elif len(t) == 10:
@@ -697,14 +696,14 @@ def p_tipo_funcion(t):
 
 def p_declaracion(t):
     '''declaracion  : LET mutable ID tipado PYC
-                        | LET mutable ID tipado IGUAL expresiones PYC
+                        | LET mutable ID tipado IGUAL expresiones
                         | LET mutable ID DP  tipado_vector IGUAL expresiones PYC
                         | LET mutable ID tipado IGUAL definition_strct_v2 PYC'''
 
     if len(t) == 6:
         t[0] = Declaracion.Declaracion(Identificador.Identificador(t[3]), None, t[4], t[2])
 
-    elif len(t) == 8:
+    elif len(t) == 7:
 
         t[0] = Declaracion.Declaracion(Identificador.Identificador(t[3]), t[6], t[4], t[2])
     else:
@@ -723,7 +722,7 @@ def p_tipado_vect(t):
         t[0]=t[3]
 
 
-def p_asignacio(t):
+def p_asignacion(t):
     '''asignacion      : ID IGUAL expresiones
                         '''
     t[0] = Asignacion.Asignacion(t[1], t[3])
@@ -781,20 +780,20 @@ def p_instruccion_imprimir(t):
 
     if len(t) == 5:
 
-        if t[1] == 'println!':
+        if t[1] == 'println':
             t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), True, [])
             # print("\nRe reocnocio: println! con el token: ", t[3], "\n")
-        elif t[1] == 'print!':
+        elif t[1] == 'print':
             t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), False, [])
             # print("\nRe reocnocio: print! con el token: ", t[3], "\n")
 
     else:
 
-        if t[1] == 'println!':
+        if t[1] == 'println':
             t[0] = Imprimir.Imprimir(t[3], True, t[5])
             # print("\nRe reocnocio: println! con el token: ", t[5], "\n")
 
-        elif t[1] == 'print!':
+        elif t[1] == 'print':
             t[0] = Imprimir.Imprimir(t[3], False, t[5])
             # print("\nRe reocnocio: print! con el token: ", t[5], "\n")
 

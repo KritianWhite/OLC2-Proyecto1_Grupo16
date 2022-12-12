@@ -17,7 +17,7 @@ class Primitivo(Expresion):
         codigo = ""
         retorno = RetornoType(self.valor)
 
-        if self.tipo.tipo == ttipo.ENTERO or self.tipo.tipo == ttipo.USIZE or  self.tipo.tipo == ttipo.DECIMAL:
+        if self.tipo.tipo == ttipo.ENTERO or self.tipo.tipo == ttipo.USIZE or self.tipo.tipo == ttipo.DECIMAL:
             temp = controlador.Generador3D.obtenerTemporal()
             codigo = f'\t{temp} = {self.valor};'
 
@@ -54,15 +54,15 @@ class Primitivo(Expresion):
 
                 if estado == 1:
                     if caracter == 'n':
-                        codigo += f'\tHeap[HP] = 10;\n'
+                        codigo += f'\tHeap[int(HP)] = 10;\n'
                         codigo += f'\tHP = HP +1;\n'
                         estado = 0
                         continue
 
-                codigo += f'\tHeap[HP] = {ord(caracter)};\n'
+                codigo += f'\tHeap[int(HP)] = {ord(caracter)};\n'
                 codigo += f'\tHP = HP +1;\n'
 
-            codigo += f'\tHeap[HP] = 0;\n'
+            codigo += f'\tHeap[int(HP)] = 0;\n'
             codigo += f'\tHP = HP +1;\n'
 
 

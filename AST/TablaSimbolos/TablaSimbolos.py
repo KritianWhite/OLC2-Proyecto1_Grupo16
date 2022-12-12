@@ -1,5 +1,5 @@
 from AST.TablaSimbolos.Simbolos import Simbolos
-from Analizador.gramatica import E_list
+from Analizador.Gramatica import E_list
 
 class TablaDeSimbolos():
 

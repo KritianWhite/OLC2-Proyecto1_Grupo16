@@ -1,0 +1,277 @@
+GRAMATICA:
+
+
+init :              instrucciones
+;
+instrucciones :      instrucciones instruccion
+                    | instruccion
+;
+instruccion :        funcion
+                    | declaracion
+                    | asignacion
+                    | declaracion_arreglo
+                    | star_struct
+;
+lista_bloque :       lista_bloque bloque
+                    | bloque
+;
+bloque :             impresiones
+                    | declaracion
+                    | asignacion
+                    | llamada
+                    | start_match
+                    | start_if
+                    | start_while
+                    | return_ins
+                    | break_ins
+                    | continue_ins
+                    | start_loop
+                    | declaracion_arreglo
+                    | asignacion_arreglo
+                    | start_for
+                    | funcion_nativa
+                    |
+;
+bloque_match :       impresiones
+                    | asignacion
+                    | llamada
+                    | start_match
+                    | start_if
+                    | start_while
+                    | return_ins
+                    | start_loop
+                    | declaracion_arreglo
+                    | start_for
+                    |
+;
+star_struct :       STRUCT definition_strct
+;
+definition_strct :  ID LI list_struct_var LD
+;
+definition_strct_v2 :  ID LI list_struct_var LD
+;
+list_struct_var :   list_struct_var COMA  struct_var
+                    | struct_var
+;
+struct_var :        ID DP tipo_datos
+                    |  ID DP definition_strct_v2
+                    | ID DP expresiones
+;
+start_for :          FOR ID IN opciones_for LI lista_bloque LD
+;
+opciones_for :      expresiones
+                    | expresiones PUNTO PUNTO expresiones
+;
+asignacion_arreglo : acceso_arreglo IGUAL expresiones PYC
+;
+declaracion_arreglo : LET mutable ID validacion_dimension IGUAL expresiones
+;
+validacion_dimension: DP dimensiones_def
+;
+dimensiones_def :   CI dimensiones_def PYC expresiones CD
+                    | CI tipo_datos PYC expresiones CD
+;
+acceso_arreglo :    ID dimensiones
+;
+dimensiones :       dimensiones dimension
+                    | dimension
+;
+dimension :         CI expresiones CD
+;
+start_loop :        LOOP LI lista_bloque LD
+;
+continue_ins :      CONTINUE
+;
+break_ins :         BREAK
+                    | BREAK expresiones
+;
+return_ins :        RETURN
+                    | RETURN definition_strct_v2
+                    | RETURN expresiones
+;
+start_while :       WHILE expresiones LI lista_bloque LD
+;
+list_exp_ins :      list_exp_ins bloque_exp
+                    | bloque_exp
+;
+start_if :          IF expresiones LI list_exp_ins LD
+                    | IF expresiones LI list_exp_ins LD ELSE LI list_exp_ins LD
+                    | IF expresiones LI list_exp_ins LD lista_elif
+                    | IF expresiones LI list_exp_ins LD lista_elif ELSE LI list_exp_ins LD
+;
+else_if :           ELSE IF expresiones  LI list_exp_ins LD
+;
+start_match :       MATCH expresiones LI matches LD
+;
+matches :           matches bloque_match
+                    | bloque_match
+;
+bloque_match :      varios_match IGUAL MAYOR simple_bloque_exp COMA
+                    | varios_match IGUAL MAYOR LI list_exp_ins LD
+;
+simple_bloque_exp : expresiones
+                    | bloque_match
+;
+bloque_exp :        bloque
+                    | expresiones
+;
+varios_match :      varios_match BARRA expresiones
+                    | expresiones
+                    | GBAJO
+;
+llamada  :          ID PI PD
+                    | ID PI lista_expres PD
+;
+ista_expres :       lista_expres COMA  expresiones
+                    | expresiones
+;
+funcion  :          LI lista_bloque LD
+                    | FUNCION ID PI PD tipo_funcion LI lista_bloque LD
+                    |  FUNCION ID PI parametros PD tipo_funcion LI lista_bloque LD
+;
+parametros :        parametros COMA definiciones
+                    | definiciones
+;
+definiciones :      MUT ID tipado
+                    | ID tipado
+                    | ID  tipados_tipos
+;
+tipados_tipos :     DP REFERENCE dimensiones_def
+                    |  DP REFERENCE CI tipo_datos CD
+                    | DP REFERENCE  tipado_vector
+                    | DP REFERENCE ID
+;
+referencias :       REFER
+                    |
+;
+acceso   :          PUBLICO
+                    |
+;
+tipo_funcion :      RESTA MAYOR tipo_datos
+                    | RESTA MAYOR VECTOR MENOR tipo_datos MAYOR
+                    |
+;
+declaracion  :      LET mutable ID tipado PYC
+                        | LET mutable ID tipado IGUAL expresiones
+                        | LET mutable ID DP  tipado_vector IGUAL expresiones PYC
+                        | LET mutable ID tipado IGUAL definition_strct_v2 PYC
+;
+tipado_vector :     VECTOR MENOR tipado_vector MAYOR
+                    |  VECTOR MENOR tipo_datos MAYOR
+;
+asignacion :        ID IGUAL expresiones
+;
+mutable :           MUT
+                    |
+;
+tipado :            DP tipo_datos
+                    |
+;
+tipo_datos :        TIPOINT
+                    | TIPOFLOAT
+                    | TIPOCHAR
+                    | TIPOSTRING
+                    | DIRSTRING
+                    | TIPOBOOL
+                    | TIPOUSIZE
+                    | ID
+;
+impresiones :       PRINTLN PI CADENA PD
+                    | PRINT PI CADENA PD
+                    | PRINTLN PI CADENA COMA impresion_valores PD
+                    | PRINT PI CADENA COMA  impresion_valores PD
+;
+impresion_valores : impresion_valores COMA expresiones
+                    | expresiones
+;
+expresiones :       funcion_nativa
+                    | expre_logica
+                    | expre_relacional
+                    | expre_aritmetica
+                    | expre_valor
+;
+expre_valor :       datos_cast
+                    | start_match
+                    | start_if
+                    | start_loop
+                    | llamada
+                    | arreglo_init
+                    | acceso_arreglo
+                    | iniciando_vector
+                    | repeticiones
+;
+repeticiones :      CI expresiones PYC expresiones CD
+                    | CI tipo_datos PYC expresiones CD
+;
+iniciando_vector    : VECTOR NEW
+                    | VECTOR WCAPACITY PI expresiones PD
+                    | VECT CI lista_Expresiones CD
+                    | VECT CI expresiones PYC expresiones CD
+;
+arreglo_init :      CI lista_Expresiones CD
+;
+lista_Expresiones : lista_Expresiones COMA expresiones
+                    | expresiones
+;
+funcion_nativa :    expresiones PUNTO nativas
+;
+nativas_vectores :  PUSH PI expresiones PD
+                    | PUSH PI definition_strct_v2 PD
+                    | REMOVE PI expresiones PD
+                    | CONTAINS PI expresiones PD
+                    | INSERT PI expresiones COMA expresiones PD
+                    | CAPACITY
+;
+nativas      :      ABS
+                    | SQRT
+                    | TOSTRING
+                    | TOOWNED
+                    | CLONE
+                    | LEN
+                    | nativas_vectores
+                    | acceso_struct
+;
+acceso_struct :     ID list_acceso_struck
+                    | ID list_acceso_struck IGUAL expresiones
+;
+list_acceso_struck : list_acceso_struck PUNTO  ID
+                    | PUNTO ID
+                    |
+;
+expre_logica :      expresiones OR expresiones
+                    | expresiones AND expresiones
+                    | NOT  expresiones
+;
+expre_relacional :  expresiones MAYORIGUAL expresiones
+                    | expresiones MAYOR expresiones
+                    | expresiones MENORIGUAL expresiones
+                    | expresiones MENOR expresiones
+                    | expresiones IGUALDAD expresiones
+                    | expresiones DESIGUALDAD expresiones
+;
+expre_aritmetica :  RESTA expresiones %prec UMENOS
+                    | PI expresiones PD
+                    | expresiones RESTA expresiones
+                    | expresiones SUMA expresiones
+                    | expresiones MULTI expresiones
+                    | expresiones DIVI expresiones
+                    | expresiones MODULO expresiones
+                    | TIPOFLOAT POWF PI expresiones COMA expresiones PD
+                    | TIPOINT POW PI expresiones COMA expresiones PD
+;
+datos_cast :        datos
+                    | expresiones AS tipo_datos
+;
+datos :             ENTERO
+                    | FLOAT
+                    | CADENA
+                    | CARACTER
+                    | ID
+                    | TRUE
+                    | FALSE
+                    | REFERENCE ID
+                    | REFER CADENA
+;
+
+
+

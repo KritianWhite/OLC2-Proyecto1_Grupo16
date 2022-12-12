@@ -2,7 +2,7 @@ from AST.Abstracto.Instruccion import Intruccion
 from AST.TablaSimbolos.TablaSimbolos import TablaDeSimbolos
 from AST.TablaSimbolos.Tipos import RetornoType, tipo
 from AST.Expresion.Identificador import Identificador
-from Analizador.gramatica import E_list
+from Analizador.Gramatica import E_list
 from AST.Instruccion.Declaracion import Declaracion
 from AST.Expresion.Identificador import Identificador
 from AST.TablaSimbolos.TablaSimbolos import TablaDeSimbolos, Simbolos

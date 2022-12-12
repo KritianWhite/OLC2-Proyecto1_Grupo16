@@ -33,11 +33,10 @@ package main
 
 import ("fmt")
 
-var SP, HP int;
-var stack [30101999]float64;
-var heap [30101999]float64;
- SP = 0;
- HP = 0;\n"""
+var SP, HP float64;
+var Stack [30101999]float64;
+var Heap [30101999]float64;
+\n"""
         if self.temporales > 0:   ## se modifica la manera para declarar las variables temporales
             encabezado += "var "
         for i in range(0, self.temporales):
@@ -48,7 +47,7 @@ var heap [30101999]float64;
                 encabezado += ","
 
         if self.temporales > 0:
-            encabezado += "float64; \n\n"
+            encabezado += " float64; \n\n"
 
         if len(self.listareturn) > 0:
             encabezado += "var "
@@ -57,7 +56,7 @@ var heap [30101999]float64;
                     encabezado += self.listareturn[i]
                 else:
                     encabezado += self.listareturn[i] + ","
-            encabezado += "float64; \n\n"
+            encabezado += " float64; \n\n"
 
         return encabezado
 
@@ -71,7 +70,8 @@ var heap [30101999]float64;
         codigo_SALIDA += self.codigo + '\n'
         codigo_SALIDA += self.declararfuciones() + "\n\n\n"
         codigo_SALIDA += self.funciones
-        codigo_SALIDA += 'func main()' + "{" + f'\n {self.main}  \n' + "}"
+        codigo_SALIDA += 'func main()' + "{\n SP = 0\n HP = 0\n " + f'\n {self.main}  \n' + "}"
+
         return codigo_SALIDA
 
     def declararfuciones(self):

@@ -1,7 +1,7 @@
 from AST.Abstracto.Expresion import Expresion
 from AST.Expresion.Operaciones.Operacion import operador, Operacion
 from AST.TablaSimbolos.Tipos import tipo,RetornoType
-from Analizador.gramatica import E_list
+from Analizador.Gramatica import E_list
 
 from AST.Instruccion.Imprimir import Imprimir
 from AST.TablaSimbolos.Tipos import Tipos
