@@ -4,7 +4,7 @@ from AST.TablaSimbolos.TablaSimbolos import TablaDeSimbolos, Simbolos
 from AST.Instruccion import Funcion
 from AST.TablaSimbolos.Tipos import RetornoType
 from AST.Expresion.Identificador import Identificador
-from Analizador.Gramatica import E_list
+from Analizador.gramatica import E_list
 from AST.TablaSimbolos.InstanciaArreglo import InstanciaArreglo
 from AST.TablaSimbolos.InstanciaVector import InstanciaVector
 from AST.TablaSimbolos.Tipos import tipo as t

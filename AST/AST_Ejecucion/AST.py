@@ -5,7 +5,7 @@ from AST.TablaSimbolos.Tipos import RetornoType
 from AST.TablaSimbolos.Simbolos import Simbolos
 from pathlib import Path
 from AST.TablaSimbolos import InstanciaStruct
-from Analizador.Gramatica import E_list
+from Analizador.gramatica import E_list
 import random
 from Generador3D.Generador3D import Generador3D
 from ..Instruccion.Llamada import Llamada
