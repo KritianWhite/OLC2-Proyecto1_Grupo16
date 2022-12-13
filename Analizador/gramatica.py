@@ -632,7 +632,7 @@ def p_parametros(t):
 
     else:
         t[0] = [t[1]]
-
+#------------------------------------------
 def p_definiciones(t):
     """ definiciones : MUT ID tipado
                     | ID tipado
@@ -695,17 +695,22 @@ def p_tipo_funcion(t):
         t[0] = None
 
 def p_declaracion(t):
+    #el primero es para asignar con el nombre de un ide
     '''declaracion  : LET mutable ID tipado PYC
-                        | LET mutable ID tipado IGUAL expresiones
+                        |  ID  IGUAL expresiones
                         | LET mutable ID DP  tipado_vector IGUAL expresiones PYC
                         | LET mutable ID tipado IGUAL definition_strct_v2 PYC'''
-
+#(id: Identificador, expresion, tipo, mut,referencia = False):
     if len(t) == 6:
+        #esto es para el primero
         t[0] = Declaracion.Declaracion(Identificador.Identificador(t[3]), None, t[4], t[2])
 
-    elif len(t) == 7:
+    elif len(t) == 4:
+        #este tengo que modificar
+        mi_tipo = ""
 
-        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[3]), t[6], t[4], t[2])
+        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[3], None, "mutable")
+
     else:
         if  t.slice[6].type == 'definition_strct_v2':
             t[0] = Declaracion.Declaracion(Identificador.Identificador(t[3]), t[6], tipo.STRUCT, t[2])
@@ -723,7 +728,7 @@ def p_tipado_vect(t):
 
 
 def p_asignacion(t):
-    '''asignacion      : ID IGUAL expresiones
+    '''asignacion      : LET LET ID IGUAL expresiones
                         '''
     t[0] = Asignacion.Asignacion(t[1], t[3])
 

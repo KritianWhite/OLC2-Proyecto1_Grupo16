@@ -10,12 +10,17 @@ class Asignacion(Intruccion):
 
 
     def Ejecutar3D(self, controlador, ts):
+        print("-----------------------------------")
         if(ts.Existe_id(self.identificador)):
             codigo = "/*Asignacion*/\n"
 
             Expression: RetornoType = self.valor.Obtener3D(controlador, ts)
             ValorExpresion = Expression.valor
+
             TipoExpresion = Expression.tipo
+
+            print(TipoExpresion)
+            print("-----------------------------------")
             ts.Actualizar_Simbolo(self.identificador,TipoExpresion,ValorExpresion,ts.name)
 
             existe_id: Simbolos = ts.ObtenerSimbolo(self.identificador)

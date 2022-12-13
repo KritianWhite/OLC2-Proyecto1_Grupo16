@@ -9,11 +9,21 @@ class Declaracion(Intruccion):
     def __init__(self, id: Identificador, expresion, tipo, mut,referencia = False):
         self.identificador = id
         self.expresion = expresion
-        self.tipo = tipo
+        self.tipo = self.generarTipo(expresion)
         self.mut = mut
         self.referencia = referencia
         self.objeto = None
 
+
+    def generarTipo(self, expresion):
+
+        if isinstance(expresion, int):
+            print("va a retornar un tipo")
+            return tipo.ENTERO
+        elif isinstance(expresion, float):
+            return tipo.DECIMAL
+        elif isinstance(expresion, bool):
+            return tipo.BOOLEANO
 
     def Ejecutar3D(self, controlador, ts):
         print(" ==== Declarar === ",self.expresion)

@@ -2,7 +2,7 @@ from AST.Abstracto.Instruccion import Intruccion
 from AST.TablaSimbolos.TablaSimbolos import TablaDeSimbolos
 from AST.TablaSimbolos.Tipos import RetornoType, tipo
 from AST.Expresion.Identificador import Identificador
-from Analizador.Gramatica import E_list
+from Analizador.gramatica import E_list
 from AST.Instruccion.Declaracion import Declaracion
 from AST.Expresion.Identificador import Identificador
 from AST.TablaSimbolos.TablaSimbolos import TablaDeSimbolos, Simbolos
@@ -50,7 +50,7 @@ class Funcion(Intruccion):
             #ts.size += 1
 
         for instruccion in self.instrucciones:
-            codigo += instruccion.Ejecutar3D(controlador, ts)
+            codigo += str(instruccion.Ejecutar3D(controlador, ts))
 
         #return codigo
 

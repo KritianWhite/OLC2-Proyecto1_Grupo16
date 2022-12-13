@@ -4,31 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="">
+    <list default="true" id="fadd9fdb-2c44-419b-a984-23f1ec07bcc1" name="Changes" comment="cambio en clase declaracion y producion declaracion en gramatica">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Primitivo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Primitivo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Asignacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Asignacion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/Funcion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Funcion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/Llamada.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Llamada.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/SentenciasControl/Ifs.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/SentenciasControl/Ifs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/gramatica.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/gramatica.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parser.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parsetab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.py" afterDir="false" />
-    </list>
-    <list id="159130a3-dfc6-4189-95bd-06274701327a" name="Changes by Administrator" comment="">
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generador3D/Generador3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generador3D/Generador3D.py" afterDir="false" />
-    </list>
-    <list id="02073b61-f00c-40e3-87db-7f4a9a868334" name="Changes by Boror" comment="" />
-    <list id="370a197f-192e-48fa-8608-2c16d7302846" name="Changes by Julio R" comment="">
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Primitivo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Primitivo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generador3D/Generador3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generador3D/Generador3D.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,82 +30,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Generador3D/Generador3D.py">
-      <ranges>
-        <range start1="35" end1="40" start2="35" end2="39" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="50" end1="51" start2="49" end2="50" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="59" end1="60" start2="58" end2="59" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="73" end1="74" start2="72" end2="74" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/AST/Instruccion/Imprimir.py">
-      <ranges>
-        <range start1="176" end1="177" start2="176" end2="177" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="180" end1="181" start2="180" end2="181" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="192" end1="193" start2="192" end2="193" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="196" end1="197" start2="196" end2="197" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="199" end1="200" start2="199" end2="200" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="202" end1="203" start2="202" end2="203" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="206" end1="207" start2="206" end2="207" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="213" end1="214" start2="213" end2="214" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="225" end1="226" start2="225" end2="226" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="242" end1="243" start2="242" end2="243" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="256" end1="257" start2="256" end2="257" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="259" end1="260" start2="259" end2="260" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="262" end1="263" start2="262" end2="263" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="276" end1="277" start2="276" end2="277" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="282" end1="283" start2="282" end2="283" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="290" end1="291" start2="290" end2="291" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="294" end1="295" start2="294" end2="295" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="301" end1="302" start2="301" end2="302" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="312" end1="313" start2="312" end2="313" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="328" end1="329" start2="328" end2="329" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="336" end1="337" start2="336" end2="337" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="343" end1="344" start2="343" end2="344" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="369" end1="370" start2="369" end2="370" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="382" end1="383" start2="382" end2="383" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="385" end1="386" start2="385" end2="386" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="388" end1="389" start2="388" end2="389" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="402" end1="403" start2="402" end2="403" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="408" end1="409" start2="408" end2="409" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="416" end1="417" start2="416" end2="417" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="420" end1="421" start2="420" end2="421" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="427" end1="428" start2="427" end2="428" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="445" end1="446" start2="445" end2="446" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="448" end1="449" start2="448" end2="449" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="469" end1="472" start2="469" end2="476" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="474" end1="475" start2="478" end2="480" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="487" end1="488" start2="492" end2="493" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="503" end1="504" start2="508" end2="509" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="506" end1="507" start2="511" end2="512" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="520" end1="521" start2="525" end2="526" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="526" end1="527" start2="531" end2="532" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="533" end1="534" start2="538" end2="539" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="537" end1="538" start2="542" end2="543" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="544" end1="545" start2="549" end2="550" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="723" end1="724" start2="728" end2="729" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="729" end1="730" start2="734" end2="735" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="736" end1="737" start2="741" end2="742" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="744" end1="745" start2="749" end2="750" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="770" end1="771" start2="775" end2="776" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="776" end1="777" start2="781" end2="782" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="783" end1="784" start2="788" end2="789" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="814" end1="815" start2="819" end2="820" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="828" end1="829" start2="833" end2="834" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="832" end1="833" start2="837" end2="838" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-        <range start1="835" end1="836" start2="840" end2="841" changelist="159130a3-dfc6-4189-95bd-06274701327a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/AST/Expresion/Primitivo.py">
-      <ranges>
-        <range start1="19" end1="20" start2="19" end2="20" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="56" end1="57" start2="56" end2="57" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="61" end1="62" start2="61" end2="62" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="64" end1="65" start2="64" end2="65" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -122,23 +38,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "CodeWithMe",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Python.UI">
+    <configuration name="Asignacion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OLC2-Proyecto1_Grupo16" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AST/Instruccion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AST/Instruccion/Asignacion.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="UI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OLC2-Proyecto1_Grupo16" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,6 +102,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.UI" />
+        <item itemvalue="Python.Asignacion" />
       </list>
     </recent_temporary>
   </component>
@@ -185,13 +124,30 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cambio en clase declaracion y producion declaracion en gramatica" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio en clase declaracion y producion declaracion en gramatica" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AST/Instruccion/Asignacion.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica.coverage" NAME="Gramatica Coverage Results" MODIFIED="1670751214893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$editor.coverage" NAME="editor Coverage Results" MODIFIED="1670876345156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Interfaz" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Funcion.coverage" NAME="Funcion Coverage Results" MODIFIED="1670750936203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1670835148699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1670896480284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>
