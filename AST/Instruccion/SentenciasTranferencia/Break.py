@@ -17,7 +17,7 @@ class Break(Intruccion):
             return valor_Exp
         else:
             codigo = ""
-            codigo += f'goto {self.etq};'
+            codigo += f'goto {self.etq}\n'
             return codigo
 
 

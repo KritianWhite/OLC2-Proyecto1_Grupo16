@@ -31,29 +31,56 @@ fn main () {
     //println!("{}\n",cola.capacity());
 }
 
-var= 2
-if var==2 : {
-    var1 = 4
-}
 
 
-{
-var= 2
-if var==2 : {
-    var1 = 4
-}
-else:{
-    var2 = 5
-}
+-------
+pruebas
+-------
 
+-----------
+if-else
+-----------
 {
 var=3
 var2=4
-if 3==3 :
-{ var=4 }
-else :
-{ var2=5 }
+if var==2 :{
+	var=4
+	print("Adentro del if")
+}else :{
+	var2=5
+	print("Adentro del else")
+}
 }
 
+-------
+
+IF
+------
+{
+var= 2
+if var==2 : {
+    var1 = 4
+}}
+-----
+
+
+----
+elif
+----
+{
+
+a = 200
+b = 300
+c = 50
+if b > a:{
+   println("{}",c)
+   print("Adentro del if")
+}elif a == 100:{
+   println("{}",b)
+   print("Adentro del elif")
+}else:{
+   println("{}",a)
+   print("Adentro del else")
+}
 
 }

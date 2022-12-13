@@ -5,31 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/gramatica.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/gramatica.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parser.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parsetab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Gramatica.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gramatica.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.py" afterDir="false" />
     </list>
     <list id="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" name="Changes by Administrator" comment="">
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Identificador.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Identificador.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Relacional.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Relacional.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/SentenciasCiclicas/While.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/SentenciasCiclicas/While.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/gramatica.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/gramatica.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Break.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Break.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
     </list>
     <list id="02073b61-f00c-40e3-87db-7f4a9a868334" name="Changes by Boror" comment="" />
     <list id="370a197f-192e-48fa-8608-2c16d7302846" name="Changes by Julio R" comment="">
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/entradasumas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Prubas impresiones/entradasumas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/if expresion e intruccion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Pruebas 4/if expresion e intruccion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/gramatica.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/gramatica.py" afterDir="false" />
     </list>
@@ -42,78 +39,38 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py">
+    <file path="$PROJECT_DIR$/Analizador/1.txt">
       <ranges>
-        <range start1="35" end1="48" start2="35" end2="48" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="49" end1="53" start2="49" end2="53" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="54" end1="56" start2="54" end2="56" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="57" end1="59" start2="57" end2="59" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="60" end1="65" start2="60" end2="65" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="66" end1="69" start2="66" end2="69" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="70" end1="72" start2="70" end2="72" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="73" end1="75" start2="73" end2="75" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="77" end1="78" start2="77" end2="78" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="79" end1="82" start2="79" end2="82" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="83" end1="91" start2="83" end2="91" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="92" end1="93" start2="92" end2="93" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="94" end1="95" start2="94" end2="95" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="96" end1="99" start2="96" end2="99" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="100" end1="103" start2="100" end2="103" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="104" end1="108" start2="104" end2="108" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="110" end1="112" start2="110" end2="112" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="113" end1="117" start2="113" end2="117" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="118" end1="125" start2="118" end2="125" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="126" end1="133" start2="126" end2="133" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="134" end1="137" start2="134" end2="137" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="138" end1="141" start2="138" end2="141" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="142" end1="144" start2="142" end2="144" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="145" end1="148" start2="145" end2="148" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="149" end1="155" start2="149" end2="155" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="156" end1="157" start2="156" end2="157" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="158" end1="161" start2="158" end2="161" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="162" end1="169" start2="162" end2="169" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="170" end1="177" start2="170" end2="177" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="178" end1="191" start2="178" end2="191" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="192" end1="199" start2="192" end2="199" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="200" end1="213" start2="200" end2="213" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="214" end1="215" start2="214" end2="215" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="216" end1="223" start2="216" end2="223" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="224" end1="226" start2="224" end2="226" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="227" end1="229" start2="227" end2="229" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="230" end1="233" start2="230" end2="232" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
+        <range start1="33" end1="37" start2="33" end2="33" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
+        <range start1="39" end1="47" start2="35" end2="38" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
+        <range start1="48" end1="48" start2="39" end2="42" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
+        <range start1="51" end1="55" start2="45" end2="52" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="57" end1="57" start2="54" end2="84" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/Analizador/gramatica.py">
+    <file path="$PROJECT_DIR$/Analizador/Gramatica3.py">
       <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="8" end1="10" start2="8" end2="10" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="12" end1="13" start2="12" end2="13" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="506" end1="507" start2="506" end2="509" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="508" end1="509" start2="510" end2="511" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="512" end1="513" start2="514" end2="515" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="516" end1="517" start2="518" end2="519" changelist="370a197f-192e-48fa-8608-2c16d7302846" />
-        <range start1="634" end1="635" start2="636" end2="637" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="695" end1="696" start2="697" end2="698" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="702" end1="703" start2="704" end2="705" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="711" end1="712" start2="713" end2="714" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="730" end1="731" start2="732" end2="733" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="762" end1="763" start2="764" end2="765" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="764" end1="765" start2="766" end2="767" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="768" end1="769" start2="770" end2="771" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/AST/Instruccion/Declaracion.py">
-      <ranges>
-        <range start1="20" end1="21" start2="20" end2="20" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="26" end1="26" start2="25" end2="27" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="51" end1="53" start2="52" end2="54" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="70" end1="72" start2="71" end2="73" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="88" end1="90" start2="89" end2="91" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="106" end1="108" start2="107" end2="109" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="129" end1="131" start2="130" end2="132" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="144" end1="147" start2="145" end2="148" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="148" end1="150" start2="149" end2="151" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="152" end1="154" start2="153" end2="155" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="243" end1="244" start2="243" end2="243" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="248" end1="249" start2="247" end2="247" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="262" end1="265" start2="260" end2="260" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="266" end1="267" start2="261" end2="261" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="268" end1="273" start2="262" end2="263" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="279" end1="280" start2="269" end2="269" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="303" end1="303" start2="292" end2="334" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="305" end1="308" start2="336" end2="340" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="309" end1="309" start2="341" end2="342" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="311" end1="312" start2="344" end2="345" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="313" end1="315" start2="346" end2="390" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="316" end1="318" start2="391" end2="398" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="335" end1="336" start2="415" end2="415" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="337" end1="338" start2="416" end2="416" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="339" end1="339" start2="417" end2="429" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="348" end1="348" start2="438" end2="446" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="391" end1="394" start2="489" end2="490" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="411" end1="417" start2="507" end2="507" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="461" end1="462" start2="551" end2="551" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="463" end1="464" start2="552" end2="552" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="465" end1="467" start2="553" end2="553" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
       </ranges>
     </file>
   </component>
@@ -141,7 +98,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.Gramatica3">
+  <component name="RunManager" selected="Python.UI">
     <configuration name="Asignacion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OLC2-Proyecto1_Grupo16" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -210,8 +167,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Gramatica3" />
         <item itemvalue="Python.UI" />
+        <item itemvalue="Python.Gramatica3" />
         <item itemvalue="Python.Asignacion" />
       </list>
     </recent_temporary>
@@ -244,10 +201,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica.coverage" NAME="Gramatica Coverage Results" MODIFIED="1670751214893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica3.coverage" NAME="Gramatica3 Coverage Results" MODIFIED="1670915558294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica3.coverage" NAME="Gramatica3 Coverage Results" MODIFIED="1670915809184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$editor.coverage" NAME="editor Coverage Results" MODIFIED="1670876345156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Interfaz" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Funcion.coverage" NAME="Funcion Coverage Results" MODIFIED="1670750936203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1670915519226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1670923693132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>

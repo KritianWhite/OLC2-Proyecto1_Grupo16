@@ -223,7 +223,7 @@ class Imprimir(Intruccion):
                                     valoid = self.lista[i].Obtener3D(controlador, ts)
                                     codigo += valoid.codigo
                                     tempAcceso = controlador.Generador3D.obtenerTemporal()
-                                    codigo += f'\t{tempAcceso} = Heap[int({valoid.temporal})];\n'
+                                    codigo += f'\t{tempAcceso} = Heap[int({valoid.temporal})]\n'
 
                                     validacion = False
                                     if len(simbolo.valores) > 0:
@@ -240,28 +240,28 @@ class Imprimir(Intruccion):
                                         temp2 = controlador.Generador3D.obtenerTemporal()
                                         etq4 = controlador.Generador3D.obtenerEtiqueta()
 
-                                        codigo += f'\tHeap[int(HP)] = {ord("[")};\n'
-                                        codigo += f'\tHP = HP +1;\n'
+                                        codigo += f'\tHeap[int(HP)] = {ord("[")}\n'
+                                        codigo += f'\tHP = HP +1\n'
                                         if isinstance(simbolo, InstanciaVector):
-                                            codigo += f'\t{valoid.temporal} = {valoid.temporal} + 1;\n'
-                                        codigo += f'\t{temp1} = {valoid.temporal};\n'
+                                            codigo += f'\t{valoid.temporal} = {valoid.temporal} + 1\n'
+                                        codigo += f'\t{temp1} = {valoid.temporal}\n'
                                         codigo += f'\t{etq1}:\n'
-                                        codigo += f'\tif ({tempAcceso} >0 ) goto {etq2};\n'
+                                        codigo += f'\tif ({tempAcceso} >0 ) goto {etq2}\n'
                                         codigo += f'\tgoto {etq3};\n'
 
                                         codigo += f'\t{etq2}:\n'
-                                        codigo += f'\t{tempAcceso} = {tempAcceso} - 1;\n'
+                                        codigo += f'\t{tempAcceso} = {tempAcceso} - 1\n'
 
 
-                                        codigo += f'\t{temp1} = {temp1} + 1;\n'
-                                        codigo += f'\t{temp2} = Heap[int({temp1})] ;\n'
+                                        codigo += f'\t{temp1} = {temp1} + 1\n'
+                                        codigo += f'\t{temp2} = Heap[int({temp1})] \n'
 
                                         if valoid.tipo == t.ENTERO:
-                                            codigo += f'\tHeap[int(HP)] = {ord("¥")};\n'
-                                            codigo += f'\tHP = HP +1;\n'
+                                            codigo += f'\tHeap[int(HP)] = {ord("¥")}\n'
+                                            codigo += f'\tHP = HP +1\n'
                                         elif valoid.tipo == t.DECIMAL:
-                                            codigo += f'\tHeap[int(HP)] = {ord("¢")};\n'
-                                            codigo += f'\tHP = HP +1;\n'
+                                            codigo += f'\tHeap[int(HP)] = {ord("¢")}\n'
+                                            codigo += f'\tHP = HP +1\n'
                                         elif valoid.tipo == t.DIRSTRING or valoid.tipo == t.STRING:
                                             temp3 = controlador.Generador3D.obtenerTemporal()
                                             temp4 = controlador.Generador3D.obtenerTemporal()
@@ -269,38 +269,38 @@ class Imprimir(Intruccion):
                                             etq6 = controlador.Generador3D.obtenerEtiqueta()
                                             etq7 = controlador.Generador3D.obtenerEtiqueta()
                                             codigo+="/*parte strint*/\n"
-                                            codigo += f'\t{temp3} = {temp2};\n'
+                                            codigo += f'\t{temp3} = {temp2}\n'
                                             #codigo += f'\t{temp3} = {temp2} - 1;\n'
 
                                             codigo += f'\t{etq7}:\n'
                                             #codigo += f'\t{temp3} = {temp2} + 1;\n'
-                                            codigo += f'\t{temp4} = Heap[int({temp3})] ;\n'
+                                            codigo += f'\t{temp4} = Heap[int({temp3})] \n'
 
-                                            codigo += f'\tif ({temp4} != 0 ) goto {etq5};\n'
-                                            codigo += f'\tgoto {etq6};\n'
+                                            codigo += f'\tif ({temp4} != 0 ) goto {etq5}\n'
+                                            codigo += f'\tgoto {etq6}\n'
 
                                             codigo += f'\t{etq5}:\n'
-                                            codigo += f'\tHeap[int(HP)] = {temp4};\n'
-                                            codigo += f'\tHP = HP +1;\n'
+                                            codigo += f'\tHeap[int(HP)] = {temp4}\n'
+                                            codigo += f'\tHP = HP +1\n'
 
-                                            codigo += f'\t{temp3} = {temp3} + 1;\n'
-                                            codigo += f'\tgoto {etq7};\n'
+                                            codigo += f'\t{temp3} = {temp3} + 1\n'
+                                            codigo += f'\tgoto {etq7}\n'
                                             codigo += f'\t{etq6}:\n'
 
                                         if valoid.tipo == t.ENTERO or valoid.tipo == t.DECIMAL:
-                                            codigo += f'\tHeap[int(HP)] = {temp2};\n'
-                                            codigo += f'\tHP = HP +1;\n'
+                                            codigo += f'\tHeap[int(HP)] = {temp2}\n'
+                                            codigo += f'\tHP = HP +1\n'
 
-                                        codigo += f'\tif ({tempAcceso} == 0 ) goto {etq4}; aqui paso\n'
-                                        codigo += f'\tHeap[int(HP)] = {ord(",")};\n'
-                                        codigo += f'\tHP = HP +1;\n'
+                                        codigo += f'\tif ({tempAcceso} == 0 ) goto {etq4}\n'
+                                        codigo += f'\tHeap[int(HP)] = {ord(",")}\n'
+                                        codigo += f'\tHP = HP +1\n'
                                         codigo += f'\t{etq4}:\n'
 
-                                        codigo += f'\tgoto {etq1};\n'
+                                        codigo += f'\tgoto {etq1}\n'
                                         codigo += f'\t{etq3}:\n'
 
-                                        codigo += f'\tHeap[int(HP)] = {ord("]")};\n'
-                                        codigo += f'\tHP = HP +1;\n'
+                                        codigo += f'\tHeap[int(HP)] = {ord("]")}\n'
+                                        codigo += f'\tHP = HP +1\n'
 
                                     elif isinstance(simbolo, InstanciaVector):
                                         temp1 = controlador.Generador3D.obtenerTemporal()
@@ -395,22 +395,22 @@ class Imprimir(Intruccion):
                                         etq6 = controlador.Generador3D.obtenerEtiqueta()
                                         etq7 = controlador.Generador3D.obtenerEtiqueta()
                                         codigo += "/*parte strint*/\n"
-                                        codigo += f'\t{temp3} = {temp2};\n'
+                                        codigo += f'\t{temp3} = {temp2}\n'
                                         # codigo += f'\t{temp3} = {temp2} - 1;\n'
 
                                         codigo += f'\t{etq7}:\n'
                                         # codigo += f'\t{temp3} = {temp2} + 1;\n'
-                                        codigo += f'\t{temp4} = Heap[int({temp3})] ;\n'
+                                        codigo += f'\t{temp4} = Heap[int({temp3})] \n'
 
-                                        codigo += f'\tif ({temp4} != 0 ) goto {etq5};\n'
+                                        codigo += f'\tif ({temp4} != 0 ) goto {etq5}\n'
                                         codigo += f'\tgoto {etq6};\n'
 
                                         codigo += f'\t{etq5}:\n'
-                                        codigo += f'\tHeap[int(HP)] = {temp4};\n'
-                                        codigo += f'\tHP = HP +1;\n'
+                                        codigo += f'\tHeap[int(HP)] = {temp4}\n'
+                                        codigo += f'\tHP = HP +1\n'
 
-                                        codigo += f'\t{temp3} = {temp3} + 1;\n'
-                                        codigo += f'\tgoto {etq7};\n'
+                                        codigo += f'\t{temp3} = {temp3} + 1\n'
+                                        codigo += f'\tgoto {etq7}\n'
                                         codigo += f'\t{etq6}:\n'
 
                                     if valoid.tipo == t.ENTERO or valoid.tipo == t.DECIMAL:
@@ -443,11 +443,11 @@ class Imprimir(Intruccion):
                                 print("Fallo en: ", self.lista[i])
 
                     if self.tipo:
-                        codigo += f'\tHeap[int(HP)] = 10;\n'
-                        codigo += f'\tHP = HP +1;\n'
+                        codigo += f'\tHeap[int(HP)] = 10\n'
+                        codigo += f'\tHP = HP +1\n'
 
-                    codigo += f'\tHeap[int(HP)] = 0;\n'
-                    codigo += f'\tHP = HP +1;\n'
+                    codigo += f'\tHeap[int(HP)] = 0\n'
+                    codigo += f'\tHP = HP +1\n'
                     codigo += self.CodigofinalV2(retornoPrimero, controlador)
                     return codigo
         else:
@@ -467,15 +467,15 @@ class Imprimir(Intruccion):
             etq2 = controlador.Generador3D.obtenerEtiqueta()
             ## se modifica el printf() por fmt.Printf() para Goland
             codigo += f'\t{etq1}: \n'
-            codigo += f'\t{caracter} = Heap[int({temp})]; \n'
+            codigo += f'\t{caracter} = Heap[int({temp})] \n'
             codigo += f'\tif({caracter} == 0) '
             codigo += "{"
 
             codigo += f' goto {etq2} '
             codigo += "}\n"
-            codigo += f'\tfmt.Printf(\"%c\",int({ caracter });\n' \
-                      f'\t{temp} = {temp} + 1;\n' \
-                      f'\tgoto {etq1};\n' \
+            codigo += f'\tfmt.Printf(\"%c\",int({ caracter }))\n' \
+                      f'\t{temp} = {temp} + 1\n' \
+                      f'\tgoto {etq1}\n' \
                       f'\t{etq2}:\n return \n'
 
         return codigo
@@ -611,7 +611,7 @@ class Imprimir(Intruccion):
         codigo += f'\tif {caracter} == 165  {chr(123)} goto  {etq3} {chr(125)} \n'
         codigo += f'\tif {caracter} == 162  {chr(123)} goto {etq4} {chr(125) }\n'
 
-        codigo += f'\tfmt.Printf(\"%c\",int({caracter}));\n'
+        codigo += f'\tfmt.Printf(\"%c\",int({caracter}))\n'
         codigo += f'\tgoto {etq5}\n'
         # string----------------
         codigo += f'\t{etq6}:\n'

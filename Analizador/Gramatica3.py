@@ -241,11 +241,9 @@ def p_instrucciones_lista(t):
 def p_instruccion(t):
     '''instruccion  : funcion
                     | declaracion
-                    | declaracion_arreglo
                     '''
 
     t[0] = t[1]
-
 
 def p_lista_bloque(t):
     ''' lista_bloque : lista_bloque bloque
@@ -260,24 +258,15 @@ def p_lista_bloque(t):
 def p_bloque(t):
     '''bloque : impresiones
                 | declaracion
-                | asignacion
-                | llamada
-                | start_if
                 | start_while
-                | return_ins
                 | break_ins
-                | continue_ins
-                | start_loop
-                | declaracion_arreglo
-                | start_for
-                | funcion_nativa
+                | start_if
                 | '''
 
     if len(t) > 1:
         t[0] = t[1]
     else:
         t[0] = None
-
 
 '''xxx'''
 from AST.Expresion import Identificador
@@ -301,21 +290,112 @@ from AST.Expresion import DeclararStruct, Repeticiones
 
 '''zZz'''
 
+def p_funciones(t):
+    '''funcion  : LI lista_bloque LD'''
+
+    if len(t) == 4:
+        t[0] = Funcion.Funcion(None, None, [], t[2])
+        #t[0] = Funcion.Funcion(t[2], None, [], t[6])
+
+def p_instruccion_imprimir(t):
+    '''impresiones     : PRINTLN PI CADENA PD
+                       | PRINT PI CADENA PD
+                       | PRINTLN PI CADENA COMA impresion_valores PD
+                       | PRINT PI CADENA COMA  impresion_valores PD '''
+    if len(t) == 5:
+
+        if t[1] == 'println':
+            t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), True, [])
+            # print("\nRe reocnocio: println! con el token: ", t[3], "\n")
+        elif t[1] == 'print':
+            t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), False, [])
+            # print("\nRe reocnocio: print! con el token: ", t[3], "\n")
+
+    else:
+
+        if t[1] == 'println':
+            t[0] = Imprimir.Imprimir(t[3], True, t[5])
+            # print("\nRe reocnocio: println! con el token: ", t[5], "\n")
+
+        elif t[1] == 'print':
+            t[0] = Imprimir.Imprimir(t[3], False, t[5])
+            # print("\nRe reocnocio: print! con el token: ", t[5], "\n")
+
+def p_imprimir_lista_valores(t):
+    '''impresion_valores     :  impresion_valores COMA expresiones
+                         | expresiones '''
+
+    if len(t) > 2:
+        t[1].append(t[3])
+        t[0] = t[1]
+
+    else:
+        t[0] = [t[1]]
+
 
 def p_declaracion(t):
-    '''declaracion  :   ID tipado
-                        |  ID tipado IGUAL expresiones'''
-
+    #el primero es para asignar con el nombre de un ide
+    '''declaracion  : ID tipado
+                        |  ID  IGUAL expresiones'''
+    #(id: Identificador, expresion, tipo, mut,referencia = False):
     if len(t) == 3:
+        #esto es para el primero
         t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), None, t[2], False)
 
-        '''elif len(t) == 4:
+    elif len(t) == 4:
         #este tengo que modificar
-        mi_tipo = ""
-        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[3], None, False)'''
+        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[3], None, False)
+def p_start_if(t):
 
-    elif len(t) == 5:
-        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[3], t[2], False)
+    '''start_if : IF expresiones DP LI list_exp_ins LD
+                | IF expresiones DP  LI list_exp_ins LD ELSE DP   LI list_exp_ins LD
+                | IF expresiones DP LI list_exp_ins LD lista_elif
+                | IF expresiones DP LI list_exp_ins LD lista_elif ELSE DP  LI list_exp_ins LD  '''
+
+    print('Llego if gramatica ', len(t))
+    if len(t) == 7:
+        t[0] = Ifs.Ifs(t[2],t[5],None,None)
+    elif len(t) == 12:
+        t[0] = Ifs.Ifs(t[2], t[5], t[10],None)
+    if len(t) == 8:
+        t[0]= Ifs.Ifs(t[2],t[5],None,t[7])
+    if len(t) == 13:
+        t[0]= Ifs.Ifs(t[2],t[5],t[11],t[7])
+def p_lista_if(t):
+    ''' lista_elif : lista_elif else_if
+                    | else_if'''
+    if len(t) > 2:
+        t[1].append(t[2])
+        t[0] = t[1]
+
+    else:
+        t[0] = [t[1]]
+def p_else_if(t):
+    ''' else_if : ELIF  expresiones DP LI list_exp_ins LD '''
+    t[0] = Ifs.Ifs(t[2], t[5], None,None)
+def p_list_exp_ins(t):
+    '''list_exp_ins : list_exp_ins bloque_exp
+                | bloque_exp '''
+    if len(t) > 2:
+        t[1].append(t[2])
+        t[0] = t[1]
+
+    else:
+        t[0] = [t[1]]
+def p_bloque_exp(t):
+    ''' bloque_exp : bloque
+                    | expresiones  '''
+    t[0] = t[1]
+
+
+
+
+
+def p_start_while(t):
+    '''start_while : WHILE expresiones LI lista_bloque LD '''
+    t[0] = While.While(t[2],t[4])
+
+
 
 
 def p_tipado(t):
@@ -333,10 +413,20 @@ def p_tipo_datos(t):
                       | TIPOFLOAT
                       | TIPOCHAR
                       | TIPOSTRING
-                      | DIRSTRING
                       | TIPOBOOL
-                      | TIPOUSIZE
                       | ID'''
+    if t[1] == "int":
+        t[0] = tipo.ENTERO
+    elif t[1] == "float":
+        t[0] = tipo.DECIMAL
+    elif t[1] == "char":
+        t[0] = tipo.CARACTER
+    elif t[1] == "str":
+        t[0] = tipo.STRING
+    elif t[1] == "bool":
+        t[0] = tipo.BOOLEANO
+    else:
+        t[0] = Identificador.Identificador(t[1])
 
 def p_expresiones(t):
     '''expresiones  : expre_logica
@@ -346,6 +436,14 @@ def p_expresiones(t):
                     '''
 
     t[0] = t[1]
+
+def p_break_ins(t):
+    '''break_ins : BREAK
+                    | BREAK expresiones'''
+    if len(t) == 2:
+        t[0] = Break.Break(None)
+    else:
+        t[0] = Break.Break(t[2])
 
 def p_expre_logica(t):
     ''' expre_logica : expresiones OR expresiones
@@ -389,9 +487,7 @@ def p_expre_aritmetica(t):
                     | expresiones SUMA expresiones
                     | expresiones MULTI expresiones
                     | expresiones DIVI expresiones
-                    | expresiones MODULO expresiones
-                    | TIPOFLOAT POWF PI expresiones COMA expresiones PD
-                    | TIPOINT POW PI expresiones COMA expresiones PD '''
+                    | expresiones MODULO expresiones '''
 
     if len(t) == 3:
         if t[1] == "-":
@@ -409,12 +505,6 @@ def p_expre_aritmetica(t):
             t[0] = Aritmetica.Aritmetica(t[1], "%", t[3], False)
         elif t[1] == "(" and t[3] == ")":
             t[0] = t[2]
-    elif len(t) == 8:
-
-        if t[2] == "::pow":
-            t[0] = Aritmetica.Aritmetica(t[4], "^", t[6], False)
-        elif t[2] == "::powf":
-            t[0] = Aritmetica.Aritmetica(t[4], "^f", t[6], False)
 
 def p_datos(t):
     '''datos : ENTERO
@@ -459,11 +549,7 @@ def p_error(t):
         print("Syntax error at EOF")
 
 
-
 import ply.yacc as yacc
-
 parser = yacc.yacc()
-
-
 def parse(input):
     return parser.parse(input)

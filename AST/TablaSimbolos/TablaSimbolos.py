@@ -1,6 +1,7 @@
 from AST.TablaSimbolos.Simbolos import Simbolos
 #from Analizador.gramatica import E_list
-global E_list
+from Analizador.Gramatica3 import E_list
+#global E_list
 class TablaDeSimbolos():
 
     def __init__(self, padre, name,tssize = 0):

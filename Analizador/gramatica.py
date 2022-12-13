@@ -45,6 +45,7 @@ reservadas = {
     # SENTENCIAS
     'if': 'IF',
     'else': 'ELSE',
+    'elif': 'ELIF',
     'match': 'MATCH',
     # CICLOS
     'loop': 'LOOP',
@@ -505,21 +506,20 @@ def p_list_exp_ins(t):
 
 def p_start_if(t):
 
-
     '''start_if : IF expresiones DP LI list_exp_ins LD
-                | IF expresiones LI list_exp_ins LD ELSE LI list_exp_ins LD
-                | IF expresiones DP  LI list_exp_ins LD lista_elif
-                | IF expresiones LI list_exp_ins LD lista_elif ELSE LI list_exp_ins LD '''
+                | IF expresiones DP  LI list_exp_ins LD ELSE DP   LI list_exp_ins LD
+                | IF expresiones DP LI list_exp_ins LD lista_elif
+                | IF expresiones DP LI list_exp_ins LD lista_elif ELSE DP  LI list_exp_ins LD  '''
 
     print('Llego if gramatica ', len(t))
     if len(t) == 7:
-        t[0]= Ifs.Ifs(t[2],t[4],None,None)
-    elif len(t)==10:
-        t[0] = Ifs.Ifs(t[2], t[4], t[8],None)
+        t[0]= Ifs.Ifs(t[2],t[5],None,None)
+    elif len(t)==12:
+        t[0] = Ifs.Ifs(t[2], t[5], t[10],None)
     if len(t) == 8:
-        t[0]= Ifs.Ifs(t[2],t[4],None,t[6])
-    if len(t) == 11:
-        t[0]= Ifs.Ifs(t[2],t[4],t[9],t[6])
+        t[0]= Ifs.Ifs(t[2],t[5],None,t[7])
+    if len(t) == 13:
+        t[0]= Ifs.Ifs(t[2],t[5],t[11],t[7])
 
 def p_lista_if(t):
     ''' lista_elif : lista_elif else_if
@@ -532,8 +532,8 @@ def p_lista_if(t):
         t[0] = [t[1]]
 
 def p_else_if(t):
-    ''' else_if : ELSE IF expresiones  LI list_exp_ins LD '''
-    t[0] = Ifs.Ifs(t[3], t[5], None,None)
+    ''' else_if : ELIF  expresiones DP LI list_exp_ins LD '''
+    t[0] = Ifs.Ifs(t[2], t[5], None,None)
 
 def p_start_match(t):
     '''start_match : MATCH expresiones LI matches LD '''

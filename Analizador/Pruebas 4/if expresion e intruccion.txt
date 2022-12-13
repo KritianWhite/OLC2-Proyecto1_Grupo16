@@ -4,13 +4,25 @@ fn main () {
     if 3 == 3{
 	    println!("Entro aqui");
 	};
-	
- 	if 3 != 3{
-	    println!("Entro aqui malo");
-	} else {
-	    println!(" else bueno"); 
-	   
-	};
+
+	}
+´
+---IF
+
+if 3 != 3 :
+ 	{
+	    var=2
+	}
+
+else-if
+{
+ 	if 3 != 3 :
+ 	{
+	    var=2
+	} else : {
+	    var=1
+	}
+}
 
 
 	if-else
@@ -21,6 +33,23 @@ fn main () {
     	    println (" else bueno")
     }
     }
+
+elif
+
+{
+a = 200
+b = 33
+if b > a:{
+  c=2
+}
+elif a == b:{
+  d=4
+}
+else:{
+  e=5
+}
+
+}
 
 
 
