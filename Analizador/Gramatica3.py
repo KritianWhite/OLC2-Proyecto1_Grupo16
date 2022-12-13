@@ -291,11 +291,14 @@ from AST.Expresion import DeclararStruct, Repeticiones
 '''zZz'''
 
 def p_funciones(t):
-    '''funcion  : LI lista_bloque LD'''
+    '''funcion  : LI lista_bloque LD
+                | DEF ID PI  PD DP lista_bloque '''
 
     if len(t) == 4:
-        t[0] = Funcion.Funcion(None, None, [], t[2])
+        t[0] = Funcion.Funcion("main", None, [], t[2])
         #t[0] = Funcion.Funcion(t[2], None, [], t[6])
+    elif len(t) == 7:
+        t[0] = Funcion.Funcion(t[2], None, [], t[6])
 
 def p_instruccion_imprimir(t):
     '''impresiones     : PRINTLN PI CADENA PD

@@ -12,7 +12,7 @@ from AST.Expresion.Primitivo import Primitivo
 class Funcion(Intruccion):
 
     def __init__(self, identificador, tipo, parametros, instrucciones):
-        self.identificador = "main"
+        self.identificador =identificador
         self.tipo = tipo
         self.parametros = parametros
         self.instrucciones = instrucciones
