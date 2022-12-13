@@ -1,4 +1,4 @@
-import Gramatica as g
+import  gramatica as g
 
 f = open("./entrada.txt", "r")
 input = f.read()

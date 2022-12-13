@@ -1,3 +1,19 @@
+
+// if-elif-else
+sent_if:    IF PI expresiones PD LI instrucciones LD
+            | IF PI expresiones PD LI instrucciones LD ELSE LI instrucciones LD
+            | IF PI expresiones PD LI instrucciones LD elifs
+            | IF PI expresiones  LI instrucciones LD elifs ELSE LI instrucciones LD
+            ;
+
+elifs:      elifs ELIF PI expresiones PD LI instrucciones LD
+            | ELIF PI expresiones PD LI instrucciones LD
+            ;
+
+=======================================================================================================================
+
+
+
 GRAMATICA:
 
 

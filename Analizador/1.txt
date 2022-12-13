@@ -30,3 +30,30 @@ fn main () {
     //println!("{}",cola.len());
     //println!("{}\n",cola.capacity());
 }
+
+var= 2
+if var==2 : {
+    var1 = 4
+}
+
+
+{
+var= 2
+if var==2 : {
+    var1 = 4
+}
+else:{
+    var2 = 5
+}
+
+{
+var=3
+var2=4
+if 3==3 :
+{ var=4 }
+else :
+{ var2=5 }
+}
+
+
+}

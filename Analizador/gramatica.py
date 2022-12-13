@@ -1,16 +1,16 @@
 from AST.Expresion.Casteo.Casteo import Casteo
 from AST.TablaErrores import TablaErrores
 E_list = TablaErrores()
-
+##
 reservadas = {
     # ACCESO
     'pub': 'PUBLICO',
     # TIPOS
-    'i64': 'TIPOINT',
-    'f64': 'TIPOFLOAT',
+    'int': 'TIPOINT',
+    'float': 'TIPOFLOAT',
     'bool': 'TIPOBOOL',
     'char': 'TIPOCHAR',
-    'String': 'TIPOSTRING',
+    'str': 'TIPOSTRING',
     '&str': 'DIRSTRING',
     'usize': 'TIPOUSIZE',
     # CASTEO
@@ -504,17 +504,19 @@ def p_list_exp_ins(t):
         t[0] = [t[1]]
 
 def p_start_if(t):
-    '''start_if : IF expresiones LI list_exp_ins LD
+
+
+    '''start_if : IF expresiones DP LI list_exp_ins LD
                 | IF expresiones LI list_exp_ins LD ELSE LI list_exp_ins LD
-                | IF expresiones LI list_exp_ins LD lista_elif
+                | IF expresiones DP  LI list_exp_ins LD lista_elif
                 | IF expresiones LI list_exp_ins LD lista_elif ELSE LI list_exp_ins LD '''
 
     print('Llego if gramatica ', len(t))
-    if len(t) == 6:
+    if len(t) == 7:
         t[0]= Ifs.Ifs(t[2],t[4],None,None)
     elif len(t)==10:
         t[0] = Ifs.Ifs(t[2], t[4], t[8],None)
-    if len(t) == 7:
+    if len(t) == 8:
         t[0]= Ifs.Ifs(t[2],t[4],None,t[6])
     if len(t) == 11:
         t[0]= Ifs.Ifs(t[2],t[4],t[9],t[6])
@@ -632,7 +634,7 @@ def p_parametros(t):
 
     else:
         t[0] = [t[1]]
-#------------------------------------------
+#----------------------------------------------------------------
 def p_definiciones(t):
     """ definiciones : MUT ID tipado
                     | ID tipado
@@ -693,14 +695,14 @@ def p_tipo_funcion(t):
         t[0] = t[3]
     elif len(t) == 1:
         t[0] = None
-
+#------------------------------este estamos usando para declaracion
 def p_declaracion(t):
     #el primero es para asignar con el nombre de un ide
     '''declaracion  : LET mutable ID tipado PYC
                         |  ID  IGUAL expresiones
                         | LET mutable ID DP  tipado_vector IGUAL expresiones PYC
                         | LET mutable ID tipado IGUAL definition_strct_v2 PYC'''
-#(id: Identificador, expresion, tipo, mut,referencia = False):
+     #(id: Identificador, expresion, tipo, mut,referencia = False):
     if len(t) == 6:
         #esto es para el primero
         t[0] = Declaracion.Declaracion(Identificador.Identificador(t[3]), None, t[4], t[2])
@@ -709,7 +711,7 @@ def p_declaracion(t):
         #este tengo que modificar
         mi_tipo = ""
 
-        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[3], None, "mutable")
+        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[3], None, False)
 
     else:
         if  t.slice[6].type == 'definition_strct_v2':
@@ -728,7 +730,7 @@ def p_tipado_vect(t):
 
 
 def p_asignacion(t):
-    '''asignacion      : LET LET ID IGUAL expresiones
+    '''asignacion      :  ID IGUAL expresiones
                         '''
     t[0] = Asignacion.Asignacion(t[1], t[3])
 
@@ -760,13 +762,13 @@ def p_tipo_datos(t):
                       | TIPOUSIZE
                       | ID'''
 
-    if t[1] == "i64":
+    if t[1] == "int":
         t[0] = tipo.ENTERO
-    elif t[1] == "f64":
+    elif t[1] == "float":
         t[0] = tipo.DECIMAL
     elif t[1] == "char":
         t[0] = tipo.CARACTER
-    elif t[1] == "String":
+    elif t[1] == "str":
         t[0] = tipo.STRING
     elif t[1] == "&str":
         t[0] = tipo.DIRSTRING

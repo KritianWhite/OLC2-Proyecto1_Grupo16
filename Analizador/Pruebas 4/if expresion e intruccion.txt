@@ -11,6 +11,22 @@ fn main () {
 	    println!(" else bueno"); 
 	   
 	};
+
+
+	if-else
+	{
+    if 3 != 3{
+    	    println ("Entro aqui malo")
+    	} else {
+    	    println (" else bueno")
+    }
+    }
+
+
+
+
+
+
 	
 	let numero = 3;
 	
