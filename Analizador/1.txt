@@ -63,7 +63,17 @@ if var==2 : {
 }}
 -----
 
+{
+hola(20)
+}
 
+def hola (x : int) {
+    if  x == 10 :{
+    println("parametro correcto")
+}else:{
+    println("parametro incorrecto")
+}
+}
 ----
 elif
 ----

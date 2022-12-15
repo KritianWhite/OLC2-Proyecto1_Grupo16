@@ -1,0 +1,13 @@
+
+// Declaracion sin tipo
+
+a = 10
+b = "Hola"
+c = 120.03
+d = 'h'
+
+print(a)
+print(b)
+print(c)
+print(d)
+

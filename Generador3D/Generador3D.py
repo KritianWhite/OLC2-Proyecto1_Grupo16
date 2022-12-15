@@ -76,8 +76,7 @@ var Heap [30101999]float64;
 
     def declararfuciones(self):
         codigo = ""
-        for x in self.listafunciones:
-            codigo += f'void {x}();\n'
+
         return  codigo
 
     def FuncionEjecutado(self,identificador):
@@ -91,10 +90,10 @@ var Heap [30101999]float64;
         self.listafunciones.append(identificador)
 
     def agregarFuncion(self, codigo,identificador):
-        self.funciones += f'void {identificador}()'
+        self.funciones += f'func {identificador}()'
         self.funciones += "{\n"
         self.funciones += codigo+"\n"
-        self.funciones += "return;\n}"
+        self.funciones += "\n}" #revisar si en go lleva return
         self.funciones += "\n\n\n"
 
     def reiniciarGenerador(self):

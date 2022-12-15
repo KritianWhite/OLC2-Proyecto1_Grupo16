@@ -261,6 +261,7 @@ def p_bloque(t):
                 | start_while
                 | break_ins
                 | start_if
+                | llamada
                 | '''
 
     if len(t) > 1:
@@ -292,13 +293,45 @@ from AST.Expresion import DeclararStruct, Repeticiones
 
 def p_funciones(t):
     '''funcion  : LI lista_bloque LD
-                | DEF ID PI  PD DP lista_bloque '''
-
+                | DEF ID PI parametros  PD  LI lista_bloque LD
+                | DEF ID PI parametros PD tipo_datos LI lista_bloque LD
+                '''
     if len(t) == 4:
         t[0] = Funcion.Funcion("main", None, [], t[2])
         #t[0] = Funcion.Funcion(t[2], None, [], t[6])
-    elif len(t) == 7:
-        t[0] = Funcion.Funcion(t[2], None, [], t[6])
+    elif len(t) == 9:
+        t[0] = Funcion.Funcion(t[2], None, t[4], t[7])
+    elif len(t) == 10:
+        t[0] = Funcion.Funcion(t[2], t[6], t[4], t[8])
+
+def p_parametros(t):
+    '''parametros : parametros COMA definiciones
+                  | definiciones'''
+
+    if len(t) > 2:
+        t[1].append(t[3])
+        t[0] = t[1]
+
+    else:
+        t[0] = [t[1]]
+
+def p_definiciones(t):
+    """ definiciones :  ID tipado
+                     """
+
+
+    print("Llego a definiciones, ",len(t))
+
+    if len(t) == 4:
+        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[2]), None, t[3],True)
+
+    elif len(t) == 3:
+        if t.slice[2].type == 'tipado':
+            t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), None, t[2], False)
+        else:
+            t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), None, t[2], True,True)
+
+
 
 def p_instruccion_imprimir(t):
     '''impresiones     : PRINTLN PI CADENA PD
@@ -364,6 +397,8 @@ def p_start_if(t):
         t[0]= Ifs.Ifs(t[2],t[5],None,t[7])
     if len(t) == 13:
         t[0]= Ifs.Ifs(t[2],t[5],t[11],t[7])
+
+
 def p_lista_if(t):
     ''' lista_elif : lista_elif else_if
                     | else_if'''
@@ -373,9 +408,13 @@ def p_lista_if(t):
 
     else:
         t[0] = [t[1]]
+
+
 def p_else_if(t):
     ''' else_if : ELIF  expresiones DP LI list_exp_ins LD '''
     t[0] = Ifs.Ifs(t[2], t[5], None,None)
+
+
 def p_list_exp_ins(t):
     '''list_exp_ins : list_exp_ins bloque_exp
                 | bloque_exp '''
@@ -385,12 +424,34 @@ def p_list_exp_ins(t):
 
     else:
         t[0] = [t[1]]
+
+
 def p_bloque_exp(t):
     ''' bloque_exp : bloque
                     | expresiones  '''
     t[0] = t[1]
 
+def p_llamada(t):
+    '''llamada  : ID PI PD
+                | ID PI lista_expres PD'''
 
+    if len(t) == 4:
+        print("=== llamda tipo 1")
+        t[0] = Llamada.Llamada(t[1], [])
+    else:
+        print("=== llamda tipo 2")
+        t[0] = Llamada.Llamada(t[1], t[3])
+
+def p_lista_expres(t):
+    '''lista_expres : lista_expres COMA  expresiones
+                    | expresiones '''
+
+    if len(t) > 2:
+        t[1].append(t[3])
+        t[0] = t[1]
+
+    else:
+        t[0] = [t[1]]
 
 
 
@@ -403,7 +464,7 @@ def p_start_while(t):
 
 def p_tipado(t):
     '''tipado      : DP tipo_datos
-                     |'''
+                     '''
     if len(t) > 1:
 
         t[0] = t[2]
@@ -431,6 +492,14 @@ def p_tipo_datos(t):
     else:
         t[0] = Identificador.Identificador(t[1])
 
+def p_break_ins(t):
+    '''break_ins : BREAK
+                    | BREAK expresiones'''
+    if len(t) == 2:
+        t[0] = Break.Break(None)
+    else:
+        t[0] = Break.Break(t[2])
+
 def p_expresiones(t):
     '''expresiones  : expre_logica
                     | expre_relacional
@@ -440,13 +509,12 @@ def p_expresiones(t):
 
     t[0] = t[1]
 
-def p_break_ins(t):
-    '''break_ins : BREAK
-                    | BREAK expresiones'''
-    if len(t) == 2:
-        t[0] = Break.Break(None)
-    else:
-        t[0] = Break.Break(t[2])
+def p_expre_valor(t):
+    '''expre_valor :  start_if
+                    | datos
+                    | llamada
+                    '''
+    t[0] = t[1]
 
 def p_expre_logica(t):
     ''' expre_logica : expresiones OR expresiones

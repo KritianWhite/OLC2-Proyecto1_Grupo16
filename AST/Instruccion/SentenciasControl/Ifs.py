@@ -2,7 +2,8 @@ from AST.Abstracto.Instruccion import Intruccion
 from AST.Abstracto.Expresion import Expresion
 from AST.TablaSimbolos.Tipos import tipo,RetornoType
 from AST.TablaSimbolos.TablaSimbolos import TablaDeSimbolos
-from Analizador.gramatica import E_list
+#from Analizador.gramatica import E_list
+from Analizador.Gramatica3 import E_list
 from AST.Instruccion.SentenciasTranferencia.Break import Break
 from AST.Instruccion.SentenciasTranferencia.Continue import Continue
 

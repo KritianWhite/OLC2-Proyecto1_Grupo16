@@ -6,6 +6,7 @@ reservadas = {
     # ACCESO
     'pub': 'PUBLICO',
     # TIPOS
+    'def' : 'DEF',
     'int': 'TIPOINT',
     'float': 'TIPOFLOAT',
     'bool': 'TIPOBOOL',

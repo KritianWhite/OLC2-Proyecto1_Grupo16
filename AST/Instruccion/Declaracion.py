@@ -9,8 +9,8 @@ class Declaracion(Intruccion):
     def __init__(self, id: Identificador, expresion, tipo, mut,referencia = False):
         self.identificador = id
         self.expresion = expresion
-        #self.tipo = self.generarTipo(expresion)
-        self.tipo = tipo
+        self.tipo = self.generarTipo(expresion)
+        #self.tipo = tipo
         self.mut = mut
         self.referencia = referencia
         self.objeto = None

@@ -4,7 +4,8 @@ from AST.TablaSimbolos.TablaSimbolos import TablaDeSimbolos, Simbolos
 from AST.Instruccion import Funcion
 from AST.TablaSimbolos.Tipos import RetornoType
 from AST.Expresion.Identificador import Identificador
-from Analizador.gramatica import E_list
+#from Analizador.gramatica import E_list
+from Analizador.Gramatica3 import E_list
 from AST.TablaSimbolos.InstanciaArreglo import InstanciaArreglo
 from AST.TablaSimbolos.InstanciaVector import InstanciaVector
 from AST.TablaSimbolos.Tipos import tipo as t
@@ -52,7 +53,7 @@ class Llamada(Intruccion, Expresion):
                 if not controlador.Generador3D.FuncionEjecutado(self.identificador):
                     if self.identificador != "main":
                         controlador.Generador3D.agregaridfuncion(self.identificador)
-                    retorno = str( simbolo_funcion.Ejecutar3D(controlador, ts_local))
+                    retorno =  simbolo_funcion.Ejecutar3D(controlador, ts_local)
                 else:
                     tablapadre = tabla.padre
                     tsbusqueda = ""
@@ -115,7 +116,7 @@ class Llamada(Intruccion, Expresion):
                     codigo += return_lla.codigo
                     codigo += f'\n\t{temp1} = SP + {ts.size};\n'
                     codigo += f'\t{temp2} = {temp1} + {ts_local.size};/*P simulado*/\n'
-                    codigo += f'\tStack[(int){temp2}]= {return_lla.temporal};\n'
+                    codigo += f'\tStack[int({temp2})]= {return_lla.temporal};\n'
 
                     simbolo = Simbolos()
                     simbolo.SimboloPremitivo(aux_fun.identificador.id, None, aux_fun.tipo, aux_fun.mut,ts_local.size)
@@ -138,7 +139,7 @@ class Llamada(Intruccion, Expresion):
                                 codigo += f'\n\t{tempReferencia} = SP + {return_lla.direccion};\n'
                                 codigo += f'\t{temp1} = SP + {ts.size};\n'
                                 codigo += f'\t{temp2} = {temp1} + {ts_local.size};/*P simulado*/\n'
-                                codigo += f'\tStack[(int){temp2}]= {tempReferencia};\n'
+                                codigo += f'\tStack[int({temp2})]= {tempReferencia};\n'
 
                                 simbolo = Simbolos()
                                 simbolo.SimboloPremitivo(aux_fun.identificador.id, None, aux_fun.tipo, aux_fun.mut,ts_local.size)
@@ -169,7 +170,7 @@ class Llamada(Intruccion, Expresion):
                                 codigo += f'\n\t{tempReferencia} = SP + {return_lla.direccion}/*Referencia*/;\n'
                                 codigo += f'\t{temp1} = SP + {ts.size};\n'
                                 codigo += f'\t{temp2} = {temp1} + {ts_local.size};/*P simulado*/\n'
-                                codigo += f'\tStack[(int){temp2}]= {tempReferencia};\n'
+                                codigo += f'\tStack[int({temp2})]= {tempReferencia};\n'
 
                                 simbolo = Simbolos()
                                 simbolo.SimboloPremitivo(aux_fun.identificador.id, None, aux_fun.tipo, aux_fun.mut,ts_local.size)
@@ -204,7 +205,7 @@ class Llamada(Intruccion, Expresion):
                             codigo += f'\n\t{tempReferencia} = SP + {return_lla.direccion};/*Referencia*/\n'
                             codigo += f'\t{temp1} = SP + {ts.size};\n'
                             codigo += f'\t{temp2} = {temp1} + {ts_local.size};/*P simulado*/\n'
-                            codigo += f'\tStack[(int){temp2}]= {tempReferencia};\n'
+                            codigo += f'\tStack[int({temp2})]= {tempReferencia};\n'
 
                             simbolo = Simbolos()
                             simbolo.SimboloPremitivo(aux_fun.identificador.id, None, aux_fun.tipo, aux_fun.mut,ts_local.size)

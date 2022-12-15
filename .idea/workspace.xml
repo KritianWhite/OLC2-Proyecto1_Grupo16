@@ -6,18 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Llamada.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Llamada.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/SentenciasControl/Ifs.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/SentenciasControl/Ifs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parser.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parsetab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gramatica.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Gramatica.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" afterDir="false" />
     </list>
     <list id="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" name="Changes by Administrator" comment="">
+      <change beforePath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/Funcion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Funcion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Llamada.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Llamada.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/Simbolos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/Simbolos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/gramatica.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/gramatica.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generador3D/Generador3D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generador3D/Generador3D.py" afterDir="false" />
     </list>
     <list id="02073b61-f00c-40e3-87db-7f4a9a868334" name="Changes by Boror" comment="" />
-    <list id="370a197f-192e-48fa-8608-2c16d7302846" name="Changes by Julio R" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,11 +35,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/AST/Instruccion/Llamada.py">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="8" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="54" end1="55" start2="55" end2="56" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="117" end1="118" start2="118" end2="119" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="140" end1="141" start2="141" end2="142" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="171" end1="172" start2="172" end2="173" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="206" end1="207" start2="207" end2="208" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/Analizador/Gramatica3.py">
       <ranges>
-        <range start1="293" end1="294" start2="293" end2="295" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="296" end1="297" start2="297" end2="298" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
-        <range start1="298" end1="298" start2="299" end2="301" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="263" end1="263" start2="263" end2="264" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="294" end1="296" start2="295" end2="298" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="299" end1="301" start2="301" end2="334" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="366" end1="366" start2="399" end2="401" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="375" end1="375" start2="410" end2="412" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="378" end1="378" start2="415" end2="417" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="387" end1="387" start2="426" end2="428" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="392" end1="392" start2="433" end2="443" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="393" end1="393" start2="444" end2="454" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="405" end1="406" start2="466" end2="467" changelist="fa5d1b79-8ae5-47ba-8ea1-f42d774af8ee" />
+        <range start1="432" end1="432" start2="493" end2="501" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="442" end1="449" start2="511" end2="517" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
       </ranges>
     </file>
   </component>
@@ -146,6 +173,8 @@
       <workItem from="1670818227161" duration="665000" />
       <workItem from="1670820126005" duration="317000" />
       <workItem from="1670824122635" duration="13147000" />
+      <workItem from="1670997918470" duration="33000" />
+      <workItem from="1671074649871" duration="12390000" />
     </task>
     <servers />
   </component>
@@ -155,6 +184,27 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cambio en clase declaracion y producion declaracion en gramatica" />
     <option name="LAST_COMMIT_MESSAGE" value="cambio en clase declaracion y producion declaracion en gramatica" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Analizador/Gramatica3.py</url>
+          <line>298</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Analizador/Gramatica3.py</url>
+          <line>301</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Analizador/Gramatica3.py</url>
+          <line>303</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -166,6 +216,6 @@
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$editor.coverage" NAME="editor Coverage Results" MODIFIED="1670876345156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Interfaz" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Funcion.coverage" NAME="Funcion Coverage Results" MODIFIED="1670750936203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1670925200981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1671091099797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>

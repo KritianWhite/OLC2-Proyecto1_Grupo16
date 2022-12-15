@@ -1,0 +1,21 @@
+// Declaracion con tipo
+
+a: int = 10
+b: str = "Hola"
+c: float = 120.03
+d: char = 'h'
+
+e: str = 10
+f: int = "Hola"
+g: int = 120.03
+h: str = 'a'
+
+println("{}",a)
+println("{}",b)
+println("{}",c)
+println("{}",d)
+println("{}",e)
+println("{}",f)
+println("{}",g)
+println("{}",h)
+
