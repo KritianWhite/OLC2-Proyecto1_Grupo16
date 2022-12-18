@@ -91,7 +91,7 @@ class Nativas(Expresion):
                 codigo += return_exp1.codigo
 
                 if tipo_exp1 == tipo.STRING:
-                    tipo_exp1 = tipo.DIRSTRING
+                    #tipo_exp1 = tipo.DIRSTRING
 
                     temp1 = controlador.Generador3D.obtenerTemporal()
                     etq1 = controlador.Generador3D.obtenerEtiqueta()
@@ -103,8 +103,8 @@ class Nativas(Expresion):
                     codigo += f'\t{temp2} = HP;\n'
 
                     codigo += f'\t{etq1}:\n'
-                    codigo += f'\t{temp1} = Heap[(int){array.temporal}];\n'
-                    codigo += f'\tif ({temp1} != 0 ) goto {etq2};\n'
+                    codigo += f'\t{temp1} = Heap[int({array.temporal})];\n'
+                    codigo += f'\tif ({temp1} != 0 ){chr(123)} goto {etq2} {chr(125)};\n'
                     codigo += f'\tgoto {etq3};\n'
 
                     codigo += f'\t{etq2}:\n'
@@ -127,7 +127,7 @@ class Nativas(Expresion):
                 return_exp1 = self.expresion.Obtener3D(controlador, ts)
                 codigo += return_exp1.codigo
 
-                codigo += f'\t{return_exp1.temporal} = Heap[(int){return_exp1.temporal}];\n'
+                codigo += f'\t{return_exp1.temporal} = Heap[int({return_exp1.temporal})];\n'
 
                 retorno = RetornoType()
                 retorno.iniciarRetorno(codigo, "",return_exp1.temporal , return_exp1.tipo)
@@ -147,17 +147,17 @@ class Nativas(Expresion):
 
                     if not return_exp1.referencia:
                         codigo += f'\t{temp1} = SP + {return_exp1.direccion};\n'
-                        codigo += f'\t{temp2} = Stack[(int){temp1}];\n'
+                        codigo += f'\t{temp2} = Stack[int({temp1})];\n'
                     else:
                         codigo += f'\t{temp2} = SP + {return_exp1.direccion};\n'
-                        codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+                        codigo += f'\t{temp2} = Stack[int({temp2})];\n'
                         while return_exp1.referencia:
-                            codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+                            codigo += f'\t{temp2} = Stack[int({temp2})];\n'
                             return_exp1 = return_exp1.tsproviene.ObtenerSimbolo(return_exp1.idproviene)
 
                     #codigo += f'\n{temp1} = SP + {return_exp1.direccion};\n'
                     #codigo += f'\n{temp2} = Stack[(int){temp1}];\n'
-                    codigo += f'\n{temp3} = Heap[(int){temp2}];\n'
+                    codigo += f'\n{temp3} = Heap[int({temp2})];\n'
                     retorno = RetornoType()
                     retorno.iniciarRetorno(codigo,"",temp3,tipo.ENTERO)
                     return retorno

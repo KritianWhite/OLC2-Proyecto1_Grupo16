@@ -19,12 +19,12 @@ class InstanciaArreglo(Simbolos):
 
         if not esreferencia.referencia:
             codigo += f'\t{temp1} = SP + {direccion};\n'
-            codigo += f'\t{temp2} = Stack[(int){temp1}];\n'
+            codigo += f'\t{temp2} = Stack[int({temp1})];\n'
         else:
             codigo += f'\t{temp2} = SP + {esreferencia.direccion};\n'
-            codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+            codigo += f'\t{temp2} = Stack[int({temp2})];\n'
             while esreferencia.referencia:
-                codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+                codigo += f'\t{temp2} = Stack[int({temp2})];\n'
                 esreferencia = esreferencia.tsproviene.ObtenerSimbolo(esreferencia.idproviene)
 
 
@@ -39,7 +39,7 @@ class InstanciaArreglo(Simbolos):
 
             if self.peek_stack(listatemporales) is not None:
                 temp4 = controlador.Generador3D.obtenerTemporal()
-                codigo += f'\t{temp4} = Heap[(int){temp3}];\n'
+                codigo += f'\t{temp4} = Heap[int({temp3})];\n'
                 codigo += f'\t{temp2} = {temp3} + {temp4};\n'
 
         retorno = RetornoType()
@@ -64,18 +64,18 @@ class InstanciaArreglo(Simbolos):
 
         if not esreferencia.referencia:
             codigo += f'\t{temp1} = SP + {direccion};\n'
-            codigo += f'\t{temp2} = Stack[(int){temp1}];\n'
+            codigo += f'\t{temp2} = Stack[int({temp1})];\n'
         else:
             codigo += f'\t{temp2} = SP + {esreferencia.direccion};\n'
-            codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+            codigo += f'\t{temp2} = Stack[int({temp2})];\n'
             while esreferencia.referencia:
-                codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+                codigo += f'\t{temp2} = Stack[int({temp2})];\n'
                 esreferencia = esreferencia.tsproviene.ObtenerSimbolo(esreferencia.idproviene)
 
         temp4=""
 
         size = controlador.Generador3D.obtenerTemporal()
-        codigo += f'\t{size} = Heap[(int){temp2}];\n'
+        codigo += f'\t{size} = Heap[int({temp2})];\n'
 
         primeravex= True
         etq1 = controlador.Generador3D.obtenerEtiqueta()
@@ -92,14 +92,14 @@ class InstanciaArreglo(Simbolos):
 
             if primeravex and self.varImprimir is not None:
                 primeravex = False
-                codigo += f'\tif({tempooo} < {size}) goto {etq1};\n'
+                codigo += f'\tif({tempooo} < {size}) {chr(123)} goto {etq1} {chr(125)};\n'
                 codigo += f'\tgoto {etq2};\n'
 
                 codigo += f'\t{etq1}:\n'
-                codigo += f'\tif({tempooo} < 0) goto {etq2};\n'
+                codigo += f'\tif({tempooo} < 0) {chr(123)} goto {etq2} {chr(125)};\n'
 
             temp4 = controlador.Generador3D.obtenerTemporal()
-            codigo += f'\t{temp4} = Heap[(int){temp3}];\n'
+            codigo += f'\t{temp4} = Heap[int({temp3})];\n'
 
             if self.peek_stack(listatemporales) is not None:
                 codigo += f'\t{temp2} = {temp3} + {temp4};\n'
@@ -126,12 +126,12 @@ class InstanciaArreglo(Simbolos):
 
         if not esreferencia.referencia:
             codigo += f'\t{temp1} = SP + {direccion};\n'
-            codigo += f'\t{temp2} = Stack[(int){temp1}];\n'
+            codigo += f'\t{temp2} = Stack[int({temp1})];\n'
         else:
             codigo += f'\t{temp2} = SP + {esreferencia.direccion};\n'
-            codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+            codigo += f'\t{temp2} = Stack[int({temp2})];\n'
             while esreferencia.referencia:
-                codigo += f'\t{temp2} = Stack[(int){temp2}];\n'
+                codigo += f'\t{temp2} = Stack[int({temp2})];\n'
                 esreferencia = esreferencia.tsproviene.ObtenerSimbolo(esreferencia.idproviene)
 
         temp4=""
@@ -143,7 +143,7 @@ class InstanciaArreglo(Simbolos):
             listatemporales.remove(listatemporales[0])
 
             temp4 = controlador.Generador3D.obtenerTemporal()
-            codigo += f'\t{temp4} = Heap[(int){temp3}];\n'
+            codigo += f'\t{temp4} = Heap[int({temp3})];\n'
 
             codigo += f'\t{temp2} = {temp3} + {temp4};\n'
 
@@ -174,9 +174,9 @@ class InstanciaArreglo(Simbolos):
             temp3 = controlador.Generador3D.obtenerTemporal()
 
             codigo += f'\t{temp1} = SP + {direccion};\n'
-            codigo += f'\t{temp2} = Stack[(int){temp1}];\n'
+            codigo += f'\t{temp2} = Stack[int({temp1})];\n'
             codigo += f'\t{temp2} = {temp2} + 1;\n'
-            codigo += f'\t{temp3} = Heap[(int){temp2}];\n'
+            codigo += f'\t{temp3} = Heap[int({temp2})];\n'
             retorno = RetornoType(valores[indiceDimension])
             retorno.iniciarRetorno(codigo, "", temp3, "")
 

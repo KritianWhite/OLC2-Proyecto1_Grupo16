@@ -48,7 +48,7 @@ class ArregloData(Expresion):
 
         temp = controlador.Generador3D.obtenerTemporal()
         codigo += f'\t{temp} = HP;\n'
-        codigo += f'\tHeap[HP] = {len(expresionesCompiladas)};\n'
+        codigo += f'\tHeap[int(HP)] = {len(expresionesCompiladas)};\n'
         codigo += f'\tHP = HP +1;\n'
 
         for i in range(0, len(expresionesCompiladas)):
@@ -57,7 +57,7 @@ class ArregloData(Expresion):
             if expresionCompilada.tipo != t.ARRAY:
                 tipoFinal = expresionCompilada.tipo
                 valores.append(expresionCompilada.valor)
-                codigo += f'\tHeap[HP] = {listatemporales[i]};\n'
+                codigo += f'\tHeap[int(HP)] = {listatemporales[i]};\n'
                 codigo += f'\tHP = HP +1;\n'
                 continue
             else:
@@ -67,7 +67,7 @@ class ArregloData(Expresion):
                 if i == 0:
                     tipoFinal = instanciaArray.tipo
                     listaDimensiones.extend(instanciaArray.dimensiones)
-                    codigo += f'\tHeap[HP] = {len(listatemporales) * (i + 1) - 1 * (i + 1) + (i+1)};\n'
+                    codigo += f'\tHeap[int(HP)] = {len(listatemporales) * (i + 1) - 1 * (i + 1) + (i+1)};\n'
                 else:
                     factor = ( len(listatemporales)- (i) )
 
@@ -78,7 +78,7 @@ class ArregloData(Expresion):
                     if len(expresionCompilada.dimensiones) > 1:
                         resultado += expresionCompilada.dimensiones[len(expresionCompilada.dimensiones)-1] + 1
 
-                    codigo += f'\tHeap[HP] =   {(resultado + 1)*(listaDimensiones[0] - factor) + factor };\n'
+                    codigo += f'\tHeap[int(HP)] =   {(resultado + 1)*(listaDimensiones[0] - factor) + factor };\n'
 
                 codigo += f'\tHP = HP +1;\n'
 

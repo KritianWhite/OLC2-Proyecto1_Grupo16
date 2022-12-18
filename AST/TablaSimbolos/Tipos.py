@@ -7,17 +7,16 @@ class tipo(Enum):
     BOOLEANO = 2,
     CARACTER = 3,
     STRING = 4,
-    DIRSTRING = 5,
-    UNDEFINED = 6,
-    RETURN = 7,
-    BREAK = 8,
-    CONTINUE = 9,
-    ARRAY = 10,
-    OBJETO = 11,
-    USIZE = 12,
-    VECTOR = 13,
-    STRUCT = 14,
-    ERROR = 15
+    UNDEFINED = 5,
+    RETURN = 6,
+    BREAK = 7,
+    CONTINUE = 8,
+    ARRAY = 9,
+    OBJETO = 10,
+    USIZE = 11,
+    VECTOR = 12,
+    STRUCT = 13,
+    ERROR = 14
 
 class RetornoType():
     def __init__(self,  valor = None , tipo = tipo.UNDEFINED , final = tipo.UNDEFINED):
@@ -72,10 +71,6 @@ class Tipos():
         elif self.nombre == 'DECIMAL':
             print("Se dectecto un decimal")
             return tipo.DECIMAL
-
-        elif self.nombre == 'DIRSTRING':
-            print("Se dectecto una DIRSTRING")
-            return tipo.DIRSTRING
 
         elif self.nombre == 'STRING':
             print("Se dectecto una STRING")

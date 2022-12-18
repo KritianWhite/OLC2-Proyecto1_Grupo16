@@ -24,9 +24,9 @@ class Aritmetica(Operacion, Expresion):
         CARACTER = controlador.Generador3D.obtenerTemporal()
 
         codigo += f'{etiquetaCiclo}: \n'
-        codigo += f'{CARACTER} = Heap[(int){expresionRetorno.temporal}];\n'
-        codigo += f'if ( {CARACTER} == 0) goto {etiquetaSalida};\n'
-        codigo += f'     Heap[HP] = {CARACTER};\n'
+        codigo += f'{CARACTER} = Heap[int({expresionRetorno.temporal})];\n'
+        codigo += f'if {CARACTER} == 0 {chr(123)}goto {etiquetaSalida}{chr(125)};\n'
+        codigo += f'     Heap[int(HP)] = {CARACTER};\n'
         codigo += f'     HP = HP + 1;\n'
         codigo += f'     {expresionRetorno.temporal} = {expresionRetorno.temporal} + 1;\n'
         codigo += f'     goto {etiquetaCiclo};\n'
@@ -78,7 +78,7 @@ class Aritmetica(Operacion, Expresion):
             if self.operador == operador.SUMA:
 
                 codigo += "/*SUMA*/\n"
-                if tipo_exp1 == tipo.STRING and tipo_exp2 == tipo.DIRSTRING:
+                if tipo_exp1 == tipo.STRING and tipo_exp2 == tipo.STRING:
                     temp = controlador.Generador3D.obtenerTemporal()
 
                     codigo += f'{temp} = HP\n'
@@ -179,7 +179,7 @@ class Aritmetica(Operacion, Expresion):
                 codigo += f'\t{temp1} = {exp1_temp};\n'
                 codigo += f'\t{temp2} = 1;\n'
                 codigo += f'\t{etq3}:\n'
-                codigo += f'\tif ({temp2} != {exp2_temp}) goto {etq1};\n'
+                codigo += f'\tif ({temp2} != {exp2_temp}) {chr(123)} goto {etq1} {chr(125)};\n'
                 codigo += f'\tgoto {etq2};\n'
                 codigo += f'\t{etq1}:\n'
                 codigo += f'\t{temp1} = {temp1} * {exp1_temp};\n'
@@ -198,13 +198,13 @@ class Aritmetica(Operacion, Expresion):
                 temp1 = controlador.Generador3D.obtenerTemporal()
                 temp2 = controlador.Generador3D.obtenerTemporal()
 
-                codigo += f'\t{temp1} = (int){exp1_temp};\n'
+                codigo += f'\t{temp1} = int({exp1_temp});\n'
                 codigo += f'\t{temp2} = 1;\n'
                 codigo += f'\t{etq3}:\n'
-                codigo += f'\tif ({temp2} != (int){exp2_temp}) goto {etq1};\n'
+                codigo += f'\tif {temp2} != int({exp2_temp}) {chr(123)}goto {etq1}{chr(125)};\n'
                 codigo += f'\tgoto {etq2};\n'
                 codigo += f'\t{etq1}:\n'
-                codigo += f'\t{temp1} = {temp1} * (int){exp1_temp};\n'
+                codigo += f'\t{temp1} = {temp1} * int({exp1_temp});\n'
                 codigo += f'\t{temp2} = {temp2} + {1};\n'
                 codigo += f'\tgoto {etq3};\n'
                 codigo += f'\t{etq2}:\n'

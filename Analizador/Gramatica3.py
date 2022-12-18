@@ -261,6 +261,7 @@ def p_bloque(t):
                 | start_while
                 | break_ins
                 | start_if
+                | start_for
                 | llamada
                 | '''
 
@@ -372,15 +373,29 @@ def p_imprimir_lista_valores(t):
 def p_declaracion(t):
     #el primero es para asignar con el nombre de un ide
     '''declaracion  : ID tipado
-                        |  ID  IGUAL expresiones'''
+                        | ID  IGUAL expresiones
+                        | ID tipado IGUAL expresiones'''
     #(id: Identificador, expresion, tipo, mut,referencia = False):
+    #if len(t) == 2:
+    #    t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), "", tipo.UNDEFINED, False)
     if len(t) == 3:
         #esto es para el primero
-        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), None, t[2], False)
+        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), "0", t[2], False)
 
     elif len(t) == 4:
         #este tengo que modificar
         t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[3], None, False)
+    elif len(t) == 5:
+        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), t[4], t[2], False)
+
+def p_lista_Variables(t):
+    '''lista_Variables : lista_Variables COMA ID
+                        | ID'''
+    if len(t) > 2:
+        t[1].append(t[3])
+        t[0] = t[1]
+    else:
+        t[0] = [t[1]]
 def p_start_if(t):
 
     '''start_if : IF expresiones DP LI list_exp_ins LD
@@ -459,12 +474,47 @@ def p_start_while(t):
     '''start_while : WHILE expresiones LI lista_bloque LD '''
     t[0] = While.While(t[2],t[4])
 
+def p_start_for(t):
+    '''start_for : FOR ID IN opciones_for LI lista_bloque LD '''
+
+    t[0]= For.For(t[2],t[4],t[6])
+
+def p_opciones_for(t):
+    '''opciones_for :  expresiones
+                    | RANGE  PI expresiones PD '''
+
+    if len(t) == 2:
+        t[0]= [1,t[1]]
+    else:
+        t[0]= [2,1,t[3]]
+
+
+
+def p_acceso_arreglo(t):
+    '''acceso_arreglo : ID dimensiones '''
+    print("Deberia ser id: ", t[1], " dimensiones: ",t[2])
+    t[0] = AccesoArreglo.AccesoArreglo(t[1], t[2])
+
+def p_dimensiones(t):
+    '''dimensiones : dimensiones dimension
+                    | dimension'''
+    if len(t) > 2:
+        t[1].append(t[2])
+        t[0] = t[1]
+
+    else:
+        t[0] = [t[1]]
+
+def p_dimension(t):
+    '''dimension : CI expresiones CD  '''
+    t[0] = t[2]
+
 
 
 
 def p_tipado(t):
     '''tipado      : DP tipo_datos
-                     '''
+                    | '''
     if len(t) > 1:
 
         t[0] = t[2]
@@ -505,16 +555,62 @@ def p_expresiones(t):
                     | expre_relacional
                     | expre_aritmetica
                     | datos
+                    | expre_valor
+                    | funcion_nativa
                     '''
 
     t[0] = t[1]
+
+
+def p_funcion_nativa(t):
+    '''funcion_nativa : tipo_datos PI expresiones PD ''' #nativas expresiones PUNTO nativas
+
+
+
+    print("Llego a nativas")
+
+    if isinstance(t[3],NativasVectores.NativasVectores):
+        nativa = t[3]
+        nativa.expresion = t[1]
+        print("Llego a nativa vectores", nativa)
+        t[0] = nativa
+
+    elif  isinstance(t[3],AccesoStruct.AccesoStruct):
+        print(t[3])
+        print(t[1])
+        t[3].identificador = t[1]
+        t[0]= t[3]
+    else:
+        t[0]= Casteo.Casteo(t[3],t[1])
+    # t[0] = Nativas.Nativas(t[1], t[3])
+
 
 def p_expre_valor(t):
     '''expre_valor :  start_if
                     | datos
+                    | arreglo_init
+                    | acceso_arreglo
                     | llamada
                     '''
     t[0] = t[1]
+
+
+def p_arreglo_init(t):
+    '''arreglo_init : CI lista_Expresiones CD '''
+    t[0] = ArregloData.ArregloData(t[2])
+
+
+def p_lista_expresiones(t):
+    '''lista_Expresiones : lista_Expresiones COMA expresiones
+                        | expresiones'''
+
+    if len(t) > 2:
+        t[1].append(t[3])
+        t[0] = t[1]
+
+    else:
+        t[0] = [t[1]]
+
 
 def p_expre_logica(t):
     ''' expre_logica : expresiones OR expresiones
@@ -591,7 +687,7 @@ def p_datos(t):
     elif t.slice[1].type == 'FLOAT':
         t[0] = Primitivo.Primitivo(t[1], 'DECIMAL')
     elif t.slice[1].type == 'CADENA':
-        t[0] = Primitivo.Primitivo(t[1], 'DIRSTRING')
+        t[0] = Primitivo.Primitivo(t[1], 'STRING')
     elif t.slice[1].type == 'TRUE':
         t[0] = Primitivo.Primitivo(True, 'BOOLEANO')
     elif t.slice[1].type == 'FALSE':
@@ -601,7 +697,7 @@ def p_datos(t):
     elif t.slice[1].type == 'ID':
         t[0] = Identificador.Identificador(t[1])
     else:
-        t[0] = Primitivo.Primitivo(t[2], 'DIRSTRING')
+        t[0] = Primitivo.Primitivo(t[2], 'STRING')
 
 
 def p_error(t):

@@ -36,7 +36,7 @@ class DeclaracionVector(Intruccion):
             codigo += Exp_arreglo.codigo
 
             codigo += f'\t{temp1} = SP + {ts.size};\n'
-            codigo += f'\tStack[(int){temp1}] = {Exp_arreglo.temporal};\n'
+            codigo += f'\tStack[int({temp1})] = {Exp_arreglo.temporal};\n'
 
             objetoVector.direccion = ts.size
             ts.Agregar_Simbolo(self.identificador, objetoVector)
@@ -59,7 +59,7 @@ class DeclaracionVector(Intruccion):
                 temp1 = controlador.Generador3D.obtenerTemporal()
 
                 codigo += f'\t{temp1} = SP + {ts.size};\n'
-                codigo += f'\tStack[(int){temp1}] = HP;\n'
+                codigo += f'\tStack[int({temp1})] = HP;\n'
                 codigo += f'\tHP= HP + 2;\n'
 
                 new_vector.direccion = ts.size
@@ -86,14 +86,14 @@ class DeclaracionVector(Intruccion):
 
                 codigo += self.capacidad.codigo
                 codigo += f'\t{temp2} = HP;\n'
-                codigo += f'\tHeap[(int)HP] = 0;\n'
+                codigo += f'\tHeap[int(HP)] = 0;\n'
                 codigo += f'\tHP = HP + 1; \n'
-                codigo += f'\tHeap[(int)HP] = {self.capacidad.temporal};\n'
+                codigo += f'\tHeap[int(HP)] = {self.capacidad.temporal};\n'
                 codigo += f'\tHP = HP + 1; \n'
                 codigo += f'\tHP = HP + {self.capacidad.temporal}; \n'
 
                 codigo += f'\t{temp1} = SP + {ts.size};\n'
-                codigo += f'\tStack[(int){temp1}] = {temp2};\n'
+                codigo += f'\tStack[int({temp1})] = {temp2};\n'
 
                 new_vector.direccion = ts.size
 

@@ -43,7 +43,7 @@ class DeclaracionArreglo(Intruccion):
             codigo += "/*Declaracion*/\n"
             codigo += Exp_arreglo.codigo + "\n"
             codigo += f'\t{temp1} = SP + {sizeTabla};\n'
-            codigo += f'\tStack[(int){temp1}] = {Exp_arreglo.temporal};\n'
+            codigo += f'\tStack[int({temp1})] = {Exp_arreglo.temporal};\n'
             ts.size += 1
 
             objetoArreglo.direccion = sizeTabla
@@ -58,7 +58,7 @@ class DeclaracionArreglo(Intruccion):
             temp1 = controlador.Generador3D.obtenerTemporal()
             sizeTabla = ts.size
             Exp_arreglo.codigo += f'\t{temp1} = SP + {sizeTabla};\n'
-            Exp_arreglo.codigo += f'\tStack[(int){temp1}] = {Exp_arreglo.temporal};\n'
+            Exp_arreglo.codigo += f'\tStack[int({temp1})] = {Exp_arreglo.temporal};\n'
             ts.size += 1
 
             objetoArreglo = Exp_arreglo.valor

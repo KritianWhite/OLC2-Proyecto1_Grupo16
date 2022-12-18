@@ -46,7 +46,7 @@ class AccesoArreglo(Expresion,Intruccion):
             retronoA = insArreglo.SetValor(arreglo.direccion,controlador,self.temporales,arreglo)
             codigo += retronoA.codigo
 
-        codigo += f'\tHeap[(int){retronoA.temporal}] = {Expression.temporal};\n'
+        codigo += f'\tHeap[int({retronoA.temporal})] = {Expression.temporal};\n'
         return codigo
 
     def Obtener3D(self, controlador, ts:TablaDeSimbolos) -> RetornoType:
@@ -56,7 +56,7 @@ class AccesoArreglo(Expresion,Intruccion):
             texto = "No se encontro arreglo"
             codigo = ""
             for x in texto:
-                codigo += f'printf("%c", (int){ord(x)});'
+                codigo += f'printf("%c", int({ord(x)}));'
             retorno = RetornoType()
             retorno.codigo = codigo
 

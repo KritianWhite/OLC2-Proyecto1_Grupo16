@@ -40,7 +40,7 @@ class Primitivo(Expresion):
                 else:
                     codigo = f'\t{temp} = 0;'
 
-        elif self.tipo.tipo != ttipo.STRING or self.tipo.tipo != ttipo.DIRSTRING or self.tipo.tipo != ttipo.CARACTER:
+        elif self.tipo.tipo != ttipo.STRING or self.tipo.tipo != ttipo.CARACTER:
 
             temp = controlador.Generador3D.obtenerTemporal()
             codigo += f'\t{temp} = HP;\n'

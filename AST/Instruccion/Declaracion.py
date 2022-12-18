@@ -9,8 +9,8 @@ class Declaracion(Intruccion):
     def __init__(self, id: Identificador, expresion, tipo, mut,referencia = False):
         self.identificador = id
         self.expresion = expresion
-        self.tipo = self.generarTipo(expresion)
-        #self.tipo = tipo
+        #self.tipo = self.generarTipo(expresion)
+        self.tipo = tipo
         self.mut = mut
         self.referencia = referencia
         self.objeto = None
@@ -31,8 +31,6 @@ class Declaracion(Intruccion):
         print(" ==== Declarar === ",self.expresion)
         codigo = ""
         if self.expresion is not None:
-
-
             return_exp: RetornoType = self.expresion.Obtener3D(controlador, ts)
 
             try:
@@ -122,7 +120,7 @@ class Declaracion(Intruccion):
                     newSimbolo.SimboloPremitivo(self.identificador.id, '', self.tipo, self.mut,sizeTabla)
                     ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
 
-                elif self.tipo == tipo.STRING or self.tipo == tipo.DIRSTRING:
+                elif self.tipo == tipo.STRING:
                     newSimbolo.SimboloPremitivo(self.identificador.id, "", self.tipo, self.mut,sizeTabla)
                     ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
 
@@ -164,9 +162,11 @@ class Declaracion(Intruccion):
                     return codigo
             else:
                 newSimbolo = Simbolos()
-                newSimbolo.SimboloPremitivo(self.identificador.id, None, tipo.UNDEFINED, self.mut,sizeTabla)
+                sizeTabla = ts.size
+                ts.size += 1
+                newSimbolo.SimboloPremitivo(self.identificador.id, None, tipo.UNDEFINED, self.mut, sizeTabla)
                 ts.Agregar_Simbolo(self.identificador.id, newSimbolo)
 
-       # print("=== SE DECLARO LA VARIABLES === ", self.identificador.id)
-       # print("=== TIPO === ", self.tipo)
-       # print("=== Expresion === ", self.expresion)
+       #print("=== SE DECLARO LA VARIABLES === ", self.identificador.id)
+       #print("=== TIPO === ", self.tipo)
+       #print("=== Expresion === ", self.expresion)

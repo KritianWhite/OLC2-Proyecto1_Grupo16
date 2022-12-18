@@ -29,7 +29,7 @@ class Asignacion(Intruccion):
             temp1 = controlador.Generador3D.obtenerTemporal()
 
             codigo += f'\t{temp1} = SP + {existe_id.direccion};\n'
-            codigo += f'\tStack[(int){temp1}] = {Expression.temporal};\n'
+            codigo += f'\tStack[int({temp1})] = {Expression.temporal};\n'
 
             #retorno = RetornoType(existe_id.valor)
             #retorno.iniciarRetorno(codigo, "", "", existe_id.tipo)

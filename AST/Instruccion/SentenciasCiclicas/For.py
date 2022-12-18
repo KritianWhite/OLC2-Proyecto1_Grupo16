@@ -38,7 +38,7 @@ class For(Intruccion):
             if array.tipo == tipo.STRUCT:
                 SimboloTemp: Simbolos = ts.ObtenerSimbolo(array.Objeto)
                 declaracion.objeto = array.Objeto
-            codigo += declaracion.Ejecutar3D(controlador, ts)
+            #codigo += declaracion.Ejecutar3D(controlador, ts)
 
             array.codigo += array.codigotemp
             codigo += array.codigo
@@ -68,21 +68,21 @@ class For(Intruccion):
             codigo += f'\t{temp2} = {temp1} + {postamanio};\n'
             codigo += f'\t{temp3} = {temp2} + 1;\n'
 
-            codigo += f'\t{temp4} = Heap[(int){temp3}];\n'
+            codigo += f'\t{temp4} = Heap[int({temp3})];\n'
             codigo += f'\t{temp5} = SP + {existe_id.direccion};\n'
-            codigo += f'\tStack[(int){temp5}] = {temp4};\n'
+            codigo += f'\tStack[int({temp5})] = {temp4};\n'
 
             tempTamanio = controlador.Generador3D.obtenerTemporal()
 
             if isinstance(self.elementos[1],Identificador):
-                codigo += f'\t{tempTamanio} = Heap[(int){array.temporal}];\n'
+                codigo += f'\t{tempTamanio} = Heap[int({array.temporal})];\n'
 
             else:
-                codigo += f'\t{tempTamanio} = Heap[(int){array.temporal}];\n'
+                codigo += f'\t{tempTamanio} = Heap[int ({array.temporal})];\n'
                 #codigo += f'\t{tempTamanio} = Stack[(int){array.temporal}];\n'
                 #codigo += f'\t{tempTamanio} = Heap[(int){tempTamanio}];\n'
 
-            codigo += f'\tif ({temp1} < {tempTamanio}) goto {etiquetaV};\n'
+            codigo += f'\tif ({temp1} < {tempTamanio}) {chr(123)} goto {etiquetaV} {chr(125)};\n'
             codigo += f'\tgoto {etiquetaF};\n'
 
             codigo += f'\t{etiquetaV}:\n'
@@ -99,12 +99,12 @@ class For(Intruccion):
         elif tipo_for == 2:
             #parametro1 = self.elementos[1].Obtener3D(controlador, ts)
             #parametro2 = self.elementos[2].Obtener3D(controlador, ts)
-
-            declaracion = Declaracion(Identificador(self.ID_Iterable),self.elementos[1],tipo.ENTERO,True)
+            #self.elementos[1]
+            declaracion = Declaracion(Identificador(self.ID_Iterable),None,tipo.ENTERO,True)
             codigo += declaracion.Ejecutar3D(controlador, ts)
             #codigo += parametro2.codigo + '\n'
 
-            Condicion = Relacional(Identificador(self.ID_Iterable), '<', self.elementos[2], False)
+            Condicion = Relacional(Identificador(self.ID_Iterable), '<=', self.elementos[2], False)
             Condicion.etiquetaV = controlador.Generador3D.obtenerEtiqueta()
             Condicion.etiquetaF = controlador.Generador3D.obtenerEtiqueta()
             CondicionV = Condicion.Obtener3D(controlador, ts)
