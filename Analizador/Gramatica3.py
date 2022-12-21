@@ -241,6 +241,7 @@ def p_instrucciones_lista(t):
 def p_instruccion(t):
     '''instruccion  : funcion
                     | declaracion
+                    | asignacion
                     '''
 
     t[0] = t[1]
@@ -263,6 +264,8 @@ def p_bloque(t):
                 | start_if
                 | start_for
                 | llamada
+                | return_ins
+                | asignacion
                 | '''
 
     if len(t) > 1:
@@ -380,7 +383,7 @@ def p_declaracion(t):
     #    t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), "", tipo.UNDEFINED, False)
     if len(t) == 3:
         #esto es para el primero
-        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), "0", t[2], False)
+        t[0] = Declaracion.Declaracion(Identificador.Identificador(t[1]), None, t[2], False)
 
     elif len(t) == 4:
         #este tengo que modificar
@@ -439,7 +442,18 @@ def p_list_exp_ins(t):
 
     else:
         t[0] = [t[1]]
+def p_return_ins(t):
+    '''return_ins : RETURN
+                    | RETURN expresiones'''
+    if len(t) == 2:
+        t[0] = Return.Return(None)
+    else:
+        t[0] = Return.Return(t[2])
 
+def p_asignacion(t):
+    '''asignacion  : ID IGUAL expresiones
+                        '''
+    t[0] = Asignacion.Asignacion(t[1], t[3])
 
 def p_bloque_exp(t):
     ''' bloque_exp : bloque

@@ -4,17 +4,35 @@ from AST.TablaSimbolos.Simbolos import Simbolos
 from AST.TablaSimbolos.Tipos import tipo, RetornoType
 from AST.Instruccion.DeclaracionArreglo import DeclaracionArreglo
 from AST.Instruccion.DeclaracionVector import DeclaracionVector
+from AST.Expresion.Primitivo import Primitivo
 class Declaracion(Intruccion):
 
     def __init__(self, id: Identificador, expresion, tipo, mut,referencia = False):
         self.identificador = id
-        self.expresion = expresion
-        #self.tipo = self.generarTipo(expresion)
-        self.tipo = tipo
+
+        if expresion == None:
+            self.expresion = self.generarDefabrica(tipo)
+        elif expresion != None:
+            self.expresion = expresion
+
+        if expresion != None:
+            self.tipo = self.generarTipo(expresion)
+        elif tipo != None:
+            self.tipo = tipo
+
         self.mut = mut
         self.referencia = referencia
         self.objeto = None
 
+    def generarDefabrica(self, tipo):
+        if tipo == tipo.ENTERO:
+            return Primitivo(0, 'ENTERO')
+        elif tipo == tipo.DECIMAL:
+            return 0.0
+        elif tipo == tipo.BOOLEANO:
+            return False
+        elif tipo == tipo.STRING:
+            return ""
 
     def generarTipo(self, expresion):
 
@@ -27,9 +45,26 @@ class Declaracion(Intruccion):
         elif isinstance(expresion, str):
             return tipo.STRING
 
+    def tipoRetorno(self,expresion):
+        if expresion == "int":
+            return tipo.ENTERO
+        elif expresion == "float":
+            return tipo.DECIMAL
+        elif expresion == "bool":
+            return tipo.BOOLEANO
+        elif expresion == "str":
+            return tipo.STRING
+
+
     def Ejecutar3D(self, controlador, ts):
         print(" ==== Declarar === ",self.expresion)
         codigo = ""
+
+        #if ts.Existe_id(self.identificador):
+         #   print("-----------va a entrar a asignacion -------------------------**********")
+
+
+
         if self.expresion is not None:
             return_exp: RetornoType = self.expresion.Obtener3D(controlador, ts)
 

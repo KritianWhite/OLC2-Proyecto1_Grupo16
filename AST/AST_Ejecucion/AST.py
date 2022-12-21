@@ -139,6 +139,7 @@ class AST(Intruccion):
     def Exportar_TablaErrores(self, Reporte):
         ReporteFinal = htmlInicial + Reporte + htmlFinal
         file_path = Path(r"C:\Users\kriti\OneDrive\Documents\GitHub\OLC2-Proyecto1_Grupo16\Reportes\TablaErrores.HTML")
+        #file_path = Path(r"C:\Users\Administrator\OneDrive\Desktop\OLC2-Proyecto1_Grupo16\Reportes\TablaErrores.HTML")
         FileHTML = open(file_path, "w")
         FileHTML.write(ReporteFinal)
         FileHTML.close()
@@ -147,6 +148,7 @@ class AST(Intruccion):
 
         ReporteFinal = htmlInicial + Reporte + htmlFinal
         file_path = Path(r"C:\Users\kriti\OneDrive\Documents\GitHub\OLC2-Proyecto1_Grupo16\Reportes\TablaSimbolos.HTML")
+        #file_path = Path(r"C:\Users\Administrator\OneDrive\Desktop\OLC2-Proyecto1_Grupo16\Reportes\TablaSimbolos.HTML")
         FileHTML = open(file_path, "w")
         FileHTML.write(ReporteFinal)
         FileHTML.close()

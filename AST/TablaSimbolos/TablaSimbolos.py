@@ -24,10 +24,10 @@ class TablaDeSimbolos():
     def Agregar_Simbolo(self, id, simbolo):
         #self.tabla["main"] = simbolo
         print("Agregando: ", id, " con simbolo: ", simbolo, " en: ", self.name)
-        if not self.Existe_id(id):
-            self.tabla[id] = simbolo
-        else:
-            print("Ya existe la variable, no se pudo actualizar: ",simbolo," Con valor ",simbolo.valor)
+        #if not self.Existe_id(id):
+        self.tabla[id] = simbolo
+       # else:
+        #    print("Ya existe la variable, no se pudo actualizar: ",simbolo," Con valor ",simbolo.valor)
 
 
     def Existe_id(self, id):

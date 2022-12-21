@@ -5,34 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Arreglo/AccesoArreglo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Arreglo/AccesoArreglo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Nativas/Nativas.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Nativas/Nativas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Nativas/NativasVectores.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Nativas/NativasVectores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Primitivo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Primitivo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Vector/VectorData.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Vector/VectorData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/DeclaracionArreglo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/DeclaracionArreglo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/DeclaracionVector.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/DeclaracionVector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/InstanciaArreglo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/InstanciaArreglo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/Tipos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/Tipos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parser.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parsetab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" afterDir="false" />
     </list>
     <list id="02073b61-f00c-40e3-87db-7f4a9a868334" name="Changes by Boror" comment="" />
-    <list id="95947122-54f0-40aa-b726-f654a8036951" name="Changes by Julio R" comment="">
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Arreglo/ArregloData.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Arreglo/ArregloData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Casteo/Casteo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Casteo/Casteo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Asignacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Asignacion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/Instruccion/SentenciasCiclicas/For.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/SentenciasCiclicas/For.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
-    </list>
+    <list id="95947122-54f0-40aa-b726-f654a8036951" name="Changes by Julio R" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,36 +23,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py">
-      <ranges>
-        <range start1="26" end1="29" start2="26" end2="29" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="80" end1="81" start2="80" end2="81" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="181" end1="182" start2="181" end2="182" changelist="95947122-54f0-40aa-b726-f654a8036951" />
-        <range start1="200" end1="201" start2="200" end2="201" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="203" end1="204" start2="203" end2="204" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="206" end1="207" start2="206" end2="207" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/Analizador/Gramatica3.py">
-      <ranges>
-        <range start1="263" end1="263" start2="263" end2="264" changelist="95947122-54f0-40aa-b726-f654a8036951" />
-        <range start1="374" end1="375" start2="375" end2="377" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="376" end1="376" start2="378" end2="380" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="378" end1="379" start2="382" end2="383" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="383" end1="383" start2="387" end2="398" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="461" end1="461" start2="476" end2="491" changelist="95947122-54f0-40aa-b726-f654a8036951" />
-        <range start1="462" end1="462" start2="492" end2="512" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="466" end1="467" start2="516" end2="517" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="507" end1="507" start2="557" end2="559" changelist="95947122-54f0-40aa-b726-f654a8036951" />
-        <range start1="510" end1="510" start2="562" end2="586" changelist="95947122-54f0-40aa-b726-f654a8036951" />
-        <range start1="514" end1="514" start2="590" end2="592" changelist="95947122-54f0-40aa-b726-f654a8036951" />
-        <range start1="517" end1="517" start2="595" end2="613" changelist="95947122-54f0-40aa-b726-f654a8036951" />
-        <range start1="593" end1="594" start2="689" end2="690" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-        <range start1="603" end1="604" start2="699" end2="700" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,22 +32,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Administrator/OneDrive/Desktop/CompiVacas/OLC2-Proyecto1_Grupo16",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "CodeWithMe",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.UI">
     <configuration name="Asignacion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OLC2-Proyecto1_Grupo16" />
@@ -187,6 +141,7 @@
       <workItem from="1671240566893" duration="610000" />
       <workItem from="1671255713839" duration="11790000" />
       <workItem from="1671329560156" duration="12813000" />
+      <workItem from="1671501003661" duration="17009000" />
     </task>
     <servers />
   </component>
@@ -200,40 +155,20 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Return.py</url>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AST/Instruccion/Asignacion.py</url>
           <line>13</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Return.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="2" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AST/Instruccion/Declaracion.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Return.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Return.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Return.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Return.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/SentenciasTranferencia/Return.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="7" />
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AST/Instruccion/Declaracion.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -243,11 +178,11 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica.coverage" NAME="Gramatica Coverage Results" MODIFIED="1670751214893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica3.coverage" NAME="Gramatica3 Coverage Results" MODIFIED="1670915809184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica.coverage" NAME="Gramatica Coverage Results" MODIFIED="1670751214893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$editor.coverage" NAME="editor Coverage Results" MODIFIED="1670876345156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Interfaz" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Funcion.coverage" NAME="Funcion Coverage Results" MODIFIED="1670750936203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1671351990807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1671588055262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>
