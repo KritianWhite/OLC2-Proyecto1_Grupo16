@@ -1,0 +1,189 @@
+
+//=============================ARCHIVOS DE CALIFICACION=============================
+
+-----------------------------------------------------------------------------------
+                EXPRESIONES
+// Falta agregar lo de la potencia.
+// Arreglar operaciones logicas y realcionales
+// Y arreglar el print xd
+
+{
+
+a = 123
+b = 12.3123
+c = False
+d = True
+e = "hola buenas"
+suma = a + b
+resta = b - a
+multiplicacion = 123 * 32
+division = 54 / 4
+//potencia = 12 ** 3
+//logica = True || False && True && False
+//relacionales = 123 > 32 == 43
+
+println("{}",a)
+println("{}",b)
+println("{}",c)
+println("{}",d)
+println("{}",e)
+println("{}",suma)
+println("{}",resta)
+println("{}",multiplicacion)
+println("{}",division)
+//println("{}",potencia)
+//println("{}",logica)
+//println("{}",relacionales)
+
+}
+
+-----------------------------------------------------------------------------------
+                ARREGLOS
+// Solo vectores se pueden acceder, e imprimir
+// Matrices no, solo asignarlas mas no imprimir ni declarar
+{
+a = [1,2,3,4,5]
+//b = [[1,2,3,4],[5,6,7,8]]
+//c = [[[1,2],[3,4]],[[5,6],[7,8]]]
+
+//for i in range(2):
+//    for j in range(2):
+//        for k in range(2):
+//            print(c[i][j][k])
+
+print('')
+
+//for i in range(2):
+//    for j in range(4):
+//        print(b[i][j])
+
+print('')
+
+element:int
+for element in a:
+    print(element)
+}
+
+-----------------------------------------------------------------------------------
+                        FOR
+{
+
+element1 = "hola buenas"
+element2 = [1,2,3,4,5,6]
+
+// No se desglosa bien la cadena :')
+element:str
+for element in element1{
+    println("{}",element)}
+
+elemen:int
+for elemen in element2{
+    println("{}",elemen)}
+
+eleme:int
+for eleme in range(9){
+    println("{}",eleme)}
+
+i:int
+for i in range(4){
+    j:int
+    for j in range(4){
+        println("{}",i + j)}}
+}
+
+-----------------------------------------------------------------------------------
+                        FUNCIONES
+
+{
+x = factorial(4)
+println("{}", x)
+y = ackerman(3, 5)
+println("{}", y)
+}
+
+//Esta funcion devuelve 8
+//Verificar lo que son las relacionales pueda que por eso sea
+def factorial(n:int): int {
+    if n==0 || n==1:{
+        return 1}
+    elif n > 1:{
+        return n*factorial(n-1)}
+}
+
+// No devuelve nada :')
+def ackerman(m: int, n: int):int {
+    if m == 0:{
+        return n + 1}
+    elif n == 0:{
+        return ackerman( m - 1, 1)}
+    else:{
+        return ackerman( m - 1, ackerman(m, n - 1 ))}
+}
+
+-----------------------------------------------------------------------------------
+                        IF's
+// Funciona cada una por aparte
+// Al ejecutarlo todo solo detecta la primera sentencia
+{
+if True || False:{
+    print("esta es`")}
+
+
+if True:{
+    print("este es")}
+else:{
+    print("este no es")}
+
+
+if False:{
+    print("este no es")}
+else:{
+    print("este es")}
+
+if True:{
+    print("este es")}
+elif True:{
+    print("este no es")}
+else:{
+    print("este no es")}
+
+if False:{
+    print("este no es")}
+elif True:{
+    print("este es")}
+else:{
+    print("este no es")}
+
+if False:{
+    print("este no es")}
+elif False:{
+    print("este no es")}
+else:{
+    print("este es")}
+
+}
+
+-----------------------------------------------------------------------------------
+                        WHILE
+//Se empieza a enciclar despues de ejecutar el break
+//Realmente no deberia, pero toca revisar nuevamente
+{
+element = 0
+while (element < 10){
+    println("{}",element)
+    element = element + 1
+    }
+
+transferencias = 0
+while (transferencias < 100){
+    if(transferencias == 5):{
+        transferencias = transferencias + 1
+        continue
+        }
+    if(transferencias == 9):{
+        break
+        }
+    transferencias = transferencias + 1
+    println("{}",transferencias)
+    }
+}

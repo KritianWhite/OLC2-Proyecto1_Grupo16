@@ -28,11 +28,12 @@ class Declaracion(Intruccion):
         if tipo == tipo.ENTERO:
             return Primitivo(0, 'ENTERO')
         elif tipo == tipo.DECIMAL:
-            return 0.0
+            return Primitivo(0.0, 'ENTERO')
+
         elif tipo == tipo.BOOLEANO:
             return False
         elif tipo == tipo.STRING:
-            return ""
+            return Primitivo("",'STRING')
 
     def generarTipo(self, expresion):
 
@@ -104,7 +105,7 @@ class Declaracion(Intruccion):
                 codigo += "/*Declaracion*/\n"
                 codigo += return_exp.codigo + "\n"
                 codigo += f'\t{temp1} = SP + {sizeTabla}\n'
-                codigo += f'\tStack[int({temp1}] = {return_exp.temporal}\n'
+                codigo += f'\tStack[int({temp1})] = {return_exp.temporal}\n'
                 ts.size += 1
 
                 newSimbolo = Simbolos()

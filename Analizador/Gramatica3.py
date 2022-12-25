@@ -36,6 +36,7 @@ tokens = [
              'MULTI',
              'DIVI',
              'MODULO',
+             'POT',
              # ** ** ** ** ** OPERACION RELACIONAL ** ** ** ** **
              'MENORIGUAL',
              'MAYORIGUAL',
@@ -75,6 +76,7 @@ tokens = [
 # ********** OPERACION MATEMATICA **********
 t_SUMA = r'\+'
 t_RESTA = r'-'
+t_POT = r'\*\*'
 t_MULTI = r'\*'
 t_DIVI = r'/'
 t_MODULO = r'%'
@@ -266,6 +268,7 @@ def p_bloque(t):
                 | llamada
                 | return_ins
                 | asignacion
+                | asignacion_arreglo
                 | '''
 
     if len(t) > 1:
@@ -504,6 +507,12 @@ def p_opciones_for(t):
 
 
 
+
+def p_asignacion_arreglo(t):
+    ''' asignacion_arreglo : acceso_arreglo IGUAL expresiones '''
+    t[1].valor = t[3]
+    t[0] = t[1]
+
 def p_acceso_arreglo(t):
     '''acceso_arreglo : ID dimensiones '''
     print("Deberia ser id: ", t[1], " dimensiones: ",t[2])
@@ -570,34 +579,9 @@ def p_expresiones(t):
                     | expre_aritmetica
                     | datos
                     | expre_valor
-                    | funcion_nativa
                     '''
 
     t[0] = t[1]
-
-
-def p_funcion_nativa(t):
-    '''funcion_nativa : tipo_datos PI expresiones PD ''' #nativas expresiones PUNTO nativas
-
-
-
-    print("Llego a nativas")
-
-    if isinstance(t[3],NativasVectores.NativasVectores):
-        nativa = t[3]
-        nativa.expresion = t[1]
-        print("Llego a nativa vectores", nativa)
-        t[0] = nativa
-
-    elif  isinstance(t[3],AccesoStruct.AccesoStruct):
-        print(t[3])
-        print(t[1])
-        t[3].identificador = t[1]
-        t[0]= t[3]
-    else:
-        t[0]= Casteo.Casteo(t[3],t[1])
-    # t[0] = Nativas.Nativas(t[1], t[3])
-
 
 def p_expre_valor(t):
     '''expre_valor :  start_if
@@ -605,8 +589,20 @@ def p_expre_valor(t):
                     | arreglo_init
                     | acceso_arreglo
                     | llamada
+                    | datos_cast
                     '''
     t[0] = t[1]
+
+
+
+def p_datos_cast(t):
+    ''' datos_cast : datos
+                  | tipo_datos PI expresiones PD '''
+
+    if len(t) == 2:
+        t[0] = t[1]
+    else:
+        t[0]= Casteo.Casteo(t[3],t[1])
 
 
 def p_arreglo_init(t):

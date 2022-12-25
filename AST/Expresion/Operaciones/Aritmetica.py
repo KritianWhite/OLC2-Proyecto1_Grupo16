@@ -140,7 +140,7 @@ class Aritmetica(Operacion, Expresion):
                 etq2 = controlador.Generador3D.obtenerEtiqueta()
                 etq3 = controlador.Generador3D.obtenerEtiqueta()
 
-                codigo += f'\t if  {exp2_temp} != 0 {chr(123)} goto {chr(125)} {etq1};\n'
+                codigo += f'\t if  {exp2_temp} != 0 {chr(123)} goto {etq1} {chr(125)};\n'
                 codigo += f'\tgoto {etq2};\n'
 
                 codigo += f'\t{etq1}:\n'

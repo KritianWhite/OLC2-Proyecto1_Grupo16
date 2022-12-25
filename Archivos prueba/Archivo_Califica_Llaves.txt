@@ -1,0 +1,56 @@
+{
+a = 123
+b = 123 + 123
+c = 321 / 123
+d = "hola"
+e = "hOLa" * 3
+f = "hola" + "buenas"
+g = 123.123 * 123.321
+h = False
+i = True
+j = (False || True and False) || (True and (True || False))
+k = 4 ** 3
+l = 5 % 2
+m = 123 <= 3
+print("{}",a)
+print("{}",b)
+print("{}",c)
+print("{}",d)
+print("{}",e)
+print("{}",f)
+print("{}",g)
+print("{}",h)
+print("{}",i)
+print("{}",j)
+print("{}",k)
+print("{}",l)
+print("{}",m)
+
+if (h):{
+    print("este no es")}
+elif(j):{
+    print("este es")}
+else:{
+    print("este no es")}
+
+if(j):{
+    print("este es")}
+
+if(j):{
+    print("este es")}
+else:{
+    print("este no es")}
+
+if(h):{
+    print("este no es")}
+else:{
+    print("este es")}
+
+aux = 0
+while(aux <= 5):{
+    aux = aux + 1
+    print("{}",aux)
+}
+for element in range(5):{
+    print("{}",element)}
+}

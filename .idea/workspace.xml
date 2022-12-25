@@ -4,18 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="">
+    <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="cambio en clase declaracion y producion declaracion en gramatica">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/AST_Ejecucion/AST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Expresion/Identificador.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Identificador.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Operaciones/Aritmetica.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/TablaSimbolos/TablaSimbolos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Imprimir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parser.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parsetab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" afterDir="false" />
+    </list>
+    <list id="576bb126-d876-45ef-9f50-ca98e5f91a18" name="Changes by Administrator" comment="">
+      <change beforePath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Instruccion/Declaracion.py" afterDir="false" />
     </list>
     <list id="02073b61-f00c-40e3-87db-7f4a9a868334" name="Changes by Boror" comment="" />
-    <list id="95947122-54f0-40aa-b726-f654a8036951" name="Changes by Julio R" comment="" />
+    <list id="ae0b1ebf-9eba-4b24-8cbe-1580d3a4a144" name="Changes by Julio R" comment="">
+      <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +31,27 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/AST/Instruccion/Declaracion.py">
+      <ranges>
+        <range start1="30" end1="31" start2="30" end2="32" changelist="576bb126-d876-45ef-9f50-ca98e5f91a18" />
+        <range start1="34" end1="35" start2="35" end2="36" changelist="576bb126-d876-45ef-9f50-ca98e5f91a18" />
+        <range start1="106" end1="107" start2="107" end2="108" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Analizador/Gramatica3.py">
+      <ranges>
+        <range start1="38" end1="38" start2="38" end2="39" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="77" end1="77" start2="78" end2="79" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="268" end1="268" start2="270" end2="271" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="505" end1="505" start2="508" end2="514" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="572" end1="573" start2="581" end2="581" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="576" end1="600" start2="584" end2="584" changelist="ae0b1ebf-9eba-4b24-8cbe-1580d3a4a144" />
+        <range start1="607" end1="607" start2="591" end2="592" changelist="ae0b1ebf-9eba-4b24-8cbe-1580d3a4a144" />
+        <range start1="610" end1="610" start2="595" end2="606" changelist="ae0b1ebf-9eba-4b24-8cbe-1580d3a4a144" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,25 +61,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Administrator/OneDrive/Desktop/CompiVacas/OLC2-Proyecto1_Grupo16",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "CodeWithMe",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/OneDrive/Desktop/CompiVacas/OLC2-Proyecto1_Grupo16&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.UI">
-    <configuration name="Asignacion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Python.While">
+    <configuration name="For" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OLC2-Proyecto1_Grupo16" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -58,12 +88,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AST/Instruccion" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AST/Instruccion/Asignacion.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales/For.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -72,7 +102,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Gramatica3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="OLC2-Proyecto1_Grupo16" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -80,12 +110,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Analizador" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analizador/Gramatica3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales/Functions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Ifs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OLC2-Proyecto1_Grupo16" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales/Ifs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,11 +168,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="While" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="OLC2-Proyecto1_Grupo16" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Archivos prueba/Archivos oficiales/While.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.While" />
         <item itemvalue="Python.UI" />
-        <item itemvalue="Python.Gramatica3" />
-        <item itemvalue="Python.Asignacion" />
+        <item itemvalue="Python.Ifs" />
+        <item itemvalue="Python.Functions" />
+        <item itemvalue="Python.For" />
       </list>
     </recent_temporary>
   </component>
@@ -142,6 +218,9 @@
       <workItem from="1671255713839" duration="11790000" />
       <workItem from="1671329560156" duration="12813000" />
       <workItem from="1671501003661" duration="17009000" />
+      <workItem from="1671859700910" duration="9545000" />
+      <workItem from="1671956700340" duration="1690000" />
+      <workItem from="1671996957141" duration="7049000" />
     </task>
     <servers />
   </component>
@@ -160,16 +239,6 @@
           <line>13</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/Declaracion.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/AST/Instruccion/Declaracion.py</url>
-          <line>63</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -178,11 +247,17 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica3.coverage" NAME="Gramatica3 Coverage Results" MODIFIED="1670915809184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica.coverage" NAME="Gramatica Coverage Results" MODIFIED="1670751214893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Gramatica3.coverage" NAME="Gramatica3 Coverage Results" MODIFIED="1670915809184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analizador" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$For.coverage" NAME="For Coverage Results" MODIFIED="1671998999303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Ifs.coverage" NAME="Ifs Coverage Results" MODIFIED="1672008287102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$editor.coverage" NAME="editor Coverage Results" MODIFIED="1670876345156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Interfaz" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$While.coverage" NAME="While Coverage Results" MODIFIED="1672008747313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Archivo_Calificacion.coverage" NAME="Archivo_Calificacion Coverage Results" MODIFIED="1671865777580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Archivos prueba" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Arrays.coverage" NAME="Arrays Coverage Results" MODIFIED="1671997142657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Funcion.coverage" NAME="Funcion Coverage Results" MODIFIED="1670750936203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1671588055262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Functions.coverage" NAME="Functions Coverage Results" MODIFIED="1672000089266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1672008391819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>

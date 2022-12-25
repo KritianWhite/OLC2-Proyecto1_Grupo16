@@ -184,7 +184,7 @@ class Imprimir(Intruccion):
                                             codigo += f'\t{temp1} = {temp1} + 1;\n'
 
                                         codigo += f'\t{etq1}:\n'
-                                        codigo += f'\tif ({array.temporal} >0 ) goto {etq2};\n'
+                                        codigo += f'\tif ({array.temporal} >0) {chr(123)} goto {etq2} {chr(125)};\n'
                                         codigo += f'\tgoto {etq3};\n'
 
                                         codigo += f'\t{etq2}:\n'
@@ -203,7 +203,7 @@ class Imprimir(Intruccion):
                                         codigo += f'\tHeap[int(HP)] = {temp2};\n' ##int(HP)
                                         codigo += f'\tHP = HP +1;\n'
 
-                                        codigo += f'\tif ({array.temporal} == 0 ) goto {etq4};\n'
+                                        codigo += f'\tif ({array.temporal} == 0 ) {chr(123)}goto {etq4} {chr(125)};\n'
                                         codigo += f'\tHeap[int(HP)] = {ord(",")};\n'
                                         codigo += f'\tHP = HP +1;\n'
                                         codigo += f'\t{etq4}:\n'
@@ -246,7 +246,7 @@ class Imprimir(Intruccion):
                                             codigo += f'\t{valoid.temporal} = {valoid.temporal} + 1\n'
                                         codigo += f'\t{temp1} = {valoid.temporal}\n'
                                         codigo += f'\t{etq1}:\n'
-                                        codigo += f'\tif ({tempAcceso} >0 ) goto {etq2}\n'
+                                        codigo += f'\tif ({tempAcceso} >0 ) {chr(123)} goto {etq2} {chr(125)}\n'
                                         codigo += f'\tgoto {etq3};\n'
 
                                         codigo += f'\t{etq2}:\n'
@@ -276,7 +276,7 @@ class Imprimir(Intruccion):
                                             #codigo += f'\t{temp3} = {temp2} + 1;\n'
                                             codigo += f'\t{temp4} = Heap[int({temp3})] \n'
 
-                                            codigo += f'\tif ({temp4} != 0 ) goto {etq5}\n'
+                                            codigo += f'\tif ({temp4} != 0 ) {chr(123)}goto {etq5} {chr(125)}\n'
                                             codigo += f'\tgoto {etq6}\n'
 
                                             codigo += f'\t{etq5}:\n'
@@ -291,7 +291,7 @@ class Imprimir(Intruccion):
                                             codigo += f'\tHeap[int(HP)] = {temp2}\n'
                                             codigo += f'\tHP = HP +1\n'
 
-                                        codigo += f'\tif ({tempAcceso} == 0 ) goto {etq4}\n'
+                                        codigo += f'\tif ({tempAcceso} == 0 ) {chr(123)}goto {etq4}{chr(125)}\n'
                                         codigo += f'\tHeap[int(HP)] = {ord(",")}\n'
                                         codigo += f'\tHP = HP +1\n'
                                         codigo += f'\t{etq4}:\n'
@@ -316,7 +316,7 @@ class Imprimir(Intruccion):
                                         codigo += f'\t{valoid.temporal} = {valoid.temporal} + 1;\n'
                                         codigo += f'\t{temp1} = {valoid.temporal};\n'
                                         codigo += f'\t{etq1}:\n'
-                                        codigo += f'\tif ({tempAcceso} >0 ) goto {etq2};\n'
+                                        codigo += f'\tif ({tempAcceso} >0 ) {chr(123)}goto {etq2}{chr(125)};\n'
                                         codigo += f'\tgoto {etq3};\n'
 
                                         codigo += f'\t{etq2}:\n'
@@ -333,7 +333,7 @@ class Imprimir(Intruccion):
 
                                         codigo += self.printvect(controlador, temp3, temp4, valoid.tipo)
 
-                                        codigo += f'\tif ({tempAcceso} == 0 ) goto {etq4};\n'
+                                        codigo += f'\tif ({tempAcceso} == 0 ) {chr(123)}goto {etq4}{chr(125)};\n'
                                         codigo += f'\tHeap[int(HP)] = {ord(",")};\n'
                                         codigo += f'\tHP = HP +1;\n'
                                         codigo += f'\t{etq4}:\n'
@@ -373,7 +373,7 @@ class Imprimir(Intruccion):
                                     codigo += f'\t{temp1} = {tempactual};\n'
 
                                     codigo += f'\t{etq1}:\n'
-                                    codigo += f'\tif ({tempAcceso} >0 ) goto {etq2};\n'
+                                    codigo += f'\tif ({tempAcceso} >0 ) {chr(123)}goto {etq2}{chr(125)};\n'
                                     codigo += f'\tgoto {etq3};\n'
 
                                     codigo += f'\t{etq2}:\n'
@@ -402,7 +402,7 @@ class Imprimir(Intruccion):
                                         # codigo += f'\t{temp3} = {temp2} + 1;\n'
                                         codigo += f'\t{temp4} = Heap[int({temp3})] \n'
 
-                                        codigo += f'\tif ({temp4} != 0 ) goto {etq5}\n'
+                                        codigo += f'\tif ({temp4} != 0 ) {chr(123)}goto {etq5}{chr(125)}\n'
                                         codigo += f'\tgoto {etq6};\n'
 
                                         codigo += f'\t{etq5}:\n'
@@ -417,7 +417,7 @@ class Imprimir(Intruccion):
                                         codigo += f'\tHeap[int(HP)] = {temp2};\n'
                                         codigo += f'\tHP = HP +1\n'
 
-                                    codigo += f'\tif ({tempAcceso} == 0 ) goto {etq4}\n'
+                                    codigo += f'\tif ({tempAcceso} == 0 ) {chr(123)}goto {etq4}{chr(125)}\n'
                                     codigo += f'\tHeap[int(HP)] = {ord(",")}\n'
                                     codigo += f'\tHP = HP +1\n'
                                     codigo += f'\t{etq4}:\n'
@@ -496,7 +496,7 @@ class Imprimir(Intruccion):
         codigo += f'\t{temporal} = {temporal} + 1;\n'
         codigo += f'\t{temp1} = {temporal};\n'
         codigo += f'\t{etq1}:\n'
-        codigo += f'\tif ({tempAcceso} >0 ) goto {etq2};\n'
+        codigo += f'\tif ({tempAcceso} >0 ) {chr(123)}goto {etq2}{chr(125)};\n'
         codigo += f'\tgoto {etq3};\n'
 
         codigo += f'\t{etq2}:\n'
@@ -525,7 +525,7 @@ class Imprimir(Intruccion):
             # codigo += f'\t{temp3} = {temp2} + 1;\n'
             codigo += f'\t{temp4} = Heap[int({temp3})] ;\n'
 
-            codigo += f'\tif ({temp4} != 0 ) goto {etq5};\n'
+            codigo += f'\tif ({temp4} != 0 ) {chr(123)}goto {etq5}{chr(125)};\n'
             codigo += f'\tgoto {etq6};\n'
 
             codigo += f'\t{etq5}:\n'
@@ -539,7 +539,7 @@ class Imprimir(Intruccion):
             codigo += f'\tHeap[int(HP)] = {temp2};\n'
             codigo += f'\tHP = HP +1;\n'
 
-        codigo += f'\tif ({tempAcceso} == 0 ) goto {etq4};\n'
+        codigo += f'\tif ({tempAcceso} == 0 ) {chr(123)}goto {etq4}{chr(125)};\n'
         codigo += f'\tHeap[int(HP)] = {ord(",")};\n'
         codigo += f'\tHP = HP +1;\n'
         codigo += f'\t{etq4}:\n'
@@ -669,13 +669,13 @@ class Imprimir(Intruccion):
 
         codigo += f'\t{etq1}: \n'
         codigo += f'\t{caracter} = Heap[int({temp})]; \n'
-        codigo += f'\tif({caracter} == 0) goto {etq2};\n'
+        codigo += f'\tif({caracter} == 0) {chr(123)}goto {etq2}{chr(125)};\n'
 
-        codigo += f'\tif({caracter} == 215)  goto {etq6};\n'
-        codigo += f'\tif({caracter} == 165) goto {etq3};\n'
-        codigo += f'\tif({caracter} == 162) goto {etq4};\n'
+        codigo += f'\tif({caracter} == 215) {chr(123)} goto {etq6}{chr(125)};\n'
+        codigo += f'\tif({caracter} == 165) {chr(123)}goto {etq3}{chr(125)};\n'
+        codigo += f'\tif({caracter} == 162) {chr(123)}goto {etq4}{chr(125)};\n'
 
-        codigo += f'\tfmt.Printf(\"%c\",(char){caracter});\n'
+        codigo += f'\tfmt.Printf(\"%c\",int({caracter}));\n'
         codigo += f'\tgoto {etq5};\n'
         # string----------------
         codigo += f'\t{etq6}:\n'
@@ -684,11 +684,11 @@ class Imprimir(Intruccion):
 
         codigo += f'\t{etq7}:\n'
         codigo += f'\t{caracterTemp} = Heap[int({temp2})]; \n'
-        codigo += f'\tif ({caracterTemp} != 0) goto {etq8};\n'
+        codigo += f'\tif ({caracterTemp} != 0) {chr(123)}goto {etq8}{chr(125)};\n'
         codigo += f'\tgoto {etq5};\n'
 
         codigo += f'\t{etq8}:\n'
-        codigo += f'\tfmt.Printf(\"%c\",(char){caracterTemp});\n'
+        codigo += f'\tfmt.Printf(\"%c\",int({caracterTemp}));\n'
         codigo += f'\t{temp2} = {temp2} + 1;\n'
         codigo += f'\tgoto {etq7};\n'
         # -------------------------

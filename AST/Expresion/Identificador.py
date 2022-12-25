@@ -40,7 +40,7 @@ class Identificador(Expresion):
             retorno = RetornoType(existe_id.valor)
 
             if existe_id.tipo is tipo.BOOLEANO and self.etiquetaV != "":
-                codigo += f"\tif {temp2} == 1  {chr(123)} goto {chr(125)} {self.etiquetaV}\n"
+                codigo += f"\tif {temp2} == 1  {chr(123)} goto {self.etiquetaV} {chr(125)}\n"
                 codigo += f"\tgoto {self.etiquetaF} \n"
                 retorno.etiquetaV = self.etiquetaV
                 retorno.etiquetaF = self.etiquetaF
