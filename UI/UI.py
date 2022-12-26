@@ -29,7 +29,7 @@ def ventanas():
             ConsoleTxt.delete('1.0', END)
             ConsoleTxt.configure(state='disabled')
 
-            #f = io.open("../Analizador/entrada.txt", mode="r", encoding="utf-8")
+            #f = io.open("", mode="r", encoding="utf-8")
             #entrada = f.read()
             #instrucciones = g.parse(entrada)
 
