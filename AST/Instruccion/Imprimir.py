@@ -20,6 +20,8 @@ from AST.Expresion.Primitivo import Primitivo
 class Imprimir(Intruccion):
 
     def __init__(self, expresion, tipo, lista):
+
+
         self.expresion = expresion
         self.tipo = tipo
         self.lista = lista
@@ -28,6 +30,9 @@ class Imprimir(Intruccion):
     def Ejecutar3D(self, controlador, ts):
         listarelacionales = []
         codigo = "/*Acceso imprimir*/\n"
+        if isinstance(self.lista[0],AccesoArreglo):
+            print("]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]")
+            self.expresion ="{:?}"
 
 
         if len(self.lista) > 0:
