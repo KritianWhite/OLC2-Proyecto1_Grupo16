@@ -103,9 +103,9 @@ class Casteo(Expresion):
             if self.tipo_destino == tipo.USIZE:
                 return RetornoType(int(ord(valor_exp1)), tipo.USIZE)
 
-        elif tipo_exp1 == tipo.DIRSTRING:
-            if self.tipo_destino == tipo.DIRSTRING:
-                return RetornoType(valor_exp1, tipo.DIRSTRING)
+        elif tipo_exp1 == tipo.STRING:
+            if self.tipo_destino == tipo.STRING:
+                return RetornoType(valor_exp1, tipo.STRING)
 
         elif tipo_exp1 == tipo.STRING:
             if self.tipo_destino == tipo.STRING:

@@ -187,3 +187,36 @@ while (transferencias < 100){
     println("{}",transferencias)
     }
 }
+
+-----------------------------------------------------------------------------------
+                        NATIVAS
+// EL push si funciona, pero no inserta el valor que es
+// Sino que inserta otro valor generado, de donde nose :'v
+
+{
+a = [1,2,3,4,5]
+a.push(6)
+a.push(7)
+a.push(8)
+a.push(9)
+a.push(6)
+a.push(7)
+a.push(8)
+a.push(9)
+println("{:?}", a)
+}
+
+// remove funciona bien el unico detalle es de que elimina por posicion
+// con index de -2 en adelante hasta el infinito se podria decir
+{
+a = [1,2,3,4,5]
+a.remove(-2)
+println("{:?}", a)
+}
+
+// contains no funciona literal xd, osea si pero no jala :(
+{
+a = [1,2,3,4,5]
+x = a.contains(2)
+println("{}", x)
+}

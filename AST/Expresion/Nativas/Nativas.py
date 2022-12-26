@@ -24,7 +24,7 @@ class Nativas(Expresion):
                 etq1 = controlador.Generador3D.obtenerEtiqueta()
                 etq2 = controlador.Generador3D.obtenerEtiqueta()
                 codigo += return_exp1.codigo
-                codigo += f'\tif ({return_exp1.temporal}<0) goto {etq1};\n'
+                codigo += f'\tif ({return_exp1.temporal}<0) {chr(123)}goto {etq1}{chr(125)};\n'
                 codigo += f'\tgoto {etq2};\n'
                 codigo += f'\t{etq1}:\n'
                 codigo += f'\t{return_exp1.temporal} = {return_exp1.temporal} * -1;\n'
@@ -74,7 +74,7 @@ class Nativas(Expresion):
             return_exp1 = self.expresion.Obtener3D(controlador, ts)
             tipo_exp1 = return_exp1.tipo
 
-            if tipo_exp1 == tipo.DIRSTRING:
+            if tipo_exp1 == tipo.STRING:
                 return_exp1.tipo = tipo.STRING
                 return return_exp1
 

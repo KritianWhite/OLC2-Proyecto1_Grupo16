@@ -26,7 +26,12 @@ reservadas = {
     'continue'  : 'CONTINUE',
     'return'    : 'RETURN',
     'True'      : 'TRUE',
-    'False'     : 'FALSE'
+    'False'     : 'FALSE',
+    'len()'       : 'LEN',
+    'push': 'PUSH',
+    'remove': 'REMOVE',
+    'contains': 'CONTAINS',
+    'insert' : 'INSERT'
 }
 
 tokens = [
@@ -269,6 +274,7 @@ def p_bloque(t):
                 | return_ins
                 | asignacion
                 | asignacion_arreglo
+                | funcion_nativa
                 | '''
 
     if len(t) > 1:
@@ -341,17 +347,16 @@ def p_definiciones(t):
 
 
 def p_instruccion_imprimir(t):
-    '''impresiones     : PRINTLN PI CADENA PD
-                       | PRINT PI CADENA PD
-                       | PRINTLN PI CADENA COMA impresion_valores PD
-                       | PRINT PI CADENA COMA  impresion_valores PD '''
+    '''impresiones     : PRINTLN PI  impresion_valores PD
+                       | PRINT PI impresion_valores PD '''
     if len(t) == 5:
 
+
         if t[1] == 'println':
-            t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), True, [])
+            t[0] = Imprimir.Imprimir("{}", True, t[3])
             # print("\nRe reocnocio: println! con el token: ", t[3], "\n")
         elif t[1] == 'print':
-            t[0] = Imprimir.Imprimir(Primitivo.Primitivo(t[3], 'STRING'), False, [])
+            t[0] = Imprimir.Imprimir("{}", False, t[3])
             # print("\nRe reocnocio: print! con el token: ", t[3], "\n")
 
     else:
@@ -574,14 +579,54 @@ def p_break_ins(t):
         t[0] = Break.Break(t[2])
 
 def p_expresiones(t):
-    '''expresiones  : expre_logica
+    '''expresiones  : funcion_nativa
+                    | expre_logica
                     | expre_relacional
                     | expre_aritmetica
-                    | datos
                     | expre_valor
                     '''
 
     t[0] = t[1]
+
+def p_funcion_nativa(t):
+    '''funcion_nativa : expresiones PUNTO nativas'''
+    #
+    print("Llego a nativas")
+
+    if isinstance(t[3],NativasVectores.NativasVectores):
+        nativa = t[3]
+        nativa.expresion = t[1]
+        print("Llego a nativa vectores", nativa)
+        t[0] = nativa
+
+    elif  isinstance(t[3],AccesoStruct.AccesoStruct):
+        print(t[3])
+        print(t[1])
+        t[3].identificador = t[1]
+        t[0]= t[3]
+    else:
+
+        t[0] = Nativas.Nativas(t[1], t[3])
+
+def p_nativas(t):
+    '''nativas      :  LEN
+                    | nativas_vectores '''
+    if len(t) == 5:
+        t[0] = NativasVectores.NativasVectores(t[2], t[1].lower())
+    else:
+        t[0] = t[1]
+
+def p_nativas_vectores(t):
+    '''nativas_vectores : PUSH PI expresiones PD
+                        | REMOVE PI expresiones PD
+                        | CONTAINS PI expresiones PD
+                        | INSERT PI expresiones COMA expresiones PD'''
+
+    if len(t)==5:
+        t [0] = NativasVectores.NativasVectores(t[3],t[1].lower())
+    elif len(t) == 7:
+        t[0] = NativasVectores.NativasVectores(t[3], t[1].lower(),t[5])
+
 
 def p_expre_valor(t):
     '''expre_valor :  start_if

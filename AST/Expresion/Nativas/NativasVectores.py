@@ -83,7 +83,7 @@ class NativasVectores(Expresion,Intruccion):
                     codigo += f'\t{tempExp} = {temp6};\n'
 
                     codigo += f'\t{etq1}:\n'
-                    codigo += f'\t if ({temp5} > {exp1.temporal}) goto {etq2};\n'
+                    codigo += f'\t if ({temp5} > {exp1.temporal}) {chr(123)} goto {etq2} {chr(125)};\n'
                     codigo += f'\tgoto {etq3};\n'
 
                     codigo += f'\t{etq2}:\n'
@@ -213,7 +213,7 @@ class NativasVectores(Expresion,Intruccion):
                 codigo += f'\t{temp1} = {temp2};\n'
 
                 codigo += f'\t{etq1}:\n'
-                codigo += f'\tif ({tempAcceso} >0 ) goto {etq2};\n'
+                codigo += f'\tif ({tempAcceso} >0 ){chr(123)} goto {etq2}{chr(125)};\n'
                 codigo += f'\tgoto {etq3};\n'
 
                 codigo += f'\t{etq2}:\n'
@@ -248,12 +248,12 @@ class NativasVectores(Expresion,Intruccion):
                     codigo += f'\t{temp4} = Heap[int({temp3})] ;\n'
                     codigo += f'\t{temp4_t} = Heap[int({temp3_t})] ;\n'
 
-                    codigo += f'\tif ({temp4} != 0 ) goto {etq5};\n'
+                    codigo += f'\tif ({temp4} != 0 ) {chr(123)}goto {etq5} {chr(125)};\n'
                     codigo += f'\tgoto {etq6};\n'
 
                     codigo += f'\t{etq5}:\n' #aqio se recprre los caracteres
 
-                    codigo += f'if({temp4} == {temp4_t}) goto {etq5_t};\n'
+                    codigo += f'if({temp4} == {temp4_t}) {chr(123)}goto {etq5_t} {chr(125)};\n'
                     codigo += f'\tgoto {etq6_t};\n'
 
                     codigo += f'\t{etq5_t}:\n'
@@ -271,7 +271,7 @@ class NativasVectores(Expresion,Intruccion):
                     codigo += f'\tgoto {etq7};\n'
                     codigo += f'\t{etq6}:\n'
 
-                    codigo += f'if({tempvalidacion} == 1) goto {etq3};\n'
+                    codigo += f'if({tempvalidacion} == 1) {chr(123)}goto {etq3}{chr(125)};\n'
 
                 #codigo += f'\tif ({tempAcceso} == 0 ) goto {etq4};\n'
                 #codigo += f'\tHeap[HP] = {ord(",")};\n'
@@ -283,7 +283,7 @@ class NativasVectores(Expresion,Intruccion):
 
 
                 if not self.provienePrint:
-                    codigo += f'\tif ({tempvalidacion} == 1) goto {self.etiquetaV};\n'
+                    codigo += f'\tif ({tempvalidacion} == 1) {chr(123)}goto {self.etiquetaV} {chr(125)};\n'
                     codigo += f'\tgoto {self.etiquetaF};\n'
 
                 # parte del recorrido termina de la varibles ------------------------------------------------------
@@ -342,7 +342,7 @@ class NativasVectores(Expresion,Intruccion):
                 etq3 = controlador.Generador3D.obtenerEtiqueta()
 
                 codigo += f'\t{etq1}:\n'
-                codigo += f'\tif( {temp4} < {temp3}) goto {etq2};\n'
+                codigo += f'\tif( {temp4} < {temp3}) {chr(123)}goto {etq2} {chr(125)};\n'
                 codigo += f'\tgoto {etq3};\n'
                 codigo += f'\t{etq2}:\n'
 
@@ -371,7 +371,7 @@ class NativasVectores(Expresion,Intruccion):
                 tempLong = controlador.Generador3D.obtenerTemporal()
                 codigo += f'\t{tempLong} = Heap[int({tempF})];\n'
 
-                codigo += f'\tif( {tempLong} == {exp1.temporal}) goto {etq4};\n'
+                codigo += f'\tif( {tempLong} == {exp1.temporal}) {chr(123)}goto {etq4} {chr(125)};\n'
                 codigo += f'\tgoto {etq5};\n'
                 codigo += f'\t{etq4}:\n'
                 codigo += f'\tHeap[int({temp5})] = {exp2.temporal};\n'
@@ -437,7 +437,7 @@ class NativasVectores(Expresion,Intruccion):
         etq4 = controlador.Generador3D.obtenerEtiqueta()
         etq5 = controlador.Generador3D.obtenerEtiqueta()
 
-        codigo += f'\tif( {temp0} == {temp2}) goto {etq4};\n'
+        codigo += f'\tif( {temp0} == {temp2}) {chr(123)}goto {etq4} {chr(125)};\n'
         codigo += f'\tgoto {etq5};\n'
         codigo += f'\t{etq4}:\n'
 
@@ -445,7 +445,7 @@ class NativasVectores(Expresion,Intruccion):
 
         etqv = controlador.Generador3D.obtenerEtiqueta()
         etqf = controlador.Generador3D.obtenerEtiqueta()
-        codigo += f'\tif( {temp2} == 0) goto {etqv};\n'
+        codigo += f'\tif( {temp2} == 0) {chr(123)}goto {etqv}{chr(125)};\n'
         codigo += f'\tgoto {etqf};\n'
 
         codigo += f'\t{etqv}:\n'
@@ -477,7 +477,7 @@ class NativasVectores(Expresion,Intruccion):
         codigo += f'\t{temp11} = {temp11}+1;\n'
 
         codigo += f'\t{etq6}:\n'
-        codigo += f'\tif( {indeceinical} < {indecefinal}) goto {etq7};\n'
+        codigo += f'\tif( {indeceinical} < {indecefinal}) {chr(123)}goto {etq7}{chr(125)};\n'
         codigo += f'\tgoto {etq8};\n'
         codigo += f'\t{etq7}:\n'
 

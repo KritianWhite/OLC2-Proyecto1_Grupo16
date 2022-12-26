@@ -6,111 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="b979ef8f-073c-4698-89b5-bf6b4946a6d2" name="Changes" comment="cambio en clase declaracion y producion declaracion en gramatica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/Entrada con parametros declaradas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/Ver el tipo de dato rust.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/entrada - copia.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/funciones nativas multiples pruebas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/multillamadas funcinoes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/parser.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/probando todo hasta streing y dirstring.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/prueba rust vect.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/todas las varbles directas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 2/todas las varibles con declaracino.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/Logicas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/a.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/creoq ue vien recovery.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/entrada1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/match anidados.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/match avanzado.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/match facil.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas 3/recuperar.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/Pruebas rust.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/definicion y asignacion variables.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/entrada declaraciones.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/entrada.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/entrada1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/entrada2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prubas impresiones/entradasumas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prueba1 v2/WHILE con len.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prueba1 v2/entrada 1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prueba1 v2/funciona referencias.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prueba1 v2/funcionno.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prueba1 v2/funciono while en otra funcion.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Prueba1 v2/simple referencia.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/While faci;.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/funcion exprecion y while.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/if con ins e exp.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/if expresion e intruccion.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/llamado como expresion facil.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/match anidados.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/match con ins e exp.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pruebas 4/parser.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/Funciones con return sin tipo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/Loop exp en fn int.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/Loop ins en fn.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/While continue return break.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/funcion exprecion y while.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/if con return err pero se dejo pasar.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/last loop on tranferenicas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/loop como expresion.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/loop con return err pero se dejo pasar.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 5/loop exp en otra funcion.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 6/$mut 1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 6/arrays1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/Pueba 6/asignacion array.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/entrada.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analizador/pruebas -- if-else-elif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/arreglos/dosdim#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/arreglos/muldim#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/arreglos/unadim#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/bases de datos/db1.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/bases de datos/db2.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/basicos/Basicos#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/basicos/intermedios#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/errores/errores.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/recursivas/Recursivas#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/structs/ListaEnlazada#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/structs/ListaSuperAvanzada#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/structs/StructBasico#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/structs/StructBasico2#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Actualizados/vectores/vector#.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/arreglos/dosdim.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/arreglos/muldim.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/arreglos/unadim.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/bases de datos/baseDeDatos1.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/bases de datos/baseDeDatos2.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/basicos/Basicos.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/basicos/intermedios.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/comprobacion/comprobacion.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/errores/errores.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/recursiva/Recursivas.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/structs/ListaEnlazada.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/structs/ListaSuperAvanzada.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/structs/StructBasico.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/Nuevos/vector/vector.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/arreglos/#dosdim.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/arreglos/#muldim.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/arreglos/#unadim.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/bases de datos/baseDeDatos1.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/bases de datos/baseDeDatos2.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/basicos/#Basicos.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/basicos/#intermedios.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/comprobacion/#comprobacion.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/errores/#errores.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/errores/#errores2.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/errores/errores.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/errores/errores2.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/recursiva/Recursivas.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/structs/#ListaEnlazada.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/structs/#StructBasico.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/structs/ListaSuperAvanzada.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archivos Oficiales/P2Odiciales/vector/#vector.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Expresion/Casteo/Casteo.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Casteo/Casteo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Expresion/Nativas/Nativas.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Nativas/Nativas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AST/Expresion/Nativas/NativasVectores.py" beforeDir="false" afterPath="$PROJECT_DIR$/AST/Expresion/Nativas/NativasVectores.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/parser.out" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parser.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analizador/parsetab.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/parsetab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archivos prueba/Lo que tenemo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Archivos prueba/Lo que tenemo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaErrores.HTML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Reportes/TablaSimbolos.HTML" afterDir="false" />
     </list>
-    <list id="576bb126-d876-45ef-9f50-ca98e5f91a18" name="Changes by Administrator" comment="" />
+    <list id="a01a87c9-cf46-4d9b-a575-b06cfa448b82" name="Changes by Administrator" comment="">
+      <change beforePath="$PROJECT_DIR$/Analizador/Gramatica3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analizador/Gramatica3.py" afterDir="false" />
+    </list>
     <list id="02073b61-f00c-40e3-87db-7f4a9a868334" name="Changes by Boror" comment="" />
     <list id="ae0b1ebf-9eba-4b24-8cbe-1580d3a4a144" name="Changes by Julio R" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,6 +28,21 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/Analizador/Gramatica3.py">
+      <ranges>
+        <range start1="28" end1="29" start2="28" end2="34" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="271" end1="271" start2="276" end2="277" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="343" end1="347" start2="349" end2="351" changelist="a01a87c9-cf46-4d9b-a575-b06cfa448b82" />
+        <range start1="349" end1="349" start2="353" end2="354" changelist="a01a87c9-cf46-4d9b-a575-b06cfa448b82" />
+        <range start1="350" end1="351" start2="355" end2="356" changelist="a01a87c9-cf46-4d9b-a575-b06cfa448b82" />
+        <range start1="353" end1="354" start2="358" end2="359" changelist="a01a87c9-cf46-4d9b-a575-b06cfa448b82" />
+        <range start1="576" end1="577" start2="581" end2="583" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="579" end1="580" start2="585" end2="585" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+        <range start1="584" end1="584" start2="589" end2="629" changelist="b979ef8f-073c-4698-89b5-bf6b4946a6d2" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -260,8 +183,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.While" />
         <item itemvalue="Python.UI" />
+        <item itemvalue="Python.While" />
         <item itemvalue="Python.Ifs" />
         <item itemvalue="Python.Functions" />
         <item itemvalue="Python.For" />
@@ -288,7 +211,7 @@
       <workItem from="1671501003661" duration="17009000" />
       <workItem from="1671859700910" duration="9545000" />
       <workItem from="1671956700340" duration="1690000" />
-      <workItem from="1671996957141" duration="8881000" />
+      <workItem from="1671996957141" duration="18439000" />
     </task>
     <servers />
   </component>
@@ -326,6 +249,6 @@
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Funcion.coverage" NAME="Funcion Coverage Results" MODIFIED="1670750936203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Functions.coverage" NAME="Functions Coverage Results" MODIFIED="1672000089266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Archivos prueba/Archivos oficiales" />
     <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$Asignacion.coverage" NAME="Asignacion Coverage Results" MODIFIED="1670892902279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AST/Instruccion" />
-    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1672008391819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
+    <SUITE FILE_PATH="coverage/OLC2_Proyecto1_Grupo16$UI.coverage" NAME="UI Coverage Results" MODIFIED="1672033731403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UI" />
   </component>
 </project>
