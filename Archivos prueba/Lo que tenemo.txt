@@ -203,7 +203,7 @@ a.push(6)
 a.push(7)
 a.push(8)
 a.push(9)
-println("{:?}", a)
+println(a)
 }
 
 // remove funciona bien el unico detalle es de que elimina por posicion
